@@ -281,12 +281,14 @@
                 "language": "text/cql",
                 "expression": "inaccurracyanswer"
               }
-            },
+            }
+          ],
+          "extension": [
             {
               "url": "http://hl7.org/fhir/questionnaire-item-control",
               "valueCoding": {
                 "code": " radio-button",
-                "display": "Radio Button"
+                "display": "Lives in or travels to high altitude"
               }
             }
           ],
@@ -435,14 +437,6 @@
                 "expression": "Nocturnalanswer"
               }
             }
-            ,
-            {
-              "url": "http://hl7.org/fhir/questionnaire-item-control",
-              "valueCoding": {
-                "code": " radio-button",
-                "display": "Radio Button"
-              }
-            }
           ],
 
           "linkId": "3.7",
@@ -486,15 +480,10 @@
         {
           "extension": [
             {
-              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-              "valueCodeableConcept": {
-                "coding": [
-                  {
-                    "system": "http://hl7.org/fhir/questionnaire-item-control",
-                    "code": "radio-button",
-                    "display": "Radio Button"
-                  }
-                ]
+              "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+              "valueExpression": {
+                "language": "text/cql",
+                "expression": "sufferother"
               }
             }
           ],
@@ -2595,27 +2584,13 @@
           "text": "Type Of Order",
           "type": "choice",
           "required": true,
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-              "valueCodeableConcept": {
-                "coding": [
-                  {
-                    "system": "http://hl7.org/fhir/questionnaire-item-control",
-                    "code": "radio-button",
-                    "display": "Radio Button"
-                  }
-                ]
-              }
-            }
-          ],
-
           "answerOption": [
             {
               "valueCoding": {
                 "code": "Initial or original order for certification",
                 "display": "Initial or original order for certification"
-              }
+              },
+              "initialSelected": true
             },
             {
               "valueCoding": {
@@ -2636,7 +2611,6 @@
               }
             }
           ]
-
         },
         {
           "linkId": "10.2",
@@ -2698,6 +2672,20 @@
           "type": "choice",
           "repeats": true,
           "required": true,
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "check-box",
+                    "display": "Check-box"
+                  }
+                ]
+              }
+            }
+          ],
           "answerOption": [
             {
               "valueCoding": {
