@@ -2612,8 +2612,7 @@
               "valueCoding": {
                 "code": "Initial or original order for certification",
                 "display": "Initial or original order for certification"
-              },
-              "initialSelected": true
+              }
             },
             {
               "valueCoding": {
