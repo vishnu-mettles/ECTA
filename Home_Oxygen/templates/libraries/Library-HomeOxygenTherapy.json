@@ -23,18 +23,6 @@
     ],
     "dataRequirement": [
         {
-          "type": "Encounter",
-          "dateFilter": [
-            {
-              "path": "period",
-              "valuePeriod": {
-                "start": "2022-12-01T03:53:02",
-                "end": "2023-04-03T07:53:24"
-              }
-            }
-          ]
-        },
-        {
           "type": "Condition",
           "codeFilter": [
             {
@@ -534,6 +522,15 @@
           "codeFilter": [
             {
               "path": "code",
+              "valueSet": "<FHIR-server>/ValueSet/2.16.840.1.113762.1.4.1034.477"
+            }
+          ]
+        },
+        {
+          "type": "Condition",
+          "codeFilter": [
+            {
+              "path": "code",
               "valueSet": "<FHIR-server>/ValueSet/2.16.840.1.113762.1.4.1219.169"
             }
           ]
@@ -634,6 +631,15 @@
             {
               "path": "code",
               "valueSet": "<FHIR-server>/ValueSet/2.16.840.1.113883.3.464.1003.116.11.1029"
+            }
+          ]
+        },
+        {
+          "type": "Condition",
+          "codeFilter": [
+            {
+              "path": "code",
+              "valueSet": "<FHIR-server>/ValueSet/2.16.840.1.113762.1.4.1182.47"
             }
           ]
         },
@@ -749,7 +755,7 @@
                 },
                 {
                   "system": "http://hl7.org/fhir/sid/icd-10-cm",
-                  "code": "J96. 11",
+                  "code": "J96.11",
                   "display": "Chronic respiratory failure with hypoxia"
                 },
                 {
@@ -774,8 +780,8 @@
                 },
                 {
                   "system": "http://loinc.org",
-                  "code": "54525-1",
-                  "display": "Functional limitation in range of motion [CMS Assessment]"
+                  "code": "92908-3",
+                  "display": "Functional limitation in range of motion during assessment period [CMS Assessment]"
                 },
                 {
                   "system": "http://hl7.org/fhir/sid/icd-10-cm",
@@ -864,18 +870,8 @@
                 },
                 {
                   "system": "http://snomed.info/sct",
-                  "code": "3716002",
-                  "display": "Goiter (disorder)"
-                },
-                {
-                  "system": "http://snomed.info/sct",
-                  "code": "3716002",
-                  "display": "Goiter (disorder)"
-                },
-                {
-                  "system": "http://snomed.info/sct",
                   "code": "166818002",
-                  "display": "Lipids abnormal (finding)"
+                  "display": "Lipids abnormal"
                 },
                 {
                   "system": "http://loinc.org",
@@ -886,16 +882,6 @@
                   "system": "http://hl7.org/fhir/sid/icd-10-cm",
                   "code": "I20.9",
                   "display": "Angina pectoris, unspecified"
-                },
-                {
-                  "system": "http://hl7.org/fhir/sid/icd-10-cm",
-                  "code": "I20.9",
-                  "display": "Angina pectoris, unspecified"
-                },
-                {
-                  "system": "http://hl7.org/fhir/sid/icd-10-cm",
-                  "code": "J84",
-                  "display": "Cystic fibrosis with pulmonary manifestations"
                 },
                 {
                   "system": "http://hl7.org/fhir/sid/icd-10-cm",
@@ -956,11 +942,6 @@
                   "system": "http://snomed.info/sct",
                   "code": "56727007",
                   "display": "Vitiligo (disorder)"
-                },
-                {
-                  "system": "http://snomed.info/sct",
-                  "code": "24526004",
-                  "display": "Inflammatory bowel disease (disorder)"
                 },
                 {
                   "system": "http://snomed.info/sct",
@@ -1039,7 +1020,7 @@
                 {
                     "system": "http://www.ama-assn.org/go/cpt",
                     "code": "78472",
-                    "display": "Cardiac blood pool imaging, gated equilibrium"
+                    "display": "Cardiac blood pool imaging, gated equilibrium; planar, single study at rest or stress (exercise and/or pharmacologic), wall motion study plus ejection fraction, with or without additional quantitative processing"
                 },
                 {
                   "system": "http://snomed.info/sct",
@@ -1135,6 +1116,11 @@
                   "system": "http://snomed.info/sct",
                   "code": "252465000",
                   "display": "Pulse oximetry (procedure)"
+                },
+                {
+                  "system": "http://snomed.info/sct",
+                  "code": "117007006",
+                  "display": "Titration method (procedure)"
                 }
               ]
             }
@@ -1171,6 +1157,11 @@
                 },
                 {
                   "system": "http://loinc.org",
+                  "code": "16931-8",
+                  "display": "Hematocrit/Hemoglobin [Ratio] of Blood by Automated count"
+                },
+                {
+                  "system": "http://loinc.org",
                   "code": "62008-8",
                   "display": "I tossed and turned at night in past 7 days [PROMIS]"
                 },
@@ -1182,7 +1173,7 @@
                 {
                   "system": "http://loinc.org",
                   "code": "19255-9",
-                  "display": "Oxygen [Partial pressure] adjusted to patients actual temperature in Arterial blood"
+                  "display": "Oxygen [Partial pressure] adjusted to patient's actual temperature in Arterial blood"
                 },
                 {
                   "system": "http://loinc.org",
@@ -1232,7 +1223,7 @@
                 {
                   "system": "http://snomed.info/sct",
                   "code": "271209008",
-                  "display": "High altitude residence (& accident caused by)"
+                  "display": "High altitude residence"
                 },
                 {
                   "system": "http://snomed.info/sct",
@@ -1248,11 +1239,6 @@
                   "system": "http://snomed.info/sct",
                   "code": "442549008",
                   "display": "Periodic breathing of sleep at high altitude (finding)"
-                },
-                {
-                  "system": "http://snomed.info/sct",
-                  "code": "157730009",
-                  "display": "Air pressure effects: &/or altitude problems (disorder)"
                 },
                 {
                   "system": "http://loinc.org",
@@ -1277,7 +1263,7 @@
                 {
                   "system": "http://loinc.org",
                   "code": "19254-2",
-                  "display": "Oxygen [Partial pressure] adjusted to patients actual temperature in Blood"
+                  "display": "Oxygen [Partial pressure] adjusted to patient's actual temperature in Blood"
                 },
                 {
                   "system": "http://snomed.info/sct",
@@ -1301,6 +1287,141 @@
               "valueSet": "<FHIR-server>/ValueSet/2.16.840.1.113762.1.4.1047.428"
             }
           ]
-        }
+        },
+        {
+          "type": "Encounter",
+          "codeFilter": [
+            {
+              "path": "type",
+              "valueSet": "<FHIR-server>/ValueSet/2.16.840.1.113762.1.4.1182.285"
+            }
+          ]
+        },
+      {
+        "type": "DeviceRequest",
+        "codeFilter": [
+          {
+            "path": "type",
+            "valueSet": "<FHIR-server>/ValueSet/2.16.840.1.113762.1.4.1219.130"
+          },
+          {
+            "path": "code",
+            "code":[
+              {
+                "system": "https://hcpcs.codes/",
+                "code": "E0433"
+              },
+              {
+                "system": "https://hcpcs.codes/",
+                "code": "E0434"
+              },
+              {
+                "system": "https://hcpcs.codes/",
+                "code": "E0444"
+              },
+              {
+                "system": "https://hcpcs.codes/",
+                "code": "E0431"
+              },
+              {
+                "system": "https://hcpcs.codes/",
+                "code": "K0738"
+              },
+              {
+                "system": "https://hcpcs.codes/",
+                "code": "E0443"
+              },
+              {
+                "system": "https://hcpcs.codes/",
+                "code": "E1392"
+              },
+              {
+                "system": "https://hcpcs.codes/",
+                "code": "E0439"
+              },
+              {
+                "system": "https://hcpcs.codes/",
+                "code": "E0442"
+              },
+              {
+                "system": "https://hcpcs.codes/",
+                "code": "E0424"
+              },
+              {
+                "system": "https://hcpcs.codes/",
+                "code": "E0441"
+              },
+              {
+                "system": "https://hcpcs.codes/",
+                "code": "E1390"
+              },
+              {
+                "system": "https://hcpcs.codes/",
+                "code": "E1391"
+              },
+              {
+                "system": "https://hcpcs.codes/",
+                "code": "E0465",
+                "display": "Home ventilator, any type, used with invasive interface, (e.g., tracheostomy tube)"
+              },
+              {
+                "system": "https://hcpcs.codes/",
+                "code": "E0466",
+                "display": "Home ventilator, any type, used with non-invasive interface, (e.g., mask, chest shell)"
+              },
+              {
+                "system": "https://hcpcs.codes/",
+                "code": "E0467",
+                "display": "Home ventilator, multi-function respiratory device, also performs any or all of the additional functions of oxygen concentration, drug nebulization, aspiration, and cough stimulation, includes all accessories, components and supplies for all functions"
+              },
+              {
+                "system": "https://hcpcs.codes/",
+                "code": "E0470",
+                "display": "Respiratory assist device, bi-level pressure capability, without backup rate feature, used with noninvasive interface, e.g., nasal or facial mask (intermittent assist device with continuous positive airway pressure device)"
+              },
+              {
+                "system": "https://hcpcs.codes/",
+                "code": "E0471",
+                "display": "Respiratory assist device, bi-level pressure capability, with back-up rate feature, used with noninvasive interface, e.g., nasal or facial mask (intermittent assist device with continuous positive airway pressure device)"
+              },
+              {
+                "system": "https://hcpcs.codes/",
+                "code": "E0472",
+                "display": "Respiratory assist device, bi-level pressure capability, with backup rate feature, used with invasive interface, e.g., tracheostomy tube (intermittent assist device with continuous positive airway pressure device)"
+              },
+              {
+                "system": "https://hcpcs.codes/",
+                "code": "A4615",
+                "display": "Cannula, nasal"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "Encounter",
+        "codeFilter": [
+          {
+            "path": "code",
+            "code":[
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+                "code": "IMP",
+                "display": "inpatient encounter"
+              }
+            ]
+          },
+          {
+            "path": "code",
+            "code":[
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/v2-0004",
+                "code": "O",
+                "display": "Outpatient"
+              }
+            ]
+          }
+        ]
+      }
     ]
 }

@@ -1,0 +1,685 @@
+{
+  "resourceType": "Library",
+  "version": "1.0.0",
+  "name": "SupportSurfaceGroup",
+  "title": "SupportSurfaceGroup",
+  "status": "draft",
+  "type": {
+    "coding": [
+      {
+        "code": "logic-library"
+      }
+    ]
+  },
+  "relatedArtifact": [
+    {
+      "type": "depends-on",
+      "resource": "<FHIR-server>/Library/FHIRHelpers"
+    }
+  ],
+  "dataRequirement": [
+    {
+      "type": "Condition",
+      "codeFilter": [
+        {
+          "path": "code",
+          "valueSet": "<FHIR-server>/ValueSet/2.16.840.1.113883.3.6037.1001.23.98.115"
+        }
+        ]
+    },
+    {
+      "type": "Device",
+      "codeFilter": [
+        {
+          "path": "code",
+          "valueSet": "<FHIR-server>/ValueSet/2.16.840.1.113883.3.6037.1001.23.98.116"
+        }
+        ]
+    },
+    {
+      "type": "DeviceUseStatement",
+      "codeFilter": [
+        {
+          "path": "code",
+          "valueSet": "<FHIR-server>/ValueSet/2.16.840.1.113883.3.6037.1001.23.98.116"
+        }
+        ]
+    },
+    {
+      "type": "Condition",
+      "codeFilter": [
+        {
+          "path": "code",
+          "valueSet": "<FHIR-server>/ValueSet/2.16.840.1.113883.3.6037.1001.23.98.117"
+        }
+        ]
+    },
+    {
+      "type": "Procedure",
+      "codeFilter": [
+        {
+          "path": "code",
+          "valueSet": "<FHIR-server>/ValueSet/2.16.840.1.113883.3.6037.1001.23.98.118"
+        }
+        ]
+    },
+    {
+      "type": "Procedure",
+      "codeFilter": [
+        {
+          "path": "code",
+          "valueSet": "<FHIR-server>/ValueSet/2.16.840.1.113883.3.6037.1001.23.98.119"
+        }
+        ]
+    },
+    {
+      "type": "Procedure",
+      "codeFilter": [
+        {
+          "path": "code",
+          "valueSet": "<FHIR-server>/ValueSet/2.16.840.1.113883.3.6037.1001.23.98.120"
+        }
+        ]
+    },
+    {
+      "type": "Procedure",
+      "codeFilter": [
+        {
+          "path": "code",
+          "valueSet": "<FHIR-server>/ValueSet/2.16.840.1.113883.3.6037.1001.23.98.121"
+        }
+        ]
+    },
+    {
+      "type": "Procedure",
+      "codeFilter": [
+        {
+          "path": "code",
+          "valueSet": "<FHIR-server>/ValueSet/2.16.840.1.113883.3.6037.1001.23.98.122"
+        }
+        ]
+    },
+    {
+      "type": "Observation",
+      "codeFilter": [
+        {
+          "path": "code",
+          "valueSet": "<FHIR-server>/ValueSet/2.16.840.1.113883.3.6037.1001.23.98.123"
+        }
+        ]
+    },
+    {
+      "type": "Observation",
+      "codeFilter": [
+        {
+          "path": "code",
+          "valueSet": "<FHIR-server>/ValueSet/2.16.840.1.113883.3.6037.1001.23.98.124"
+        }
+        ]
+    },
+    {
+      "type": "Observation",
+      "codeFilter": [
+        {
+          "path": "code",
+          "valueSet": "<FHIR-server>/ValueSet/2.16.840.1.113883.3.6037.1001.23.98.125"
+        }
+        ]
+    },
+    {
+      "type": "Procedure",
+      "codeFilter": [
+        {
+          "path": "code",
+          "valueSet": "<FHIR-server>/ValueSet/2.16.840.1.113883.3.6037.1001.23.98.126"
+        }
+        ]
+    },
+    {
+      "type": "Procedure",
+      "codeFilter": [
+        {
+          "path": "code",
+          "valueSet": "<FHIR-server>/ValueSet/2.16.840.1.113883.3.6037.1001.23.98.130"
+        }
+        ]
+    },
+    {
+      "type": "Device",
+      "codeFilter": [
+        {
+          "path": "code",
+          "valueSet": "<FHIR-server>/ValueSet/2.16.840.1.113883.3.6037.1001.23.98.128"
+        }
+        ]
+    },
+    {
+      "type": "DeviceUseStatement",
+      "codeFilter": [
+        {
+          "path": "code",
+          "valueSet": "<FHIR-server>/ValueSet/2.16.840.1.113883.3.6037.1001.23.98.128"
+        }
+        ]
+    },
+    {
+      "type": "DocumentReference",
+      "codeFilter": [
+        {
+          "path": "code",
+          "valueSet": "<FHIR-server>/ValueSet/2.16.840.1.113883.3.6037.1001.23.98.129"
+        }
+        ]
+    },
+    {
+      "type": "Condition",
+      "codeFilter": [
+        {
+          "path": "code",
+          "code": [
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10-cm",
+              "code": "L89.101",
+              "display": "Pressure ulcer of unspecified part of back, stage 1"
+            },
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10-cm",
+              "code": "L89.111",
+              "display": "Pressure ulcer of right upper back, stage 1"
+            },
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10-cm",
+              "code": "L89.121",
+              "display": "Pressure ulcer of left upper back, stage 1"
+            },
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10-cm",
+              "code": "L89.131",
+              "display": "Pressure ulcer of right lower back, stage 1"
+            },
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10-cm",
+              "code": "L89.141",
+              "display": "Pressure ulcer of left lower back, stage 1"
+            },
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10-cm",
+              "code": "L89.151",
+              "display": "Pressure ulcer of sacral region, stage 1"
+            },
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10-cm",
+              "code": "L89.201",
+              "display": "Pressure ulcer of unspecified hip, stage 1"
+            },
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10-cm",
+              "code": "L89.211",
+              "display": "Pressure ulcer of right hip, stage 1"
+            },
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10-cm",
+              "code": "L89.221",
+              "display": "Pressure ulcer of left hip, stage 1"
+            },
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10-cm",
+              "code": "L89.301",
+              "display": "Pressure ulcer of unspecified buttock, stage 1"
+            },
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10-cm",
+              "code": "L89.311",
+              "display": "Pressure ulcer of right buttock, stage 1"
+            },
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10-cm",
+              "code": "L89.321",
+              "display": "Pressure ulcer of left buttock, stage 1"
+            },
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10-cm",
+              "code": "L89.421",
+              "display": "Pressure ulcer of contiguous site of back, buttock and hip, stage 1"
+            },
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10-cm",
+              "code": "L89.102",
+              "display": "Pressure ulcer of unspecified part of back, stage 2"
+            },
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10-cm",
+              "code": "L89.112",
+              "display": "Pressure ulcer of right upper back, stage 2"
+            },
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10-cm",
+              "code": "L89.122",
+              "display": "Pressure ulcer of left upper back, stage 2"
+            },
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10-cm",
+              "code": "L89.132",
+              "display": "Pressure ulcer of right lower back, stage 2"
+            },
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10-cm",
+              "code": "L89.142",
+              "display": "Pressure ulcer of left lower back, stage 2"
+            },
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10-cm",
+              "code": "L89.152",
+              "display": "Pressure ulcer of sacral region, stage 2"
+            },
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10-cm",
+              "code": "L89.202",
+              "display": "Pressure ulcer of unspecified hip, stage 2"
+            },
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10-cm",
+              "code": "L89.212",
+              "display": "Pressure ulcer of right hip, stage 2"
+            },
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10-cm",
+              "code": "L89.222",
+              "display": "Pressure ulcer of left hip, stage 2"
+            },
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10-cm",
+              "code": "L89.302",
+              "display": "Pressure ulcer of unspecified buttock, stage 2"
+            },
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10-cm",
+              "code": "L89.312",
+              "display": "Pressure ulcer of right buttock, stage 2"
+            },
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10-cm",
+              "code": "L89.322",
+              "display": "Pressure ulcer of left buttock, stage 2"
+            },
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10-cm",
+              "code": "L89.42",
+              "display": "Pressure ulcer of contiguous site of back, buttock and hip, stage 2"
+            },
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10-cm",
+              "code": "L89.103",
+              "display": "Pressure ulcer of unspecified part of back, stage 3"
+            },
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10-cm",
+              "code": "L89.113",
+              "display": "Pressure ulcer of right upper back, stage 3"
+            },
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10-cm",
+              "code": "L89.123",
+              "display": "Pressure ulcer of left upper back, stage 3"
+            },
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10-cm",
+              "code": "L89.133",
+              "display": "Pressure ulcer of right lower back, stage 3"
+            },
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10-cm",
+              "code": "L89.143",
+              "display": "Pressure ulcer of left lower back, stage 3"
+            },
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10-cm",
+              "code": "L89.153",
+              "display": "Pressure ulcer of sacral region, stage 3"
+            },
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10-cm",
+              "code": "L89.203",
+              "display": "Pressure ulcer of unspecified hip, stage 3"
+            },
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10-cm",
+              "code": "L89.213",
+              "display": "Pressure ulcer of right hip, stage 3"
+            },
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10-cm",
+              "code": "L89.223",
+              "display": "Pressure ulcer of left hip, stage 3"
+            },
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10-cm",
+              "code": "L89.303",
+              "display": "Pressure ulcer of unspecified buttock, stage 3"
+            },
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10-cm",
+              "code": "L89.313",
+              "display": "Pressure ulcer of right buttock, stage 3"
+            },
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10-cm",
+              "code": "L89.323",
+              "display": "Pressure ulcer of left buttock, stage 3"
+            },
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10-cm",
+              "code": "L89.43",
+              "display": "Pressure ulcer of contiguous site of back, buttock and hip, stage 3"
+            },
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10-cm",
+              "code": "L89.104",
+              "display": "Pressure ulcer of unspecified part of back, stage 4"
+            },
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10-cm",
+              "code": "L89.114",
+              "display": "Pressure ulcer of right upper back, stage 4"
+            },
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10-cm",
+              "code": "L89.124",
+              "display": "Pressure ulcer of left upper back, stage 4"
+            },
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10-cm",
+              "code": "L89.134",
+              "display": "Pressure ulcer of right lower back, stage 4"
+            },
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10-cm",
+              "code": "L89.144",
+              "display": "Pressure ulcer of left lower back, stage 4"
+            },
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10-cm",
+              "code": "L89.154",
+              "display": "Pressure ulcer of sacral region, stage 4"
+            },
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10-cm",
+              "code": "L89.204",
+              "display": "Pressure ulcer of unspecified hip, stage 4"
+            },
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10-cm",
+              "code": "L89.214",
+              "display": "Pressure ulcer of right hip, stage 4"
+            },
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10-cm",
+              "code": "L89.224",
+              "display": "Pressure ulcer of left hip, stage 4"
+            },
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10-cm",
+              "code": "L89.304",
+              "display": "Pressure ulcer of unspecified buttock, stage 4"
+            },
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10-cm",
+              "code": "L89.314",
+              "display": "Pressure ulcer of right buttock, stage 4"
+            },
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10-cm",
+              "code": "L89.324",
+              "display": "Pressure ulcer of left buttock, stage 4"
+            },
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10-cm",
+              "code": "L89.44",
+              "display": "Pressure ulcer of contiguous site of back, buttock and hip, stage 4"
+            },
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10-cm",
+              "code": "L89.100",
+              "display": "Pressure ulcer of unspecified part of back, unstageable"
+            },
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10-cm",
+              "code": "L89.110",
+              "display": "Pressure ulcer of right upper back, unstageable"
+            },
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10-cm",
+              "code": "L89.120",
+              "display": "Pressure ulcer of left upper back, unstageable"
+            },
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10-cm",
+              "code": "L89.130",
+              "display": "Pressure ulcer of right lower back, unstageable"
+            },
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10-cm",
+              "code": "L89.140",
+              "display": "Pressure ulcer of left lower back, unstageable"
+            },
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10-cm",
+              "code": "L89.150",
+              "display": "Pressure ulcer of sacral region, unstageable"
+            },
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10-cm",
+              "code": "L89.200",
+              "display": "Pressure ulcer of unspecified hip, unstageable"
+            },
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10-cm",
+              "code": "L89.210",
+              "display": "Pressure ulcer of right hip, unstageable"
+            },
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10-cm",
+              "code": "L89.220",
+              "display": "Pressure ulcer of left hip, unstageable"
+            },
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10-cm",
+              "code": "L89.300",
+              "display": "Pressure ulcer of unspecified buttock, unstageable"
+            },
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10-cm",
+              "code": "L89.310",
+              "display": "Pressure ulcer of right buttock, unstageable"
+            },
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10-cm",
+              "code": "L89.320",
+              "display": "Pressure ulcer of left buttock, unstageable"
+            },
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10-cm",
+              "code": "L89.45",
+              "display": "Pressure ulcer of contiguous site of back, buttock and hip, unstageable"
+            },
+            {
+              "system": "http://snomed.info/sct",
+              "code": "302045007",
+              "display": "Does not mobilize"
+            },
+            {
+              "system": "http://snomed.info/sct",
+              "code": "82971005",
+              "display": "Impaired mobility"
+            },
+            {
+              "system": "http://snomed.info/sct",
+              "code": "130985008",
+              "display": "Disturbed sensory perception"
+            },
+            {
+              "system": "http://snomed.info/sct",
+              "code": "409055009",
+              "display": "Ineffective tissue perfusion"
+            },
+            {
+              "system": "http://snomed.info/sct",
+              "code": "72042002",
+              "display": "Incontinence of feces"
+            },
+            {
+              "system": "http://snomed.info/sct",
+              "code": "165232002",
+              "display": "Urinary incontinence"
+            },
+            {
+              "system": "http://snomed.info/sct",
+              "code": "445261000124106",
+              "display": "Nutrition impaired"
+            },
+            {
+              "system": "http://snomed.info/sct",
+              "code": "397704003",
+              "display": "Pain sensation, function"
+            },
+            {
+              "system": "http://snomed.info/sct",
+              "code": "44695005",
+              "display": "Paralysis"
+            },
+            {
+              "system": "http://snomed.info/sct",
+              "code": "397623002",
+              "display": "Ability to sense pressure"
+            },
+            {
+              "system": "http://snomed.info/sct",
+              "code": "397643008",
+              "display": "Ability to sense sharp point"
+            },
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10-cm",
+              "code": "L89.503",
+              "display": "Pressure ulcer of unspecified ankle, stage 3"
+            },
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10-cm",
+              "code": "L89.504",
+              "display": "Pressure ulcer of unspecified ankle, stage 4"
+            },
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10-cm",
+              "code": "L89.513",
+              "display": "Pressure ulcer of right ankle, stage 3"
+            },
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10-cm",
+              "code": "L89.514",
+              "display": "Pressure ulcer of right ankle, stage 4"
+            },
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10-cm",
+              "code": "L89.523",
+              "display": "Pressure ulcer of left ankle, stage 3"
+            },
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10-cm",
+              "code": "L89.524",
+              "display": "Pressure ulcer of left ankle, stage 4"
+            },
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10-cm",
+              "code": "L89.603",
+              "display": "Pressure ulcer of unspecified heel, stage 3"
+            },
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10-cm",
+              "code": "L89.604",
+              "display": "Pressure ulcer of unspecified heel, stage 4"
+            },
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10-cm",
+              "code": "L89.613",
+              "display": "Pressure ulcer of right heel, stage 3"
+            },
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10-cm",
+              "code": "L89.614",
+              "display": "Pressure ulcer of right heel, stage 4"
+            },
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10-cm",
+              "code": "L89.623",
+              "display": "Pressure ulcer of left heel, stage 3"
+            },
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10-cm",
+              "code": "L89.624",
+              "display": "Pressure ulcer of left heel, stage 4"
+            },
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10-cm",
+              "code": "L89.813",
+              "display": "Pressure ulcer of head, stage 3"
+            },
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10-cm",
+              "code": "L89.814",
+              "display": "Pressure ulcer of head, stage 4"
+            },
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10-cm",
+              "code": "L89.893",
+              "display": "Pressure ulcer of other site, stage 3"
+            },
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10-cm",
+              "code": "L89.894",
+              "display": "Pressure ulcer of other site, stage 4"
+            },
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10-cm",
+              "code": "L89.93",
+              "display": "Pressure ulcer of unspecified site, stage 3"
+            },
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10-cm",
+              "code": "L89.94",
+              "display": "Pressure ulcer of unspecified site, stage 4"
+            },
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10-cm",
+              "code": "L89.003",
+              "display": "Pressure ulcer of unspecified elbow, stage 3"
+            },
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10-cm",
+              "code": "L89.004",
+              "display": "Pressure ulcer of unspecified elbow, stage 4"
+            },
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10-cm",
+              "code": "L89.013",
+              "display": "Pressure ulcer of right elbow, stage 3"
+            },
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10-cm",
+              "code": "L89.014",
+              "display": "Pressure ulcer of right elbow, stage 4"
+            },
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10-cm",
+              "code": "L89.023",
+              "display": "Pressure ulcer of left elbow, stage 3"
+            },
+            {
+              "system": "http://hl7.org/fhir/sid/icd-10-cm",
+              "code": "L89.024",
+              "display": "Pressure ulcer of left elbow, stage 4"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

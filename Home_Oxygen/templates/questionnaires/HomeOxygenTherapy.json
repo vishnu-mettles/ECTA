@@ -8,13 +8,13 @@
   ],
   "version": "1.0.0",
   "name": "HomeOxygenTherapy",
-  "title": "HomeOxygenTherapy",
-  "status": "draft",
+  "title": "Home Oxygen Therapy",
+  "status": "active",
   "subjectType": [
     "Patient"
   ],
   "date": "2019-12-03",
-  "publisher": "Mettle Solutions",
+  "publisher": "CMS",
   "extension": [
     {
       "url": "http://hl7.org/fhir/StructureDefinition/cqf-library",
@@ -22,35 +22,6 @@
     }
   ],
   "url": "<FHIR-server>/Questionnaire/questionnaire-homeoxygen-HomeOxygenTherapy",
-  "contained": [
-    {
-      "resourceType": "ValueSet",
-      "id": "gender",
-      "name": "Gender",
-      "status": "draft",
-      "description": "Gender",
-      "compose": {
-        "include": [
-          {
-            "concept": [
-              {
-                "code": "male",
-                "display": "Male"
-              },
-              {
-                "code": "female",
-                "display": "Female"
-              },
-              {
-                "code": "other",
-                "display": "Other"
-              }
-            ]
-          }
-        ]
-      }
-    }
-  ],
   "item": [
     {
       "linkId": "1",
@@ -137,7 +108,12 @@
           "linkId": "2.2",
           "text": "Is this encounter an inpatient hospital stay?",
           "type": "boolean",
-          "required": false
+          "required": false,
+          "initial": [
+            {
+              "valueBoolean": false
+            }
+          ]
         },
         {
           "extension": [
@@ -152,7 +128,12 @@
           "linkId": "2.3",
           "text": "Was blood gas study ordered and evaluated?",
           "type": "boolean",
-          "required": false
+          "required": false,
+          "initial": [
+            {
+              "valueBoolean": false
+            }
+          ]
         },
         {
           "extension": [
@@ -174,6 +155,19 @@
           "linkId": "2.4",
           "text": "Date of Blood Gas Study test?",
           "type": "date",
+          "required": false
+        },
+        {
+          "enableWhen": [
+            {
+              "operator": "=",
+              "question": "2.3",
+              "answerBoolean": true
+            }
+          ],
+          "linkId": "2.4.1",
+          "text": "Testing location of Blood Gas Study test?",
+          "type": "text",
           "required": false
         },
         {
@@ -255,7 +249,12 @@
           "linkId": "2.8",
           "text": "Is there an expectation that home oxygen therapy will improve O2 Saturation?",
           "type": "boolean",
-          "required": true
+          "required": true,
+          "initial": [
+            {
+              "valueBoolean": false
+            }
+          ]
         },
         {
           "extension": [
@@ -270,7 +269,12 @@
           "linkId": "2.9",
           "text": "Is the patient mobile within the home? ",
           "type": "boolean",
-          "required": false
+          "required": false,
+          "initial": [
+            {
+              "valueBoolean": false
+            }
+          ]
         }
       ]
     },
@@ -292,7 +296,12 @@
           "linkId": "3.01",
           "text": "Does the patient have any conditions that could cause inaccuracies in the ABG/pulse oximetry results?",
           "type": "boolean",
-          "required": true
+          "required": true,
+          "initial": [
+            {
+              "valueBoolean": false
+            }
+          ]
         },
         {
           "extension": [
@@ -365,7 +374,6 @@
           "type": "string",
           "required": true
         },
-
         {
           "extension": [
             {
@@ -379,7 +387,12 @@
           "linkId": "3.4",
           "text": "Does patient have symptoms of Hypoxemia ? ",
           "type": "boolean",
-          "required": false
+          "required": false,
+          "initial": [
+            {
+              "valueBoolean": false
+            }
+          ]
         },
         {
           "extension": [
@@ -394,7 +407,12 @@
           "linkId": "3.5",
           "text": "Presence of Exertional hypoxia / desaturation",
           "type": "boolean",
-          "required": true
+          "required": true,
+          "initial": [
+            {
+              "valueBoolean": false
+            }
+          ]
         },
         {
           "extension": [
@@ -416,7 +434,12 @@
           "linkId": "3.6",
           "text": "Was exercise testing performed in-person by a treating practitioner or other medical professional qualified to conduct testing ? ",
           "type": "boolean",
-          "required": true
+          "required": true,
+          "initial": [
+            {
+              "valueBoolean": false
+            }
+          ]
         },
         {
           "extension": [
@@ -431,7 +454,12 @@
           "linkId": "3.07",
           "text": "Presence of any nocturnal symptoms ?",
           "type": "boolean",
-          "required": true
+          "required": true,
+          "initial": [
+            {
+              "valueBoolean": false
+            }
+          ]
         },
         {
           "extension": [
@@ -515,7 +543,12 @@
           ],
           "linkId": "3.8",
           "text": "Does the patient have Obstructive Sleep Apnea (OSA) ?",
-          "type": "boolean"
+          "type": "boolean",
+          "initial": [
+            {
+              "valueBoolean": false
+            }
+          ]
         },
         {
           "extension": [
@@ -536,7 +569,12 @@
           ],
           "linkId": "3.9",
           "type":"boolean",
-          "text": "Was nocturnal testing performed under the direction of medicare enrolled IDTF ?"
+          "text": "Was nocturnal testing performed under the direction of medicare enrolled IDTF ?",
+          "initial": [
+            {
+              "valueBoolean": false
+            }
+          ]
         },
 
         {
@@ -559,7 +597,12 @@
           "linkId": "3.10",
           "text": "Is the patient's OSA being sufficiently treated?",
           "type": "boolean",
-          "required": true
+          "required": true,
+          "initial": [
+            {
+              "valueBoolean": false
+            }
+          ]
         },
         {
           "enableWhen": [
@@ -572,11 +615,15 @@
           "linkId": "3.11",
           "text": "Was the titration study performed after determining optimal settings of the PAP device ?",
           "type": "boolean",
-          "required": true
+          "required": true,
+          "initial": [
+            {
+              "valueBoolean": false
+            }
+          ]
         }
       ]
     },
-
     {
       "linkId": "4",
       "text": "Relevant Patient Observations",
@@ -595,7 +642,12 @@
           "linkId": "4.1",
           "text": "Was blood gas study performed",
           "type": "boolean",
-          "required": true
+          "required": true,
+          "initial": [
+            {
+              "valueBoolean": false
+            }
+          ]
         },
         {
           "linkId": "4.0.1",
@@ -607,6 +659,11 @@
               "operator": "=",
               "question": "4.1",
               "answerBoolean": true
+            }
+          ],
+          "initial": [
+            {
+              "valueBoolean": false
             }
           ]
         },
@@ -1031,10 +1088,11 @@
             }
           ],
           "linkId": "5.5",
-          "text": "Determination of  Pulmonary hypertension/Cor Pulmonale",
+          "text": "Determination of Pulmonary hypertension/Cor Pulmonale",
           "type": "choice",
           "repeats": true,
           "required": true,
+          "enableBehavior": "any",
           "answerOption": [
             {
               "valueString": "Pulmonary Artery pressure"
@@ -1096,7 +1154,12 @@
           "linkId": "5.8",
           "text": "For normoxemic patients, are there any medical condition with distinct physiologic, cognitive, and/or functional symptoms documented in high-quality, peer-reviewed literature to be improved by oxygen therapy, such as cluster headaches ?",
           "type": "boolean",
-          "required": true
+          "required": true,
+          "initial": [
+            {
+              "valueBoolean": false
+            }
+          ]
         },
         {
           "extension": [
@@ -1255,7 +1318,7 @@
               }
             }
           ],
-          "linkId": "6.111",
+          "linkId": "6.1.1",
           "text": "Specify other",
           "type": "string",
           "required": true
@@ -1568,12 +1631,16 @@
 
             },
             {
-              "valueString": "arterial ulcers "
-
+              "valueCoding": {
+                "code": "arterial ulcers",
+                "display": "arterial ulcers"
+              }
             },
             {
-              "valueString": "venous stasis ulcers "
-
+              "valueCoding": {
+                "code": "venous stasis ulcers",
+                "display": "venous stasis ulcers"
+              }
             },
             {
               "valueString": "Other"
@@ -1668,8 +1735,10 @@
 
             },
             {
-              "valueString": "melena"
-
+              "valueCoding": {
+                "code": "ulcers",
+                "display": "ulcers"
+              }
             },
             {
               "valueString": "rectal bleeding"
@@ -2422,7 +2491,12 @@
               "linkId": "9.2.1",
               "text": "Stationary vs. Portable",
               "type": "boolean",
-              "required": true
+              "required": true,
+              "initial": [
+                {
+                  "valueBoolean": false
+                }
+              ]
             },
             {
               "linkId": "9.2.1.1",
@@ -2454,7 +2528,12 @@
               "linkId": "9.2.2",
               "text": "Rest vs. Exercise",
               "type": "boolean",
-              "required": true
+              "required": true,
+              "initial": [
+                {
+                  "valueBoolean": false
+                }
+              ]
             },
             {
               "linkId": "9.2.2.1",
@@ -2486,7 +2565,12 @@
               "linkId": "9.2.3",
               "text": "Daytime vs. Nighttime",
               "type": "boolean",
-              "required": true
+              "required": true,
+              "initial": [
+                {
+                  "valueBoolean": false
+                }
+              ]
             },
             {
               "linkId": "9.2.3.1",
@@ -2559,7 +2643,12 @@
           "linkId": "9.5",
           "text": "Is the device portable?",
           "type": "boolean",
-          "required": true
+          "required": true,
+          "initial": [
+            {
+              "valueBoolean": false
+            }
+          ]
         },
         {
           "extension": [
@@ -2601,8 +2690,10 @@
 
             },
             {
-              "valueString": "High flow oxygen therapy "
-
+              "valueCoding": {
+                "code": "High flow oxygen therapy",
+                "display": "High flow oxygen therapy"
+              }
             },
             {
              "valueString": "Other"
@@ -2624,8 +2715,11 @@
           "required": true,
           "answerOption": [
             {
-              "valueString": "Initial or original order for certification"
-
+              "valueCoding": {
+                "code": "Initial or original order for certification",
+                "display": "Initial or original order for certification"
+              },
+              "initialSelected": true
             },
             {
               "valueString": "Change in status"
@@ -2637,11 +2731,6 @@
             {
               "valueString": "Replacement"
 
-            }
-          ],
-          "initial": [
-            {
-              "valueString": "Initial or original order for certification"
             }
           ]
         },
@@ -2667,8 +2756,10 @@
 
             },
             {
-              "valueString": "Different supplier "
-
+              "valueCoding": {
+                "code": "Different supplier",
+                "display": "Different supplier"
+              }
             },
             {
               "valueString": "Other"
@@ -2736,6 +2827,21 @@
 
             }
           ]
+        }
+      ]
+    },
+    {
+      "linkId": "11",
+      "text": "Questionnaire Signed date",
+      "type": "date",
+      "required": false,
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+          "valueExpression": {
+            "language": "text/cql",
+            "expression": "SubmissionDate"
+          }
         }
       ]
     }

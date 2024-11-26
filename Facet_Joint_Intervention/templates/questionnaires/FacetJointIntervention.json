@@ -1,0 +1,4280 @@
+{
+    "resourceType": "Questionnaire",
+    "identifier": [
+        {
+            "system": "http://identifiers.mettles.com/prior_authorization",
+            "value": "medicare-FacetJointIntervention"
+        }
+    ],
+    "version": "1.0.0",
+    "name": "FacetJointIntervention",
+    "title": "FacetJointIntervention",
+    "status": "draft",
+    "subjectType": [
+      "Patient"
+    ],
+    "date": "2024-05-05",
+    "publisher": "Mettle Solutions",
+    "extension": [
+        {
+            "url": "http://hl7.org/fhir/StructureDefinition/cqf-library",
+            "valueCanonical": "<FHIR-server>/Library/library-facetjointintervention-FacetJointIntervention"
+        }
+    ],
+    "url": "<FHIR-server>/Questionnaire/questionnaire-facetjointintervention-FacetJointIntervention",
+    "item": [
+        {
+            "linkId": "1",
+            "text": "Order Details",
+            "type": "group",
+            "item": [
+                {
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+                            "valueExpression": {
+                                "language": "text/cql",
+                                "expression": "OrderDate"
+                            }
+                        }
+                    ],
+                  "linkId": "1.1",
+                  "text": "Order Date",
+                  "type": "date",
+                  "required": true
+                },
+                {
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+                            "valueExpression": {
+                                "language": "text/cql",
+                                "expression": "PrimaryServiceRequest"
+                            }
+                        }
+                    ],
+                  "linkId": "1.2",
+                  "text": "Procedure ordered",
+                  "type": "choice",
+                  "required": true,
+                  "answerOption": [
+                        {
+                            "valueCoding": {
+                                "system": "https://hcpcs.codes/",
+                                "code": "64490",
+                                "display": "64490 - Inj paravert f jnt c/t 1 lev"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "https://hcpcs.codes/",
+                                "code": "64493",
+                                "display": "64493 - Inj paravert f jnt l/s 1 lev"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "https://hcpcs.codes/",
+                                "code": "64633",
+                                "display": "64633 - Destroy cerv/thor facet jnt"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "https://hcpcs.codes/",
+                                "code": "64635",
+                                "display": "64635 - Destroy lumb/sac facet jnt"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+                            "valueExpression": {
+                                "language": "text/cql",
+                                "expression": "OrderId"
+                            }
+                        }
+                    ],
+                  "linkId": "1.3",
+                  "text": "Order Id",
+                  "type": "string",
+                  "required": true
+                },
+                {
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+                            "valueExpression": {
+                                "language": "text/cql",
+                                "expression": "OrderingPhysicianName"
+                            }
+                        }
+                    ],
+                  "linkId": "1.4",
+                  "text": "Ordering Physician Name",
+                  "type": "string",
+                  "required": true
+                },
+                {
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+                            "valueExpression": {
+                                "language": "text/cql",
+                                "expression": "OrderingPhysicianNPI"
+                            }
+                        }
+                    ],
+                  "linkId": "1.5",
+                  "text": "Ordering Physician NPI",
+                  "type": "string",
+                  "required": true
+                }
+            ]
+        },
+        {
+            "linkId": "2",
+            "text": "Requested Intervention Details",
+            "type": "group",
+            "item": [
+                {
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+                            "valueExpression": {
+                                "language": "text/cql",
+                                "expression": "PrimaryServiceRequest"
+                            }
+                        }
+                    ],
+                    "linkId": "2.1",
+                    "text": "What is the primary HCPC code for the requested procedure?",
+                    "type": "choice",
+                    "required": true,
+                    "repeats": false,
+                    "answerOption": [
+                        {
+                            "valueCoding": {
+                                "system": "https://hcpcs.codes/",
+                                "code": "64490",
+                                "display": "64490 - Inj paravert f jnt c/t 1 lev"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "https://hcpcs.codes/",
+                                "code": "64493",
+                                "display": "64493 - Inj paravert f jnt l/s 1 lev"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "https://hcpcs.codes/",
+                                "code": "64633",
+                                "display": "64633 - Destroy cerv/thor facet jnt"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "https://hcpcs.codes/",
+                                "code": "64635",
+                                "display": "64635 - Destroy lumb/sac facet jnt"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+                            "valueExpression": {
+                                "language": "text/cql",
+                                "expression": "AdditionalServiceRequest"
+                            }
+                        }
+                    ],
+                    "linkId": "2.2.1",
+                    "text": "How many additional levels are being requested?",
+                    "type": "choice",
+                    "required": true,
+                    "enableWhen": [
+                        {
+                            "operator": "=",
+                            "question": "2.1",
+                            "answerCoding":{
+                                "system": "https://hcpcs.codes/",
+                                "code": "64490",
+                                "display": "64490 - Inj paravert f jnt c/t 1 lev"
+                            }
+                        }
+                    ],
+                    "answerOption":[
+                        {
+                            "valueCoding": {
+                                "code": "None, Primary only",
+                                "display": "None, Primary only"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "https://hcpcs.codes/",
+                                "code": "64491",
+                                "display": "One additional level: 64491 - Inj paravert f jnt c/t 2 lev. (Primary level, and second level.)  Reminder: one to two levels, either unilateral or bilateral are allowed per session per spine region."
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "https://hcpcs.codes/",
+                                "code": "64492",
+                                "display": "Two additional levels: 64492 - Inj paravert f jnt c/t 3 lev. (Primary level, second level and a third level.)  Provider education:  Three or four levels is not medically necessary and not covered.  Reminder: one to two levels, either unilateral or bilateral are allowed per session per spine region."
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "code": "Three additional levels",
+                                "display": "Three additional levels.  (Primary level, second level, third level and a fourth level.)  Provider education:  Three or four levels is not medically necessary and not covered.  Reminder: one to two levels, either unilateral or bilateral are allowed per session per spine region."
+                            }
+                        }
+                    ]
+                },
+                {
+                    "linkId": "2.2.1.1",
+                    "text": "Specify the additional level being requested:",
+                    "type": "text",
+                    "required": true,
+                    "enableWhen": [
+                        {
+                            "operator": "=",
+                            "question": "2.2.1",
+                            "answerCoding": {
+                                "code": "Three additional levels",
+                                "display": "Three additional levels.  (Primary level, second level, third level and a fourth level.)  Provider education:  Three or four levels is not medically necessary and not covered.  Reminder: one to two levels, either unilateral or bilateral are allowed per session per spine region."
+                            }
+                        }
+                    ]
+                },
+                {
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+                            "valueExpression": {
+                                "language": "text/cql",
+                                "expression": "AdditionalServiceRequest"
+                            }
+                        }
+                    ],
+                    "linkId": "2.2.2",
+                    "text": "How many additional levels are being requested?",
+                    "type": "choice",
+                    "required": true,
+                    "enableWhen": [
+                        {
+                            "operator": "=",
+                            "question": "2.1",
+                            "answerCoding":{
+                                "system": "https://hcpcs.codes/",
+                                "code": "64493",
+                                "display": "64493 - Inj paravert f jnt l/s 1 lev"
+                            }
+                        }
+                    ],
+                    "answerOption":[
+                        {
+                            "valueCoding": {
+                                "code": "None, Primary only",
+                                "display": "None, Primary only"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "https://hcpcs.codes/",
+                                "code": "64494",
+                                "display": "One additional level: 64494 - Inj paravert f jnt l/s 2 lev. (Primary level, and second level.)  Reminder: one to two levels, unilateral or bilateral are allowed per session per spine region."
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "https://hcpcs.codes/",
+                                "code": "64495",
+                                "display": "Two additional levels: 64495 - Inj paravert f jnt l/s 3 lev.  (Primary level, second level and a third level.)  Provider education:  Three or four levels is not medically necessary and not covered.  Reminder: one to two levels, either unilateral or bilateral are allowed per session per spine region."
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "code": "Three additional levels",
+                                "display": "Three additional levels. (Primary level, second level, third leve and a fourth level.)  Provider education:  Three or four levels is not medically necessary and not covered.  Reminder: one to two levels, either unilateral or bilateral are allowed per session per spine region"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "linkId": "2.2.2.1",
+                    "text": "Specify the additional level being requested:",
+                    "type": "text",
+                    "required": true,
+                    "enableWhen": [
+                        {
+                            "operator": "=",
+                            "question": "2.2.2",
+                            "answerCoding": {
+                                "code": "Three additional levels",
+                                "display": "Three additional levels. (Primary level, second level, third leve and a fourth level.)  Provider education:  Three or four levels is not medically necessary and not covered.  Reminder: one to two levels, either unilateral or bilateral are allowed per session per spine region"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+                            "valueExpression": {
+                                "language": "text/cql",
+                                "expression": "AdditionalServiceRequest"
+                            }
+                        }
+                    ],
+                    "linkId": "2.2.3",
+                    "text": "How many additional levels are being requested?",
+                    "type": "choice",
+                    "required": true,
+                    "enableWhen": [
+                        {
+                            "operator": "=",
+                            "question": "2.1",
+                            "answerCoding":{
+                                "system": "https://hcpcs.codes/",
+                                "code": "64633",
+                                "display": "64633 - Destroy cerv/thor facet jnt"
+                            }
+                        }
+                    ],
+                    "answerOption":[
+                        {
+                            "valueCoding": {
+                                "code": "None, Primary only",
+                                "display": "None, Primary only"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "https://hcpcs.codes/",
+                                "code": "64634",
+                                "display": "One additional level: 64634 - Destroy c/th facet jnt addl. (Primary level and a second level.) Reminder: one to two levels, either unilateral or bilateral are allowed per session per spine region."
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "code": "Two additional levels",
+                                "display": "Two additional levels. (Primary level, second level, and a third level.)  Provider education:  Three or four levels is not medically necessary and not covered. Reminder: one to two levels, either unilateral or bilateral are allowed per session per spine region."
+                            }
+                        }
+                    ]
+                },
+                {
+                    "linkId": "2.2.3.1",
+                    "text": "Specify the additional level being requested:",
+                    "type": "text",
+                    "required": true,
+                    "enableWhen": [
+                        {
+                            "operator": "=",
+                            "question": "2.2.3",
+                            "answerCoding": {
+                                "code": "Two additional levels",
+                                "display": "Two additional levels. (Primary level, second level, and a third level.)  Provider education:  Three or four levels is not medically necessary and not covered. Reminder: one to two levels, either unilateral or bilateral are allowed per session per spine region."
+                            }
+                        }
+                    ]
+                },
+                {
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+                            "valueExpression": {
+                                "language": "text/cql",
+                                "expression": "AdditionalServiceRequest"
+                            }
+                        }
+                    ],
+                    "linkId": "2.2.4",
+                    "text": "How many additional levels are being requested?",
+                    "type": "choice",
+                    "required": true,
+                    "enableWhen": [
+                        {
+                            "operator": "=",
+                            "question": "2.1",
+                            "answerCoding": {
+                                "system": "https://hcpcs.codes/",
+                                "code": "64635",
+                                "display": "64635 - Destroy lumb/sac facet jnt"
+                            }
+                        }
+                    ],
+                    "answerOption":[
+                        {
+                            "valueCoding": {
+                                "code": "None, Primary only",
+                                "display": "None, Primary only"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "system": "https://hcpcs.codes/",
+                                "code": "64636",
+                                "display": "One additional level: 64636 - Destroy l/s facet jnt addl. (Primary level and a second level.)  Reminder: one to two levels, either unilateral or bilateral are allowed per session per spine region."
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "code": "Two additional levels",
+                                "display": "Two additional levels. (Primary level, second level and a third level.) Provider education: Three or four levels is not medically necessary and not covered. Reminder: one to two levels, either unilateral or bilateral are allowed per session per spine region."
+                            }
+                        }
+                    ]
+                },
+                {
+                    "linkId": "2.2.4.1",
+                    "text": "Specify the additional level being requested:",
+                    "type": "text",
+                    "required": true,
+                    "enableWhen": [
+                        {
+                            "operator": "=",
+                            "question": "2.2.4",
+                            "answerCoding": {
+                                "code": "Two additional levels",
+                                "display": "Two additional levels. (Primary level, second level and a third level.) Provider education: Three or four levels is not medically necessary and not covered. Reminder: one to two levels, either unilateral or bilateral are allowed per session per spine region."
+                            }
+                        }
+                    ]
+                },
+                {
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+                            "valueExpression": {
+                                "language": "text/cql",
+                                "expression": "InterventionType"
+                            }
+                        }
+                    ],
+                    "linkId": "2.6",
+                    "text": "Is the intervention for diagnostic, therapeutic, facet cyst rupture, or RFA?",
+                    "type": "choice",
+                    "required": true,
+                    "answerOption":[
+                        {
+                            "valueCoding":{
+                                "code": "Diagnostic",
+                                "display": "Diagnostic"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "Therapeutic",
+                                "display": "Therapeutic"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "Facet Cyst Rupture",
+                                "display": "Facet Cyst Rupture"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "Radio Frequency Ablation",
+                                "display": "Radio Frequency Ablation"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+                            "valueExpression": {
+                                "language": "text/cql",
+                                "expression": "FirstOrSecondDiagnosis"
+                            }
+                        }
+                    ],
+                    "linkId": "2.7",
+                    "text": "If diagnostic is this the first or second injection?",
+                    "type": "choice",
+                    "required": true,
+                    "enableWhen": [
+                        {
+                            "operator": "=",
+                            "question": "2.6",
+                            "answerCoding": {
+                                "code": "Diagnostic",
+                                "display": "Diagnostic"
+                            }
+                        }
+                    ],
+                    "answerOption":[
+                        {
+                            "valueCoding":{
+                                "code": "Intraarticular (IA): first injection.",
+                                "display": "Intraarticular (IA): first injection."
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "Intraarticular (IA): second injection.",
+                                "display": "Intraarticular (IA): second injection."
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "Medial branch block (MBB) first injection.",
+                                "display": "Medial branch block (MBB) first injection."
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "Medial branch block (MBB) second injection.",
+                                "display": "Medial branch block (MBB) second injection."
+                            }
+                        }
+                    ]
+                },
+                {
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+                            "valueExpression": {
+                                "language": "text/cql",
+                                "expression": "FirstDiagnosisInjectionDate"
+                            }
+                        }
+                    ],
+                    "linkId": "2.7.1",
+                    "text": "What was the qualifying first injection date?",
+                    "type": "date",
+                    "enableBehavior": "any",
+                    "required": true,
+                    "enableWhen": [
+                        {
+                            "operator": "=",
+                            "question": "2.7",
+                            "answerCoding": {
+                                "code": "Intraarticular (IA): second injection.",
+                                "display": "Intraarticular (IA): second injection."
+                            }
+                        },
+                        {
+                            "operator": "=",
+                            "question": "2.7",
+                            "answerCoding": {
+                                "code": "Medial branch block (MBB) second injection.",
+                                "display": "Medial branch block (MBB) second injection."
+                            }
+                        }
+                    ]
+                },
+                {
+                    "linkId": "2.7.2",
+                    "text": "Provider Education: For each covered spinal region no more than four (4) diagnostic joint sessions will be reimbursed per rolling 12 months, in recognition that the pain generator cannot always be identified with the initial and confirmatory diagnostic procedure.",
+                    "type": "boolean",
+                    "required": true,
+                    "enableWhen": [
+                        {
+                            "operator": "=",
+                            "question": "2.6",
+                            "answerCoding": {
+                                "code": "Diagnostic",
+                                "display": "Diagnostic"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "linkId": "2.10",
+                    "text": "What were the qualifying first and second injection dates?",
+                    "type": "group",
+                    "enableWhen": [
+                        {
+                            "operator": "=",
+                            "question": "2.6",
+                            "answerCoding": {
+                                "code": "Therapeutic",
+                                "display": "Therapeutic"
+                            }
+                        }
+                    ], 
+                    "item":[
+                        {
+                            "extension": [
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+                                    "valueExpression": {
+                                        "language": "text/cql",
+                                        "expression": "FirstDiagnosisInjectionDate"
+                                    }
+                                }
+                            ],
+                            "linkId": "2.10.1",
+                            "text": "IA First injection date:",
+                            "type": "date",
+                            "required": false
+                        },
+                        {
+                            "extension": [
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+                                    "valueExpression": {
+                                        "language": "text/cql",
+                                        "expression": "SecondDiagnosisInjectionDate"
+                                    }
+                                }
+                            ],
+                            "linkId": "2.10.2",
+                            "text": "IA Second injection date:",
+                            "type": "date",
+                            "required": false
+                        },
+                        {
+                            "extension": [
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+                                    "valueExpression": {
+                                        "language": "text/cql",
+                                        "expression": "FirstDiagnosisInjectionDate"
+                                    }
+                                }
+                            ],
+                            "linkId": "2.10.3",
+                            "text": "MBB First injection date:",
+                            "type": "date",
+                            "required": false
+                        },
+                        {
+                            "extension": [
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+                                    "valueExpression": {
+                                        "language": "text/cql",
+                                        "expression": "SecondDiagnosisInjectionDate"
+                                    }
+                                }
+                            ],
+                            "linkId": "2.10.4",
+                            "text": "MBB Second injection date:",
+                            "type": "date",
+                            "required": false
+                        }
+                    ]
+                },
+                {
+                    "linkId": "2.10.5",
+                    "text": "Provider Education: For each covered spinal region no more than four (4) therapeutic facet joint sessions will be reimbursed per rolling 12 months.",
+                    "type": "boolean",
+                    "required": true,
+                    "enableWhen": [
+                        {
+                            "operator": "=",
+                            "question": "2.6",
+                            "answerCoding": {
+                                "code": "Therapeutic",
+                                "display": "Therapeutic"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "linkId": "2.11",
+                    "text": "If RFA is being performed what were the qualifying MBB first injection and MBB second injection dates?",
+                    "type": "group",
+                    "enableWhen": [
+                        {
+                            "operator": "=",
+                            "question": "2.6",
+                            "answerCoding": {
+                                "code": "Radio Frequency Ablation",
+                                "display": "Radio Frequency Ablation"
+                            }
+                        }
+                    ],
+                    "item":[
+                        {
+                            "linkId": "2.11.1",
+                            "text": "Medial branch block (MBB) first injection date:",
+                            "type": "date",
+                            "required": false
+                        },
+                        {
+                            "linkId": "2.11.2",
+                            "text": "Medial branch block (MBB) second injection date:",
+                            "type": "date",
+                            "required": false
+                        }
+                    ]
+                },
+                {
+                    "linkId": "2.11.3",
+                    "text": "Provider Education: For each covered spinal region no more than two (2) radiofrequency sessions will be reimbursed per rolling 12 months.",
+                    "type": "boolean",
+                    "required": true,
+                    "enableWhen": [
+                        {
+                            "operator": "=",
+                            "question": "2.6",
+                            "answerCoding": {
+                                "code": "Radio Frequency Ablation",
+                                "display": "Radio Frequency Ablation"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "linkId": "2.11.4",
+                    "text": "Provider Education: Cyst aspiration/rupture may be repeated once per individual cyst and only if there is 50% or more consistent improvement in pain for at least three (3) months.",
+                    "type": "boolean",
+                    "required": true,
+                    "enableWhen": [
+                        {
+                            "operator": "=",
+                            "question": "2.6",
+                            "answerCoding": {
+                                "code": "Facet Cyst Rupture",
+                                "display": "Facet Cyst Rupture"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "linkId": "2.12",
+                    "text": "Are there treatments such as anticoagulation interruption of therapy that would support consideration for additional levels?",
+                    "type": "boolean",
+                    "required": false
+                },
+                {
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+                            "valueExpression": {
+                                "language": "text/cql",
+                                "expression": "IsSedationNecessary"
+                            }
+                        }
+                    ],
+                    "linkId": "2.13",
+                    "text": "Is general anesthesia, moderate sedation, or monitored anesthesia care going to be used?",
+                    "type": "boolean",
+                    "required": false
+                },
+                {
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+                            "valueExpression": {
+                                "language": "text/cql",
+                                "expression": "SedationNecessary"
+                            }
+                        }
+                    ],
+                    "linkId": "2.14",
+                    "text": "What is the specific condition or symptoms that make sedation medically necessary?  Select all that are well documented.",
+                    "type": "choice",
+                    "repeats": true,
+                    "required": false,
+                    "enableWhen":[
+                        {
+                            "operator": "=",
+                            "question": "2.13",
+                            "answerBoolean": true
+                        }
+                    ],
+                    "answerOption":[
+                        {
+                            "valueCoding":{
+                                "code":"Patient has a medical condition that would interfere with the procedure.",
+                                "display":"Patient has a medical condition that would interfere with the procedure."
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code":"Patient does not have the cognitive capacity to cooperate.",
+                                "display":"Patient does not have the cognitive capacity to cooperate."
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code":"Patient does not have the functional capacity to cooperate.",
+                                "display":"Patient does not have the functional capacity to cooperate."
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code":"Patient does not have the capacity to remain motionless during the procedure.",
+                                "display":"Patient does not have the capacity to remain motionless during the procedure."
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code":"Patient is not able to tolerate remaining in a painful position for a prolonged period of time.",
+                                "display":"Patient is not able to tolerate remaining in a painful position for a prolonged period of time."
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code":"Other",
+                                "display":"Other"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "linkId": "2.15",
+                    "text": "Specify other",
+                    "type": "text",
+                    "required": false,
+                    "enableWhen":[
+                        {
+                            "operator": "=",
+                            "question": "2.14",
+                            "answerCoding": {
+                                "code": "Other",
+                                "display": "Other"
+                            } 
+                        }
+                    ]
+                },
+                {
+                    "linkId": "2.16",
+                    "text": "If the requested intervention will not meet the medical necessity criteria for anesthesia/sedation, was an advance beneficiary notice of non-coverage (ABN) given to the patient?",
+                    "type": "boolean",
+                    "required": false,
+                    "enableWhen":[
+                        {
+                            "operator": "=",
+                            "question": "2.13",
+                            "answerBoolean": false
+                        }
+                    ]
+                },
+                {
+                    "linkId": "2.17",
+                    "text": "Is this request an expedited request?",
+                    "type": "boolean",
+                    "required": false
+                },
+                {
+                    "linkId": "2.18",
+                    "text": "What is the specific condition that demonstrates any delays can jeopardize the patient?  Specify:",
+                    "type": "text",
+                    "required": false,
+                    "enableWhen":[
+                        {
+                            "operator": "=",
+                            "question": "2.17",
+                            "answerBoolean": true
+                        }
+                    ]
+                },
+                {
+                    "linkId": "2.19",
+                    "text": "What is the date for the requested expedited procedure to be performed?",
+                    "type": "date",
+                    "required": false,
+                    "enableWhen":[
+                        {
+                            "operator": "=",
+                            "question": "2.17",
+                            "answerBoolean": true
+                        }
+                    ]
+                },
+                {
+                    "linkId": "2.20",
+                    "text": "Will fluoroscopy or CT Guidance be used during this intervention?",
+                    "type": "boolean",
+                    "required": false
+                },
+                {
+                    "linkId": "2.21",
+                    "text": "What FDA approved agents will be injected?  Select all that apply.",
+                    "type": "choice",
+                    "required": false,
+                    "repeats": true,
+                    "answerOption":[
+                        {
+                            "valueCoding":{
+                                "code": "Contrast agent",
+                                "display": "Contrast agent"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "Corticosteroids",
+                                "display": "Corticosteroids"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "Anti-inflammatory",
+                                "display": "Anti-inflammatory"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "Anesthetic",
+                                "display": "Anesthetic"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "linkId": "2.21.1",
+                    "text": "Anesthetic injected:",
+                    "type": "choice",
+                    "required": false,
+                    "enableWhen": [
+                        {
+                            "operator": "=",
+                            "question": "2.21",
+                            "answerCoding": {
+                                "code": "Anesthetic",
+                                "display": "Anesthetic"
+                            }
+                        }
+                    ],
+                    "answerOption":[
+                        {
+                            "valueCoding":{
+                                "code": "Procaine",
+                                "display": "Procaine"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "Lidocaine",
+                                "display": "Lidocaine"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "Tetracaine",
+                                "display": "Tetracaine"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "Prilocaine",
+                                "display": "Prilocaine"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "Etidocaine",
+                                "display": "Etidocaine"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "Bupivacaine",
+                                "display": "Bupivacaine"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "Ropivacaine",
+                                "display": "Ropivacaine"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "linkId": "2.22",
+                    "text": "Does the patient have an implanted electrical device that requires consideration?",
+                    "type": "boolean",
+                    "required": false
+                },
+                {
+                    "linkId": "2.23",
+                    "text": "Provider has/will follow manufacturer instructions to ensure patient's safety relevant to the planned procedure?",
+                    "type": "boolean",
+                    "required": false,
+                    "enableWhen":[
+                        {
+                            "operator": "=",
+                            "question": "2.22",
+                            "answerBoolean": true
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "linkId": "3",
+            "text": "Diagnosis(es) and  Hx of Relevant Procedures",
+            "type": "group",
+            "item":[
+                {
+                    "linkId": "3.1",
+                    "text": "The patient's primary diagnosis that supports approval for a facet joint intervention procedure.",
+                    "type": "group",
+                    "enableBehavior": "any",
+                    "enableWhen": [
+                        {
+                            "operator": "=",
+                            "question": "2.6",
+                            "answerCoding": {
+                                "code": "Diagnostic",
+                                "display": "Diagnostic"
+                            }
+                        },
+                        {
+                            "operator": "=",
+                            "question": "2.6",
+                            "answerCoding": {
+                                "code": "Therapeutic",
+                                "display": "Therapeutic"
+                            }
+                        },
+                        {
+                            "operator": "=",
+                            "question": "2.6",
+                            "answerCoding": {
+                                "code": "Radio Frequency Ablation",
+                                "display": "Radio Frequency Ablation"
+                            }
+                        }
+                    
+                    ],
+                    "item":[
+                        {
+                            "extension": [
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+                                    "valueExpression": {
+                                        "language": "text/cql",
+                                        "expression": "PrimaryDiagnosisCervicalThoracic"
+                                    }
+                                }
+                            ],
+                            "linkId": "3.1.a",
+                            "text": "Cervical/Thoracic",
+                            "type": "choice",
+                            "required": false,
+                            "answerOption": [
+                                {
+                                    "valueCoding":{
+                                        "code": "M47.812",
+                                        "display": "Spondylosis without myelopathy or radiculopathy, cervical region"
+                                    }
+                                },
+                                {
+                                    "valueCoding":{
+                                        "code": "M47.813",
+                                        "display": "Spondylosis without myelopathy or radiculopathy, cervicothoracic region"
+                                    }
+                                },
+                                {
+                                    "valueCoding":{
+                                        "code": "M47.814",
+                                        "display": "Spondylosis without myelopathy or radiculopathy, thoracic region"
+                                    }
+                                },
+                                {
+                                    "valueCoding":{
+                                        "code": "M47.815",
+                                        "display": "Spondylosis without myelopathy or radiculopathy, thoracolumbar region"
+                                    }
+                                },
+                                {
+                                    "valueCoding":{
+                                        "code": "M47.892",
+                                        "display": "Other spondylosis, cervical region"
+                                    }
+                                },
+                                {
+                                    "valueCoding":{
+                                        "code": "M47.893",
+                                        "display": "Other spondylosis, cervicothoracic region"
+                                    }
+                                },
+                                {
+                                    "valueCoding":{
+                                        "code": "M47.894",
+                                        "display": "Other spondylosis, thoracic region"
+                                    }
+                                },
+                                {
+                                    "valueCoding":{
+                                        "code": "M47.895",
+                                        "display": "Other spondylosis, thoracolumbar region"
+                                    }
+                                },
+                                {
+                                    "valueCoding":{
+                                        "code": "M48.12",
+                                        "display": "Ankylosing hyperostosis [Forestier], cervical region"
+                                    }
+                                },
+                                {
+                                    "valueCoding":{
+                                        "code": "M48.13",
+                                        "display": "Ankylosing hyperostosis [Forestier], cervicothoracic region"
+                                    }
+                                },
+                                {
+                                    "valueCoding":{
+                                        "code": "M48.14",
+                                        "display": "Ankylosing hyperostosis [Forestier], thoracic region"
+                                    }
+                                },
+                                {
+                                    "valueCoding":{
+                                        "code": "M48.15",
+                                        "display": "Ankylosing hyperostosis [Forestier], thoracolumbar region"
+                                    }
+                                },
+                                {
+                                    "valueCoding":{
+                                        "code": "Other",
+                                        "display": "Other"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "linkId": "3.1.a.1",
+                            "text": "Specify other",
+                            "type": "text",
+                            "required": true,
+                            "enableWhen":[
+                                {
+                                    "operator": "=",
+                                    "question": "3.1.a",
+                                    "answerCoding": {
+                                        "code": "Other",
+                                        "display": "Other"
+                                    } 
+                                }
+                            ]
+                        },
+                        {
+                            "extension": [
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+                                    "valueExpression": {
+                                        "language": "text/cql",
+                                        "expression": "PrimaryDiagnosisLumbarSacral"
+                                    }
+                                }
+                            ],
+                            "linkId": "3.1.b",
+                            "text": "Lumbar/Sacral",
+                            "type": "choice",
+                            "required": false,
+                            "answerOption": [
+                                {
+                                    "valueCoding":{
+                                        "code": "M47.816",
+                                        "display": "Spondylosis without myelopathy or radiculopathy, lumbar region"
+                                    }
+                                },
+                                {
+                                    "valueCoding":{
+                                        "code": "M47.817",
+                                        "display": "Spondylosis without myelopathy or radiculopathy, lumbosacral region"
+                                    }
+                                },
+                                {
+                                    "valueCoding":{
+                                        "code": "M47.896",
+                                        "display": "Other spondylosis, lumbar region"
+                                    }
+                                },
+                                {
+                                    "valueCoding":{
+                                        "code": "M47.897",
+                                        "display": "Other spondylosis, lumbosacral region"
+                                    }
+                                },
+                                {
+                                    "valueCoding":{
+                                        "code": "M48.16",
+                                        "display": "Ankylosing hyperostosis [Forestier], lumbar region"
+                                    }
+                                },
+                                {
+                                    "valueCoding":{
+                                        "code": "M48.17",
+                                        "display": "Ankylosing hyperostosis [Forestier], lumbosacral region"
+                                    }
+                                },
+                                {
+                                    "valueCoding":{
+                                        "code": "Other",
+                                        "display": "Other"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "linkId": "3.1.b.1",
+                            "text": "Specify other",
+                            "type": "text",
+                            "required": true,
+                            "enableWhen":[
+                                {
+                                    "operator": "=",
+                                    "question": "3.1.b",
+                                    "answerCoding": {
+                                        "code": "Other",
+                                        "display": "Other"
+                                    } 
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "linkId": "3.1.1",
+                    "text": "The patient's primary diagnosis that supports approval and allowed for facet cyst rupture procedures only.",
+                    "type": "group",
+                    "required": false,
+                    "enableWhen":[
+                        {
+                            "operator": "=",
+                            "question": "2.6",
+                            "answerCoding": {
+                                "code": "Facet Cyst Rupture",
+                                "display": "Facet Cyst Rupture"
+                            }
+                        }
+                    ],
+                    "item": [
+                        {     
+                            "extension": [
+                                {
+                                    "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+                                    "valueExpression": {
+                                        "language": "text/cql",
+                                        "expression": "AnatomicRestrictionForMBBResource"
+                                    }
+                                }
+                            ],
+                            "linkId": "3.1.1.a",
+                            "text": "Cervical/Thoracic",
+                            "type": "choice",
+                            "required": true,
+                            "answerOption": [
+                                {
+                                    "valueCoding":{
+                                        "code": "M71.30",
+                                        "display": "Other bursal cyst, unspecified site"
+                                    }
+                                },
+                                {
+                                    "valueCoding":{
+                                        "code": "M71.38",
+                                        "display": "Other bursal cyst, other site"
+                                    }
+                                },
+                                {
+                                    "valueCoding":{
+                                        "code": "M53.8",
+                                        "display": "Other specified dorsopathies"
+                                    }
+                                },
+                                {
+                                    "valueCoding":{
+                                        "code": "M53.82",
+                                        "display": "Other specified dorsopathies, cervical"
+                                    }
+                                },
+                                {
+                                    "valueCoding":{
+                                        "code": "M53.83",
+                                        "display": "Other specified dorsopathies, cervicothoracic"
+                                    }
+                                },
+                                {
+                                    "valueCoding":{
+                                        "code": "M53.84",
+                                        "display": "Other specified dorsopathies, thoracic"
+                                    }
+                                },
+                                {
+                                    "valueCoding":{
+                                        "code": "M53.85",
+                                        "display": "Other specified dorsopathies, thoracolumbar"
+                                    }
+                                },
+                                {
+                                    "valueCoding":{
+                                        "code": "Other",
+                                        "display": "Other"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "linkId": "3.1.1.a.1",
+                            "text": "Specify other",
+                            "type": "text",
+                            "required": true,
+                            "enableWhen":[
+                                {
+                                    "operator": "=",
+                                    "question": "3.1.1.a",
+                                    "answerCoding": {
+                                        "code": "Other",
+                                        "display": "Other"
+                                    } 
+                                }
+                            ]
+                        },
+                        {
+                            "linkId": "3.1.1.b",
+                            "text": "Lumbar/Sacral",
+                            "type": "choice",
+                            "required": true,
+                            "answerOption": [
+                                {
+                                    "valueCoding":{
+                                        "code": "M71.30",
+                                        "display": "Other bursal cyst, unspecified site"
+                                    }
+                                },
+                                {
+                                    "valueCoding":{
+                                        "code": "M71.38",
+                                        "display": "Other bursal cyst, other site"
+                                    }
+                                },
+                                {
+                                    "valueCoding":{
+                                        "code": "M53.8",
+                                        "display": "Other specified dorsopathies"
+                                    }
+                                },
+                                {
+                                    "valueCoding":{
+                                        "code": "M53.86",
+                                        "display": "Other specified dorsopathies, lumbar"
+                                    }
+                                },
+                                {
+                                    "valueCoding":{
+                                        "code": "M53.87",
+                                        "display": "Other specified dorsopathies, lumbosacral"
+                                    }
+                                },
+                                {
+                                    "valueCoding":{
+                                        "code": "M53.88",
+                                        "display": "Other specified dorsopathies, sacral"
+                                    }
+                                },
+                                {
+                                    "valueCoding":{
+                                        "code": "Other",
+                                        "display": "Other"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "linkId": "3.1.1.b.1",
+                            "text": "Specify other",
+                            "type": "text",
+                            "required": true,
+                            "enableWhen":[
+                                {
+                                    "operator": "=",
+                                    "question": "3.1.1.b",
+                                    "answerCoding": {
+                                        "code": "Other",
+                                        "display": "Other"
+                                    } 
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "linkId": "3.2",
+                    "text": "Other relevant diagnosis or supported findings:",
+                    "type": "group",
+                    "item":[
+                        {
+                            "linkId": "3.2.a",
+                            "text": "Cervical/Thoracic",
+                            "type": "choice",
+                            "required": false,
+                            "repeats": true,
+                            "answerOption": [
+                                {
+                                    "valueCoding":{
+                                        "code": "M47.812",
+                                        "display": "Spondylosis without myelopathy or radiculopathy, cervical region"
+                                    }
+                                },
+                                {
+                                    "valueCoding":{
+                                        "code": "M47.813",
+                                        "display": "Spondylosis without myelopathy or radiculopathy, cervicothoracic region"
+                                    }
+                                },
+                                {
+                                    "valueCoding":{
+                                        "code": "M47.814",
+                                        "display": "Spondylosis without myelopathy or radiculopathy, thoracic region"
+                                    }
+                                },
+                                {
+                                    "valueCoding":{
+                                        "code": "M47.815",
+                                        "display": "Spondylosis without myelopathy or radiculopathy, thoracolumbar region"
+                                    }
+                                },
+                                {
+                                    "valueCoding":{
+                                        "code": "M47.892",
+                                        "display": "Other spondylosis, cervical region"
+                                    }
+                                },
+                                {
+                                    "valueCoding":{
+                                        "code": "M47.893",
+                                        "display": "Other spondylosis, cervicothoracic region"
+                                    }
+                                },
+                                {
+                                    "valueCoding":{
+                                        "code": "M47.894",
+                                        "display": "Other spondylosis, thoracic region"
+                                    }
+                                },
+                                {
+                                    "valueCoding":{
+                                        "code": "M47.895",
+                                        "display": "Other spondylosis, thoracolumbar region"
+                                    }
+                                },
+                                {
+                                    "valueCoding":{
+                                        "code": "M48.12",
+                                        "display": "Ankylosing hyperostosis [Forestier], cervical region"
+                                    }
+                                },
+                                {
+                                    "valueCoding":{
+                                        "code": "M48.13",
+                                        "display": "Ankylosing hyperostosis [Forestier], cervicothoracic region"
+                                    }
+                                },
+                                {
+                                    "valueCoding":{
+                                        "code": "M48.14",
+                                        "display": "Ankylosing hyperostosis [Forestier], thoracic region"
+                                    }
+                                },
+                                {
+                                    "valueCoding":{
+                                        "code": "M48.15",
+                                        "display": "Ankylosing hyperostosis [Forestier], thoracolumbar region"
+                                    }
+                                },
+                                {
+                                    "valueCoding":{
+                                        "code": "Other",
+                                        "display": "Other"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "linkId": "3.2.a.1",
+                            "text": "Specify other",
+                            "type": "text",
+                            "required": true,
+                            "enableWhen":[
+                                {
+                                    "operator": "=",
+                                    "question": "3.2.a",
+                                    "answerCoding": {
+                                        "code": "Other",
+                                        "display": "Other"
+                                    } 
+                                }
+                            ]
+                        },
+                        {
+                            "linkId": "3.2.b",
+                            "text": "Lumbar/Sacral",
+                            "type": "choice",
+                            "required": false,
+                            "repeats": true,
+                            "answerOption": [
+                                {
+                                    "valueCoding":{
+                                        "code": "M47.816",
+                                        "display": "Spondylosis without myelopathy or radiculopathy, lumbar region"
+                                    }
+                                },
+                                {
+                                    "valueCoding":{
+                                        "code": "M47.817",
+                                        "display": "Spondylosis without myelopathy or radiculopathy, lumbosacral region"
+                                    }
+                                },
+                                {
+                                    "valueCoding":{
+                                        "code": "M47.896",
+                                        "display": "Other spondylosis, lumbar region"
+                                    }
+                                },
+                                {
+                                    "valueCoding":{
+                                        "code": "M47.897",
+                                        "display": "Other spondylosis, lumbosacral region"
+                                    }
+                                },
+                                {
+                                    "valueCoding":{
+                                        "code": "M48.16",
+                                        "display": "Ankylosing hyperostosis [Forestier], lumbar region"
+                                    }
+                                },
+                                {
+                                    "valueCoding":{
+                                        "code": "M48.17",
+                                        "display": "Ankylosing hyperostosis [Forestier], lumbosacral region"
+                                    }
+                                },
+                                {
+                                    "valueCoding":{
+                                        "code": "Other",
+                                        "display": "Other"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "linkId": "3.2.b.1",
+                            "text": "Specify other",
+                            "type": "text",
+                            "required": true,
+                            "enableWhen":[
+                                {
+                                    "operator": "=",
+                                    "question": "3.2.b",
+                                    "answerCoding": {
+                                        "code": "Other",
+                                        "display": "Other"
+                                    } 
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "extension": [
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+                        "valueExpression": {
+                          "language": "text/cql",
+                          "expression": "AnatomicRestrictionForMBBResource"
+                        }
+                      }
+                    ],
+                    "linkId": "3.3",
+                    "text": "For the requested therapeutic intra-articular [IA] injection(s), select the Diagnosis(es) that explain anatomic restrictions and why an MBB cannot be performed.",
+                    "type": "choice",
+                    "repeats": true,
+                    "required": true,
+                    "answerOption": [
+                        {
+                            "valueCoding":{
+                                "code": "LA32187-9",
+                                "display": "Posterior Fusion"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "LP266363-3",
+                                "display": "Scoliosis"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "430962009",
+                                "display": "Pseudoarthrosis"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "40854002",
+                                "display": "Presence of a sixth lumbar vertebra"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "281373004",
+                                "display": "Sacralization of the fifth lumbar vertebra"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "LA15324-9",
+                                "display": "Severe Osteophytes (bone spurs)"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "414916001",
+                                "display": "Obesity or excessive adipose tissue"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "MTHU031129",
+                                "display": "Severe Kyphosis"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "Prior surgical scarring",
+                                "display": "Prior surgical scarring"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code":"Other",
+                                "display":"Other"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "linkId": "3.3.1",
+                    "text": "Specify other",
+                    "type": "text",
+                    "required": false,
+                    "enableWhen":[
+                        {
+                            "operator": "=",
+                            "question": "3.3",
+                            "answerCoding": {
+                                "code": "Other",
+                                "display": "Other"
+                            } 
+                        }
+                    ]
+                },
+                {
+                    "linkId": "3.4",
+                    "text": "Does the patient record reflect accurate/active ICD10 codes, eg., old diagnosis(es) have been coded to 'history of' if no longer active/being treated?",
+                    "type": "boolean",
+                    "required": false
+                },
+                {
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+                            "valueExpression": {
+                                "language": "text/cql",
+                                "expression": "NonFacetPathologySourcesAssessment"
+                            }
+                        }
+                    ],
+                    "linkId": "3.5",
+                    "text": "Non-facet pathology per clinical assessment or diagnostic studies has ruled out other sources of the patient's pain, including but not limited to fractures, tumors, infections or significant deformity.",
+                    "type": "choice",
+                    "required": false,
+                    "enableWhen": [
+                        {
+                            "operator": "=",
+                            "question": "2.6",
+                            "answerCoding": {
+                                "code": "Diagnostic",
+                                "display": "Diagnostic"
+                            }
+                        }
+                    ],
+                    "answerOption":[
+                        {
+                            "valueCoding":{
+                                "code": "Negative for non-facet pathology sources",
+                                "display": "Negative for non-facet pathology sources:  Medical record indicates all of the following are ABSENT: active spine fractures, spine tumors, active infections, sciatica, hip osteoarthritis, sacroiliac impingement, untreated radiculopathy, neurogenic claudication, myofascial pain, compression fractures, disc herniation, osteophytes, rheumatoid arthritis, fibromyalgia."
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "Positive for non-facet pathology sources",
+                                "display": "Positive for non-facet pathology sources:  Medical record indicates one or more of the following are PRESENT: active spine fractures, spine tumors, active infections, sciatica, hip osteoarthritis, sacroiliac impingement, untreated radiculopathy, neurogenic claudication, myofascial pain, compression fractures, disc herniation, osteophytes, rheumatoid arthritis, fibromyalgia."
+                            }
+                        }
+                    ]
+                },
+                {
+                    "linkId": "3.6",
+                    "text": "Hx of relevant spine surgery or procedures:",
+                    "type": "text",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "linkId": "4",
+            "text": "Supporting Clinical Findings",
+            "type": "group",
+            "item":[
+                {
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+                            "valueExpression": {
+                                "language": "text/cql",
+                                "expression": "SupportiveFindingsForRequestedProcedure"
+                            }
+                        }
+                    ],
+                    "linkId": "4.1",
+                    "text": "The supportive findings for the requested procedure, select one.",
+                    "type": "choice",
+                    "required": false,
+                    "answerOption":[
+                        {
+                            "valueCoding":{
+                                "code": "Neck pain and its progression.",
+                                "display": "Neck pain and its progression."
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "Axial low back pain and its progression.",
+                                "display": "Axial low back pain and its progression."
+                            }
+                        }
+                    ]
+                },
+                {
+                    "linkId": "4.2",
+                    "text": "Is there an initial pain onset encounter date PRIOR to the identified chronic pain baseline encounter, supporting the progression of chronic pain being identified, evaluated, and documented.",
+                    "type": "date",
+                    "required": false
+                },
+                {
+                    "linkId": "4.3",
+                    "text": "Which pain scale was used at the initial encounter? Provider education: Pain assessment must be performed and documented at baseline, after each procedure and at each follow-up using the same pain scale for each assessment.",
+                    "type": "choice",
+                    "required": false,
+                    "answerOption":[
+                        {
+                            "valueCoding":{
+                                "code": "Numerical Pain Rating Scale (NRS) (0-10)",
+                                "display": "Numerical Pain Rating Scale (NRS) (0-10)"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "Visual Analog Scale (VAS) Score",
+                                "display": "Visual Analog Scale (VAS) Score"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "Wong-Baker FACES",
+                                "display": "Wong-Baker FACES"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "Verbal Rating Scale for pain intensity",
+                                "display": "Verbal Rating Scale for pain intensity"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "Pain Assessment in Advanced Dementia Scale (PAINAD)",
+                                "display": "Pain Assessment in Advanced Dementia Scale (PAINAD)"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "Other",
+                                "display": "Other"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "No tool used",
+                                "display": "No tool used"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "linkId": "4.4",
+                    "text": "Pain duration",
+                    "type": "quantity",
+                    "required": false,
+                    "enableBehavior": "any",
+                    "enableWhen":[
+                        {
+                            "operator": "=",
+                            "question": "4.3",
+                            "answerCoding": {
+                                "code": "Numerical Pain Rating Scale (NRS) (0-10)",
+                                "display": "Numerical Pain Rating Scale (NRS) (0-10)"
+                            }
+                        },
+                        {
+                            "operator": "=",
+                            "question": "4.3",
+                            "answerCoding": {
+                                "code": "Visual Analog Scale (VAS) Score",
+                                "display": "Visual Analog Scale (VAS) Score"
+                            }
+                        },
+                        {
+                            "operator": "=",
+                            "question": "4.3",
+                            "answerCoding": {
+                                "code": "Wong-Baker FACES",
+                                "display": "Wong-Baker FACES"
+                            }
+                        },
+                        {
+                            "operator": "=",
+                            "question": "4.3",
+                            "answerCoding": {
+                                "code": "Verbal Rating Scale for pain intensity",
+                                "display": "Verbal Rating Scale for pain intensity"
+                            }
+                        },
+                        {
+                            "operator": "=",
+                            "question": "4.3",
+                            "answerCoding": {
+                                "code": "Pain Assessment in Advanced Dementia Scale (PAINAD)",
+                                "display": "Pain Assessment in Advanced Dementia Scale (PAINAD)"
+                            }
+                        },
+                        {
+                            "operator": "=",
+                            "question": "4.3",
+                            "answerCoding": {
+                                "code": "Other",
+                                "display": "Other"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "linkId": "4.5",
+                    "text": "Pain Intensity or Severity  (Pain Score)",
+                    "type": "integer",
+                    "required": false,
+                    "enableBehavior": "any",
+                    "enableWhen":[
+                        {
+                            "operator": "=",
+                            "question": "4.3",
+                            "answerCoding": {
+                                "code": "Numerical Pain Rating Scale (NRS) (0-10)",
+                                "display": "Numerical Pain Rating Scale (NRS) (0-10)"
+                            }
+                        },
+                        {
+                            "operator": "=",
+                            "question": "4.3",
+                            "answerCoding": {
+                                "code": "Visual Analog Scale (VAS) Score",
+                                "display": "Visual Analog Scale (VAS) Score"
+                            }
+                        },
+                        {
+                            "operator": "=",
+                            "question": "4.3",
+                            "answerCoding": {
+                                "code": "Wong-Baker FACES",
+                                "display": "Wong-Baker FACES"
+                            }
+                        },
+                        {
+                            "operator": "=",
+                            "question": "4.3",
+                            "answerCoding": {
+                                "code": "Verbal Rating Scale for pain intensity",
+                                "display": "Verbal Rating Scale for pain intensity"
+                            }
+                        },
+                        {
+                            "operator": "=",
+                            "question": "4.3",
+                            "answerCoding": {
+                                "code": "Pain Assessment in Advanced Dementia Scale (PAINAD)",
+                                "display": "Pain Assessment in Advanced Dementia Scale (PAINAD)"
+                            }
+                        },
+                        {
+                            "operator": "=",
+                            "question": "4.3",
+                            "answerCoding": {
+                                "code": "Other",
+                                "display": "Other"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "linkId": "4.6.1",
+                    "text": "Which functional assessment (disability) scale was used at the initial encounter if applicable? Provider education: The SAME scale must be used at baseline, after each procedure and at each follow-up as applicable.)",
+                    "type": "choice",
+                    "required": false,
+                    "answerOption":[
+                        {
+                            "valueCoding":{
+                                "code": "Pain Disability Index",
+                                "display": "Pain Disability Index"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "Oswestry Disability Index (ODI)",
+                                "display": "Oswestry Disability Index (ODI)"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "Oswestry Low Back Pain Disability Questionnaire (OSW)",
+                                "display": "Oswestry Low Back Pain Disability Questionnaire (OSW)"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "Quebec Low Back Pain Disability Scare (QUE)",
+                                "display": "Quebec Low Back Pain Disability Scare (QUE)"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "Roland Morris Pain Scale",
+                                "display": "Roland Morris Pain Scale"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "Back Pain Functional Scale (BPFS)",
+                                "display": "Back Pain Functional Scale (BPFS)"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "PROMIS profile domains which have been found to correlate well with the ODI scale",
+                                "display": "PROMIS profile domains which have been found to correlate well with the ODI scale"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "No functional assessment tool used",
+                                "display": "No functional assessment tool used"
+                            }
+                        }
+                    ],
+                    "enableWhen":[
+                        {
+                            "operator": "=",
+                            "question": "4.1",
+                            "answerCoding": {
+                                "code": "Axial low back pain and its progression.",
+                                "display": "Axial low back pain and its progression."
+                            }
+                        }
+                    ]
+                },
+                {
+                    "linkId": "4.6.2",
+                    "text": "Which functional assessment (disability) scale was used at the initial encounter if applicable? Provider education: The SAME scale must be used at baseline, after each procedure and at each follow-up as applicable.)",
+                    "type": "choice",
+                    "required": false,
+                    "answerOption":[
+                        {
+                            "valueCoding":{
+                                "code": "Pain Disability Index",
+                                "display": "Pain Disability Index"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "Oswestry Disability Index (ODI)",
+                                "display": "Oswestry Disability Index (ODI)"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "Roland Morris Pain Scale",
+                                "display": "Roland Morris Pain Scale"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "Back Pain Functional Scale (BPFS)",
+                                "display": "Back Pain Functional Scale (BPFS)"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "PROMIS profile domains which have been found to correlate well with the ODI scale",
+                                "display": "PROMIS profile domains which have been found to correlate well with the ODI scale"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "No functional assessment tool used",
+                                "display": "No functional assessment tool used"
+                            }
+                        }
+                    ],
+                    "enableWhen":[
+                        {
+                            "operator": "=",
+                            "question": "4.1",
+                            "answerCoding": {
+                                "code": "Neck pain and its progression.",
+                                "display": "Neck pain and its progression."
+                            }
+                        }
+                    ]
+                },
+                {
+                    "linkId": "4.6.3",
+                    "text": "Score/Results: ",
+                    "type": "integer",
+                    "required": false,
+                    "enableBehavior": "any",
+                    "enableWhen":[
+                        {
+                            "operator": "=",
+                            "question": "4.6.1",
+                            "answerCoding": {
+                                "code": "Pain Disability Index",
+                                "display": "Pain Disability Index"
+                            }
+                        },
+                        {
+                            "operator": "=",
+                            "question": "4.6.2",
+                            "answerCoding": {
+                                "code": "Pain Disability Index",
+                                "display": "Pain Disability Index"
+                            }
+                        },
+                        {
+                            "operator": "=",
+                            "question": "4.6.1",
+                            "answerCoding": {
+                                "code": "Quebec Low Back Pain Disability Scare (QUE)",
+                                "display": "Quebec Low Back Pain Disability Scare (QUE)"
+                            }
+                        },
+                        {
+                            "operator": "=",
+                            "question": "4.6.1",
+                            "answerCoding": {
+                                "code": "Roland Morris Pain Scale",
+                                "display": "Roland Morris Pain Scale"
+                            }
+                        },
+                        {
+                            "operator": "=",
+                            "question": "4.6.2",
+                            "answerCoding": {
+                                "code": "Roland Morris Pain Scale",
+                                "display": "Roland Morris Pain Scale"
+                            }
+                        },
+                        {
+                            "operator": "=",
+                            "question": "4.6.1",
+                            "answerCoding": {
+                                "code": "Back Pain Functional Scale (BPFS)",
+                                "display": "Back Pain Functional Scale (BPFS)"
+                            }
+                        },
+                        {
+                            "operator": "=",
+                            "question": "4.6.2",
+                            "answerCoding": {
+                                "code": "Back Pain Functional Scale (BPFS)",
+                                "display": "Back Pain Functional Scale (BPFS)"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "linkId": "4.6.4",
+                    "text": "Pain Intensity Score: ",
+                    "type": "integer",
+                    "required": false,
+                    "enableBehavior": "any",
+                    "enableWhen":[
+                        {
+                            "operator": "=",
+                            "question": "4.6.1",
+                            "answerCoding": {
+                                "code": "Oswestry Disability Index (ODI)",
+                                "display": "Oswestry Disability Index (ODI)"
+                            }
+                        },
+                        {
+                            "operator": "=",
+                            "question": "4.6.2",
+                            "answerCoding": {
+                                "code": "Oswestry Disability Index (ODI)",
+                                "display": "Oswestry Disability Index (ODI)"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "linkId": "4.6.5",
+                    "text": "Pain Intensity Score: ",
+                    "type": "choice",
+                    "required": false,
+                    "enableWhen":[
+                        {
+                            "operator": "=",
+                            "question": "4.6.1",
+                            "answerCoding": {
+                                "code": "Oswestry Low Back Pain Disability Questionnaire (OSW)",
+                                "display": "Oswestry Low Back Pain Disability Questionnaire (OSW)"
+                            }
+                        }
+                    ],
+                    "answerOption":[
+                        {
+                            "valueCoding":{
+                                "code": "0",
+                                "display": "No pain or can tolerate pain without pain killers"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "1",
+                                "display": "Able to manage pain without pain killers"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "2",
+                                "display": "Complete relief of pain with pain killers"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "3",
+                                "display": "Moderate relief of pain with pain killers"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "4",
+                                "display": "Very little relief of pain with pain killers"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "5",
+                                "display": "No relief/no effect, and does not use due to not helpful"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "linkId": "4.6.6",
+                    "text": "Pain Intensity Score: ",
+                    "type": "choice",
+                    "required": false,
+                    "enableBehavior": "any",
+                    "enableWhen":[
+                        {
+                            "operator": "=",
+                            "question": "4.6.1",
+                            "answerCoding": {
+                                "code": "PROMIS profile domains which have been found to correlate well with the ODI scale",
+                                "display": "PROMIS profile domains which have been found to correlate well with the ODI scale"
+                            }
+                        },
+                        {
+                            "operator": "=",
+                            "question": "4.6.2",
+                            "answerCoding": {
+                                "code": "PROMIS profile domains which have been found to correlate well with the ODI scale",
+                                "display": "PROMIS profile domains which have been found to correlate well with the ODI scale"
+                            }
+                        }
+                    ],
+                    "answerOption":[
+                        {
+                            "valueCoding":{
+                                "code": "1",
+                                "display": "No pain"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "2",
+                                "display": "Mild"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "3",
+                                "display": "Moderate"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "4",
+                                "display": "Severe"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "5",
+                                "display": "Very Severe"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "linkId": "4.6.7",
+                    "text": "Disability Index Score/Results: ",
+                    "type": "choice",
+                    "required": false,
+                    "enableBehavior": "any",
+                    "enableWhen":[
+                        {
+                            "operator": "=",
+                            "question": "4.6.1",
+                            "answerCoding": {
+                                "code": "Oswestry Disability Index (ODI)",
+                                "display": "Oswestry Disability Index (ODI)"
+                            }
+                        },
+                        {
+                            "operator": "=",
+                            "question": "4.6.2",
+                            "answerCoding": {
+                                "code": "Oswestry Disability Index (ODI)",
+                                "display": "Oswestry Disability Index (ODI)"
+                            }
+                        },
+                        {
+                            "operator": "=",
+                            "question": "4.6.1",
+                            "answerCoding": {
+                                "code": "Oswestry Low Back Pain Disability Questionnaire (OSW)",
+                                "display": "Oswestry Low Back Pain Disability Questionnaire (OSW)"
+                            }
+                        },
+                        {
+                            "operator": "=",
+                            "question": "4.6.2",
+                            "answerCoding": {
+                                "code": "Oswestry Low Back Pain Disability Questionnaire (OSW)",
+                                "display": "Oswestry Low Back Pain Disability Questionnaire (OSW)"
+                            }
+                        }
+                    ],
+                    "answerOption":[
+                        {
+                            "valueCoding":{
+                                "code": "0 - 4 No disability",
+                                "display": "0 - 4 No disability"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "5 - 14 Mild disability",
+                                "display": "5 - 14 Mild disability"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "15 - 24 Moderate disability",
+                                "display": "15 - 24 Moderate disability"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "25 - 34 Severe disability",
+                                "display": "25 - 34 Severe disability"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "35 - 50 Completely disabled",
+                                "display": "35 - 50 Completely disabled"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "linkId": "4.6.8",
+                    "text": "Pain interference with ADLs Score/Results: ",
+                    "type": "integer",
+                    "required": false,
+                    "enableBehavior": "any",
+                    "enableWhen":[
+                        {
+                            "operator": "=",
+                            "question": "4.6.1",
+                            "answerCoding": {
+                                "code": "PROMIS profile domains which have been found to correlate well with the ODI scale",
+                                "display": "PROMIS profile domains which have been found to correlate well with the ODI scale"
+                            }
+                        },
+                        {
+                            "operator": "=",
+                            "question": "4.6.2",
+                            "answerCoding": {
+                                "code": "PROMIS profile domains which have been found to correlate well with the ODI scale",
+                                "display": "PROMIS profile domains which have been found to correlate well with the ODI scale"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "linkId": "4.7",
+                    "text": "The baseline encounter date. The date the provider performed the required baseline evaluation for pain that has now been present for three months or greater and not responding to conservative pain management measures.",
+                    "type": "date",
+                    "required": false
+                },
+                {
+                    "linkId": "4.8",
+                    "text": "Baseline encounter supportive findings, select one.",
+                    "type": "choice",
+                    "required": false,
+                    "answerOption":[
+                        {
+                            "valueCoding":{
+                                "code": "Chronic neck pain greater than three months duration.",
+                                "display": "Chronic neck pain greater than three months duration."
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "Chronic low axial back pain greater than three months duration.",
+                                "display": "Chronic low axial back pain greater than three months duration."
+                            }
+                        }
+                    ]
+                },
+                {
+                    "linkId": "4.9",
+                    "text": "Chronic neck pain region",
+                    "type": "choice",
+                    "required": false,
+                    "answerOption":[
+                        {
+                            "valueCoding":{
+                                "code": "Pain in cervical spine.",
+                                "display": "Pain in cervical spine."
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "Pain in thoracic spine.",
+                                "display": "Pain in thoracic spine."
+                            }
+                        }
+                    ],
+                    "enableWhen":[
+                        {
+                            "operator": "=",
+                            "question": "4.8",
+                            "answerCoding":{
+                                "code": "Chronic neck pain greater than three months duration.",
+                                "display": "Chronic neck pain greater than three months duration."
+                            }
+                        }
+                    ]
+                },
+                {
+                    "linkId": "4.10",
+                    "text": "Chronic low back pain region",
+                    "type": "choice",
+                    "required": false,
+                    "answerOption":[
+                        {
+                            "valueCoding":{
+                                "code": "Pain in lumber spine.",
+                                "display": "Pain in lumber spine."
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "Pain in sacral spine.",
+                                "display": "Pain in sacral spine."
+                            }
+                        }
+                    ],
+                    "enableWhen":[
+                        {
+                            "operator": "=",
+                            "question": "4.8",
+                            "answerCoding":{
+                                "code": "Chronic low axial back pain greater than three months duration.",
+                                "display": "Chronic low axial back pain greater than three months duration."
+                            }
+                        }
+                    ]
+                },
+                {
+                    "linkId": "4.11",
+                    "text": "Which pain scale was used at the baseline visit encounter? Provider education: Pain assessment must be performed and documented at baseline, after each procedure and at each follow-up using the same pain scale for each assessment.",
+                    "type": "choice",
+                    "required": false,
+                    "answerOption":[
+                        {
+                            "valueCoding":{
+                                "code": "Numerical Pain Rating Scale (NRS) (0-10)",
+                                "display": "Numerical Pain Rating Scale (NRS) (0-10)"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "Visual Analog Scale (VAS) Score",
+                                "display": "Visual Analog Scale (VAS) Score"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "Wong-Baker FACES",
+                                "display": "Wong-Baker FACES"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "Verbal Rating Scale for pain intensity",
+                                "display": "Verbal Rating Scale for pain intensity"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "Pain Assessment in Advanced Dementia Scale (PAINAD)",
+                                "display": "Pain Assessment in Advanced Dementia Scale (PAINAD)"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "code": "Other",
+                                "display": "Other"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "code": "No tool used",
+                                "display": "No tool used"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "linkId": "4.12",
+                    "text": "Pain duration",
+                    "type": "quantity",
+                    "required": false,
+                    "enableBehavior": "any",
+                    "enableWhen":[
+                        {
+                            "operator": "=",
+                            "question": "4.11",
+                            "answerCoding": {
+                                "code": "Numerical Pain Rating Scale (NRS) (0-10)",
+                                "display": "Numerical Pain Rating Scale (NRS) (0-10)"
+                            }
+                        },
+                        {
+                            "operator": "=",
+                            "question": "4.11",
+                            "answerCoding": {
+                                "code": "Visual Analog Scale (VAS) Score",
+                                "display": "Visual Analog Scale (VAS) Score"
+                            }
+                        },
+                        {
+                            "operator": "=",
+                            "question": "4.11",
+                            "answerCoding": {
+                                "code": "Wong-Baker FACES",
+                                "display": "Wong-Baker FACES"
+                            }
+                        },
+                        {
+                            "operator": "=",
+                            "question": "4.11",
+                            "answerCoding": {
+                                "code": "Verbal Rating Scale for pain intensity",
+                                "display": "Verbal Rating Scale for pain intensity"
+                            }
+                        },
+                        {
+                            "operator": "=",
+                            "question": "4.11",
+                            "answerCoding": {
+                                "code": "Pain Assessment in Advanced Dementia Scale (PAINAD)",
+                                "display": "Pain Assessment in Advanced Dementia Scale (PAINAD)"
+                            }
+                        },
+                        {
+                            "operator": "=",
+                            "question": "4.11",
+                            "answerCoding": {
+                                "code": "Other",
+                                "display": "Other"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "linkId": "4.13",
+                    "text": "Pain Intensity or Severity  (Pain Score)",
+                    "type": "integer",
+                    "required": false,
+                    "enableBehavior": "any",
+                    "enableWhen":[
+                        {
+                            "operator": "=",
+                            "question": "4.11",
+                            "answerCoding": {
+                                "code": "Numerical Pain Rating Scale (NRS) (0-10)",
+                                "display": "Numerical Pain Rating Scale (NRS) (0-10)"
+                            }
+                        },
+                        {
+                            "operator": "=",
+                            "question": "4.11",
+                            "answerCoding": {
+                                "code": "Visual Analog Scale (VAS) Score",
+                                "display": "Visual Analog Scale (VAS) Score"
+                            }
+                        },
+                        {
+                            "operator": "=",
+                            "question": "4.11",
+                            "answerCoding": {
+                                "code": "Wong-Baker FACES",
+                                "display": "Wong-Baker FACES"
+                            }
+                        },
+                        {
+                            "operator": "=",
+                            "question": "4.11",
+                            "answerCoding": {
+                                "code": "Verbal Rating Scale for pain intensity",
+                                "display": "Verbal Rating Scale for pain intensity"
+                            }
+                        },
+                        {
+                            "operator": "=",
+                            "question": "4.11",
+                            "answerCoding": {
+                                "code": "Pain Assessment in Advanced Dementia Scale (PAINAD)",
+                                "display": "Pain Assessment in Advanced Dementia Scale (PAINAD)"
+                            }
+                        },
+                        {
+                            "operator": "=",
+                            "question": "4.11",
+                            "answerCoding": {
+                                "code": "Other",
+                                "display": "Other"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "linkId": "4.14.1",
+                    "text": "Which functional assessment (disability) scale was used at the baseline visit? Provider education: The SAME scale must be used at baseline, after each procedure and at each follow-up as applicable.)",
+                    "type": "choice",
+                    "required": false,
+                    "answerOption":[
+                        {
+                            "valueCoding":{
+                                "code": "Pain Disability Index",
+                                "display": "Pain Disability Index"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "Oswestry Disability Index (ODI)",
+                                "display": "Oswestry Disability Index (ODI)"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "Oswestry Low Back Pain Disability Questionnaire (OSW)",
+                                "display": "Oswestry Low Back Pain Disability Questionnaire (OSW)"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "Quebec Low Back Pain Disability Scare (QUE)",
+                                "display": "Quebec Low Back Pain Disability Scare (QUE)"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "Roland Morris Pain Scale",
+                                "display": "Roland Morris Pain Scale"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "Back Pain Functional Scale (BPFS)",
+                                "display": "Back Pain Functional Scale (BPFS)"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "PROMIS profile domains which have been found to correlate well with the ODI scale",
+                                "display": "PROMIS profile domains which have been found to correlate well with the ODI scale"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "No functional assessment tool used",
+                                "display": "No functional assessment tool used"
+                            }
+                        }
+                    ],
+                    "enableWhen":[
+                        {
+                            "operator": "=",
+                            "question": "4.8",
+                            "answerCoding": {
+                                "code": "Chronic low axial back pain greater than three months duration.",
+                                "display": "Chronic low axial back pain greater than three months duration."
+                            }
+                        }
+                    ]
+                },
+                {
+                    "linkId": "4.14.2",
+                    "text": "Which functional assessment (disability) scale was used at the baseline visit? Provider education: The SAME scale must be used at baseline, after each procedure and at each follow-up as applicable.)",
+                    "type": "choice",
+                    "required": false,
+                    "answerOption":[
+                        {
+                            "valueCoding":{
+                                "code": "Pain Disability Index",
+                                "display": "Pain Disability Index"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "Oswestry Disability Index (ODI)",
+                                "display": "Oswestry Disability Index (ODI)"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "Roland Morris Pain Scale",
+                                "display": "Roland Morris Pain Scale"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "Back Pain Functional Scale (BPFS)",
+                                "display": "Back Pain Functional Scale (BPFS)"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "PROMIS profile domains which have been found to correlate well with the ODI scale",
+                                "display": "PROMIS profile domains which have been found to correlate well with the ODI scale"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "No functional assessment tool used",
+                                "display": "No functional assessment tool used"
+                            }
+                        }
+                    ],
+                    "enableWhen":[
+                        {
+                            "operator": "=",
+                            "question": "4.8",
+                            "answerCoding": {
+                                "code": "Chronic neck pain greater than three months duration.",
+                                "display": "Chronic neck pain greater than three months duration."
+                            }
+                        }
+                    ]
+                },
+                {
+                    "linkId": "4.14.3",
+                    "text": "Score/Results: ",
+                    "type": "integer",
+                    "required": false,
+                    "enableBehavior": "any",
+                    "enableWhen":[
+                        {
+                            "operator": "=",
+                            "question": "4.14.1",
+                            "answerCoding": {
+                                "code": "Pain Disability Index",
+                                "display": "Pain Disability Index"
+                            }
+                        },
+                        {
+                            "operator": "=",
+                            "question": "4.14.2",
+                            "answerCoding": {
+                                "code": "Pain Disability Index",
+                                "display": "Pain Disability Index"
+                            }
+                        },
+                        {
+                            "operator": "=",
+                            "question": "4.14.1",
+                            "answerCoding": {
+                                "code": "Quebec Low Back Pain Disability Scare (QUE)",
+                                "display": "Quebec Low Back Pain Disability Scare (QUE)"
+                            }
+                        },
+                        {
+                            "operator": "=",
+                            "question": "4.14.1",
+                            "answerCoding": {
+                                "code": "Roland Morris Pain Scale",
+                                "display": "Roland Morris Pain Scale"
+                            }
+                        },
+                        {
+                            "operator": "=",
+                            "question": "4.14.2",
+                            "answerCoding": {
+                                "code": "Roland Morris Pain Scale",
+                                "display": "Roland Morris Pain Scale"
+                            }
+                        },
+                        {
+                            "operator": "=",
+                            "question": "4.14.1",
+                            "answerCoding": {
+                                "code": "Back Pain Functional Scale (BPFS)",
+                                "display": "Back Pain Functional Scale (BPFS)"
+                            }
+                        },
+                        {
+                            "operator": "=",
+                            "question": "4.14.2",
+                            "answerCoding": {
+                                "code": "Back Pain Functional Scale (BPFS)",
+                                "display": "Back Pain Functional Scale (BPFS)"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "linkId": "4.14.4",
+                    "text": "Pain Intensity Score: ",
+                    "type": "integer",
+                    "required": false,
+                    "enableBehavior": "any",
+                    "enableWhen":[
+                        {
+                            "operator": "=",
+                            "question": "4.14.1",
+                            "answerCoding": {
+                                "code": "Oswestry Disability Index (ODI)",
+                                "display": "Oswestry Disability Index (ODI)"
+                            }
+                        },
+                        {
+                            "operator": "=",
+                            "question": "4.14.2",
+                            "answerCoding": {
+                                "code": "Oswestry Disability Index (ODI)",
+                                "display": "Oswestry Disability Index (ODI)"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "linkId": "4.14.5",
+                    "text": "Pain Intensity Score: ",
+                    "type": "choice",
+                    "required": false,
+                    "enableWhen":[
+                        {
+                            "operator": "=",
+                            "question": "4.14.1",
+                            "answerCoding": {
+                                "code": "Oswestry Low Back Pain Disability Questionnaire (OSW)",
+                                "display": "Oswestry Low Back Pain Disability Questionnaire (OSW)"
+                            }
+                        }
+                    ],
+                    "answerOption":[
+                        {
+                            "valueCoding":{
+                                "code": "0",
+                                "display": "No pain or can tolerate pain without pain killers"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "1",
+                                "display": "Able to manage pain without pain killers"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "2",
+                                "display": "Complete relief of pain with pain killers"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "3",
+                                "display": "Moderate relief of pain with pain killers"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "4",
+                                "display": "Very little relief of pain with pain killers"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "5",
+                                "display": "No relief/no effect, and does not use due to not helpful"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "linkId": "4.14.6",
+                    "text": "Pain Intensity Score: ",
+                    "type": "choice",
+                    "required": false,
+                    "enableBehavior": "any",
+                    "enableWhen":[
+                        {
+                            "operator": "=",
+                            "question": "4.14.1",
+                            "answerCoding": {
+                                "code": "PROMIS profile domains which have been found to correlate well with the ODI scale",
+                                "display": "PROMIS profile domains which have been found to correlate well with the ODI scale"
+                            }
+                        },
+                        {
+                            "operator": "=",
+                            "question": "4.14.2",
+                            "answerCoding": {
+                                "code": "PROMIS profile domains which have been found to correlate well with the ODI scale",
+                                "display": "PROMIS profile domains which have been found to correlate well with the ODI scale"
+                            }
+                        }
+                    ],
+                    "answerOption":[
+                        {
+                            "valueCoding":{
+                                "code": "1",
+                                "display": "No pain"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "2",
+                                "display": "Mild"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "3",
+                                "display": "Moderate"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "4",
+                                "display": "Severe"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "5",
+                                "display": "Very Severe"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "linkId": "4.14.7",
+                    "text": "Disability Index Score/Results: ",
+                    "type": "choice",
+                    "required": false,
+                    "enableBehavior": "any",
+                    "enableWhen":[
+                        {
+                            "operator": "=",
+                            "question": "4.14.1",
+                            "answerCoding": {
+                                "code": "Oswestry Disability Index (ODI)",
+                                "display": "Oswestry Disability Index (ODI)"
+                            }
+                        },
+                        {
+                            "operator": "=",
+                            "question": "4.14.2",
+                            "answerCoding": {
+                                "code": "Oswestry Disability Index (ODI)",
+                                "display": "Oswestry Disability Index (ODI)"
+                            }
+                        },
+                        {
+                            "operator": "=",
+                            "question": "4.14.1",
+                            "answerCoding": {
+                                "code": "Oswestry Low Back Pain Disability Questionnaire (OSW)",
+                                "display": "Oswestry Low Back Pain Disability Questionnaire (OSW)"
+                            }
+                        },
+                        {
+                            "operator": "=",
+                            "question": "4.14.2",
+                            "answerCoding": {
+                                "code": "Oswestry Low Back Pain Disability Questionnaire (OSW)",
+                                "display": "Oswestry Low Back Pain Disability Questionnaire (OSW)"
+                            }
+                        }
+                    ],
+                    "answerOption":[
+                        {
+                            "valueCoding":{
+                                "code": "0 - 4 No disability",
+                                "display": "0 - 4 No disability"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "5 - 14 Mild disability",
+                                "display": "5 - 14 Mild disability"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "15 - 24 Moderate disability",
+                                "display": "15 - 24 Moderate disability"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "25 - 34 Severe disability",
+                                "display": "25 - 34 Severe disability"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "35 - 50 Completely disabled",
+                                "display": "35 - 50 Completely disabled"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "linkId": "4.14.8",
+                    "text": "Pain interference with ADLs Score/Results: ",
+                    "type": "integer",
+                    "required": false,
+                    "enableBehavior": "any",
+                    "enableWhen":[
+                        {
+                            "operator": "=",
+                            "question": "4.14.1",
+                            "answerCoding": {
+                                "code": "PROMIS profile domains which have been found to correlate well with the ODI scale",
+                                "display": "PROMIS profile domains which have been found to correlate well with the ODI scale"
+                            }
+                        },
+                        {
+                            "operator": "=",
+                            "question": "4.14.2",
+                            "answerCoding": {
+                                "code": "PROMIS profile domains which have been found to correlate well with the ODI scale",
+                                "display": "PROMIS profile domains which have been found to correlate well with the ODI scale"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "linkId": "4.15",
+                    "text": "Past pain medications attempted: ",
+                    "type": "choice",
+                    "required": false,
+                    "repeats": true,
+                    "answerOption": [
+                        {
+                            "valueCoding": {
+                                "code": "D018712",
+                                "display": "Non-opioid analgesic(s)"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "code": "D000701",
+                                "display": "Opioid analgesic(s)"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "code": "D000894",
+                                "display": "Nonsteroidal anti-inflammatory drugs (NSAIDs)"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "code": "41041",
+                                "display": "Muscle relaxants"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "code": "D000927",
+                                "display": "Anti-seizure medications"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "code": "D000928",
+                                "display": "Antidepressants"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "code": "Other",
+                                "display": "Other"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "linkId": "4.15.1",
+                    "text": "Specify other:",
+                    "type": "text",
+                    "required": false,
+                    "enableWhen": [
+                        {
+                            "operator": "=",
+                            "question": "4.15",
+                            "answerCoding": {
+                                "code": "Other",
+                                "display": "Other"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "linkId": "4.16",
+                    "text": "Patient's therapeutic response: ",
+                    "type": "choice",
+                    "required": false,
+                    "answerOption": [
+                        {
+                            "valueCoding": {
+                                "code": "84190002",
+                                "display": "Poor/minimal"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "code": "21768001",
+                                "display": "Fair response"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "code": "78469002",
+                                "display": "Good response"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "code": "63432002",
+                                "display": "Excellent"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "code": "399056007",
+                                "display": "Complete"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "linkId": "4.17",
+                    "text": "Past non-parmacologic treatments attempted and failed to manage pain. Select all that apply.",
+                    "type": "choice",
+                    "required": false,
+                    "repeats": true,
+                    "enableWhen":[
+                        {
+                            "operator": "=",
+                            "question": "4.8",
+                            "answerCoding":{
+                                "code": "Chronic low axial back pain greater than three months duration.",
+                                "display": "Chronic low axial back pain greater than three months duration."
+                            }
+                        }
+                    ],
+                    "answerOption": [
+                        {
+                            "valueCoding": {
+                                "code": "182660006-266694003",
+                                "display": "Cold Therapy or Heat Therapy"
+                            }
+                        }, 
+                        {
+                            "valueCoding": {
+                                "code": "C26387",
+                                "display": "Exercise(s) for pain management"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "code": "Physical Therapy",
+                                "display": "Physical Therapy"
+                            }
+                        }, 
+                        {
+                            "valueCoding": {
+                                "code": "Acupuncture",
+                                "display": "Acupuncture"
+                            }
+                        }, 
+                        {
+                            "valueCoding": {
+                                "code": "Spinal manipulation",
+                                "display": "Spinal manipulation"
+                            }
+                        }, 
+                        {
+                            "valueCoding": {
+                                "code": "Application of biopsychosocial treatment techniques",
+                                "display": "Application of biopsychosocial treatment techniques"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "code": "Diet",
+                                "display": "Diet"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "code": "Other",
+                                "display": "Other"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "linkId": "4.18",
+                    "text": "Past non-parmacologic treatments attempted and failed to manage pain. Select all that apply.",
+                    "type": "choice",
+                    "required": false,
+                    "repeats": true,
+                    "enableWhen":[
+                        {
+                            "operator": "=",
+                            "question": "4.8",
+                            "answerCoding":{
+                                "code": "Chronic neck pain greater than three months duration.",
+                                "display": "Chronic neck pain greater than three months duration."
+                            }
+                        }
+                    ],
+                    "answerOption": [
+                        {
+                            "valueCoding": {
+                                "code": "182660006-266694003",
+                                "display": "Cold Therapy or Heat Therapy"
+                            }
+                        }, 
+                        {
+                            "valueCoding": {
+                                "code": "C26387",
+                                "display": "Exercise(s) for pain management"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "code": "Acupuncture",
+                                "display": "Acupuncture"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "code": "Application of biopsychosocial treatment techniques",
+                                "display": "Application of biopsychosocial treatment techniques"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "code": "Diet",
+                                "display": "Diet"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "code": "Other",
+                                "display": "Other"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "linkId": "4.19",
+                    "text": "Specify other:",
+                    "type": "text",
+                    "required": false,
+                    "enableBehavior":"any",
+                    "enableWhen": [
+                        {
+                            "operator": "=",
+                            "question": "4.17",
+                            "answerCoding": {
+                                "code": "Other",
+                                "display": "Other"
+                            }
+                        },
+                        {
+                            "operator": "=",
+                            "question": "4.18",
+                            "answerCoding": {
+                                "code": "Other",
+                                "display": "Other"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "linkId": "4.20",
+                    "text": "Patient's therapeutic response:",
+                    "type": "choice",
+                    "required": false,
+                    "answerOption": [
+                        {
+                            "valueCoding": {
+                                "code": "84190002",
+                                "display": "Poor/minimal"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "code": "21768001",
+                                "display": "Fair response"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "code": "78469002",
+                                "display": "Good response"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "code": "63432002",
+                                "display": "Excellent"
+                            }
+                        },
+                        {
+                            "valueCoding": {
+                                "code": "399056007",
+                                "display": "Complete"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "linkId": "5",
+            "text": "Post Procedure Pain",
+            "type": "group",
+            "item":[
+                {
+                    "extension": [
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+                        "valueExpression": {
+                          "language": "text/cql",
+                          "expression": "PastProcedurePainFollowUp"
+                        }
+                      }
+                    ],
+                    "linkId": "5.2",
+                    "text": "Which of the following procedures have been performed and their documented follow up results?",
+                    "type": "choice",
+                    "required": false,
+                    "repeats": true,
+                    "answerOption":[
+                        {
+                            "valueCoding":{
+                                "code": "N/A initial request",
+                                "display": "N/A initial request"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "1st diagnostic injection follow up",
+                                "display": "1st diagnostic injection follow up"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "2nd diagnostic injection follow up",
+                                "display": "2nd diagnostic injection follow up"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "Initial RFA intervention follow up",
+                                "display": "Initial RFA intervention follow up"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "Second/subsequent RFA intervention follow up",
+                                "display": "Second/subsequent RFA intervention follow up"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "Therapeutic intervention follow up",
+                                "display": "Therapeutic intervention follow up"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "Facet cyst Aspiration/Rupture pain follow up",
+                                "display": "Facet cyst Aspiration/Rupture pain follow up"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "extension": [
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+                        "valueExpression": {
+                          "language": "text/cql",
+                          "expression": "FirstDiagnosisInjectionDate"
+                        }
+                      }
+                    ],
+                    "linkId": "5.3.1.1",
+                    "text": "What was the date of the 1st diagnostic procedure performed?",
+                    "type": "date",
+                    "required": false,
+                    "enableWhen": [
+                        {
+                            "operator": "=",
+                            "question": "5.2",
+                            "answerCoding": {
+                                "code": "1st diagnostic injection follow up",
+                                "display": "1st diagnostic injection follow up"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "linkId": "5.3.1.2",
+                    "text": "What was the date of the 1st diagnostic injection pain follow up?",
+                    "type": "date",
+                    "required": false,
+                    "enableWhen": [
+                        {
+                            "operator": "=",
+                            "question": "5.2",
+                            "answerCoding": {
+                                "code": "1st diagnostic injection follow up",
+                                "display": "1st diagnostic injection follow up"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "extension": [
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+                        "valueExpression": {
+                          "language": "text/cql",
+                          "expression": "SecondDiagnosisInjectionDate"
+                        }
+                      }
+                    ],
+                    "linkId": "5.3.2.1",
+                    "text": "What was the date of the 2nd diagnostic procedure performed?",
+                    "type": "date",
+                    "required": false,
+                    "enableWhen": [
+                        {
+                            "operator": "=",
+                            "question": "5.2",
+                            "answerCoding": {
+                                "code": "2nd diagnostic injection follow up",
+                                "display": "2nd diagnostic injection follow up"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "linkId": "5.3.2.2",
+                    "text": "What was the date of the 2nd diagnostic injection pain follow up?",
+                    "type": "date",
+                    "required": false,
+                    "enableWhen": [
+                        {
+                            "operator": "=",
+                            "question": "5.2",
+                            "answerCoding": {
+                                "code": "2nd diagnostic injection follow up",
+                                "display": "2nd diagnostic injection follow up"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "linkId": "5.3.3.1",
+                    "text": "What was the date of the initial RFA procedure performed?",
+                    "type": "date",
+                    "required": false,
+                    "enableWhen": [
+                        {
+                            "operator": "=",
+                            "question": "5.2",
+                            "answerCoding": {
+                                "code": "Initial RFA intervention follow up",
+                                "display": "Initial RFA intervention follow up"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "linkId": "5.3.3.2",
+                    "text": "What was the date of the initial RFA intervention pain follow up?",
+                    "type": "date",
+                    "required": false,
+                    "enableWhen": [
+                        {
+                            "operator": "=",
+                            "question": "5.2",
+                            "answerCoding": {
+                                "code": "Initial RFA intervention follow up",
+                                "display": "Initial RFA intervention follow up"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "linkId": "5.3.4.1",
+                    "text": "What was the date of the Second/subsequent RFA procedure performed?",
+                    "type": "date",
+                    "required": false,
+                    "enableWhen": [
+                        {
+                            "operator": "=",
+                            "question": "5.2",
+                            "answerCoding": {
+                                "code": "Second/subsequent RFA intervention follow up",
+                                "display": "Second/subsequent RFA intervention follow up"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "linkId": "5.3.4.2",
+                    "text": "What was the date of the Second/subsequent RFA intervention follow up?",
+                    "type": "date",
+                    "required": false,
+                    "enableWhen": [
+                        {
+                            "operator": "=",
+                            "question": "5.2",
+                            "answerCoding": {
+                                "code": "Second/subsequent RFA intervention follow up",
+                                "display": "Second/subsequent RFA intervention follow up"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "extension": [
+                      {
+                        "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+                        "valueExpression": {
+                          "language": "text/cql",
+                          "expression": "FirstTherapeuticInjectionDate"
+                        }
+                      }
+                    ],
+                    "linkId": "5.3.5.1",
+                    "text": "What was the date of the therapeutic procedure performed?",
+                    "type": "date",
+                    "required": false,
+                    "enableWhen": [
+                        {
+                            "operator": "=",
+                            "question": "5.2",
+                            "answerCoding": {
+                                "code": "Therapeutic intervention follow up",
+                                "display": "Therapeutic intervention follow up"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "linkId": "5.3.5.2",
+                    "text": "What was the date of the therapeutic intervention pain follow up?",
+                    "type": "date",
+                    "required": false,
+                    "enableWhen": [
+                        {
+                            "operator": "=",
+                            "question": "5.2",
+                            "answerCoding": {
+                                "code": "Therapeutic intervention follow up",
+                                "display": "Therapeutic intervention follow up"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "linkId": "5.3.6.1",
+                    "text": "What was the date of the IA procedure for cyst rupture performed?",
+                    "type": "date",
+                    "required": false,
+                    "enableWhen": [
+                        {
+                            "operator": "=",
+                            "question": "5.2",
+                            "answerCoding": {
+                                "code": "Facet cyst Aspiration/Rupture pain follow up",
+                                "display": "Facet cyst Aspiration/Rupture pain follow up"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "linkId": "5.3.6.2",
+                    "text": "What was the date of the IA injection performed with synovial cyst aspiration pain follow up?",
+                    "type": "date",
+                    "required": false,
+                    "enableWhen": [
+                        {
+                            "operator": "=",
+                            "question": "5.2",
+                            "answerCoding": {
+                                "code": "Facet cyst Aspiration/Rupture pain follow up",
+                                "display": "Facet cyst Aspiration/Rupture pain follow up"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "linkId": "5.4.1",
+                    "text": "Did the patient experienced pain relief results after the first diagnostic procedure that indicates there has been a consistent positive pain relief response of at least 80% ?",
+                    "type": "boolean",
+                    "required": false,
+                    "enableWhen": [
+                        {
+                            "operator": "=",
+                            "question": "5.2",
+                            "answerCoding": {
+                                "code": "1st diagnostic injection follow up",
+                                "display": "1st diagnostic injection follow up"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "linkId": "5.4.2",
+                    "text": "Did the patient experienced pain relief results after the 2nd diagnostic procedure that indicates there has been a consistent positive pain relief response of at least 80% ?",
+                    "type": "boolean",
+                    "required": false,
+                    "enableWhen": [
+                        {
+                            "operator": "=",
+                            "question": "5.2",
+                            "answerCoding": {
+                                "code": "2nd diagnostic injection follow up",
+                                "display": "2nd diagnostic injection follow up"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "linkId": "5.4.3",
+                    "text": "Did the patient experience pain relief results after the RFA procedure that indicates there has been a consistent positive pain relief response of at least 80% ?",
+                    "type": "boolean",
+                    "required": false,
+                    "enableWhen": [
+                        {
+                            "operator": "=",
+                            "question": "5.2",
+                            "answerCoding": {
+                                "code": "Initial RFA intervention follow up",
+                                "display": "Initial RFA intervention follow up"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "linkId": "5.4.4",
+                    "text": "Did the patient experience pain relief results after the second RFA procedure that indicates there has been a consistent positive pain relief response of at least 50% improvement for at least six months or at least 50% improvement in ADL performance?",
+                    "type": "boolean",
+                    "required": false,
+                    "enableWhen": [
+                        {
+                            "operator": "=",
+                            "question": "5.2",
+                            "answerCoding": {
+                                "code": "Second/subsequent RFA intervention follow up",
+                                "display": "Second/subsequent RFA intervention follow up"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "linkId": "5.4.5",
+                    "text": "Did the patient experience pain relief results after the therapeutic procedure that indicates there has been at least consistent 50% pain relief for at least three (3) months from the prior therapeutic procedure or at least 50% consistent improvement in the ability to perform previously painful movements and ADLs as compared to baseline measurement using the same scale?",
+                    "type": "boolean",
+                    "required": false,
+                    "enableWhen": [
+                        {
+                            "operator": "=",
+                            "question": "5.2",
+                            "answerCoding": {
+                                "code": "Therapeutic intervention follow up",
+                                "display": "Therapeutic intervention follow up"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "linkId": "5.4.6",
+                    "text": "The duration of pain relief is consistent with the agent used.  Specify the duration?",
+                    "type": "quantity",
+                    "required": false,
+                    "enableBehavior":"any",
+                    "enableWhen": [
+                        {
+                            "operator": "=",
+                            "question": "5.2",
+                            "answerCoding": {
+                                "code": "1st diagnostic injection follow up",
+                                "display": "1st diagnostic injection follow up"
+                            }
+                        },
+                        {
+                            "operator": "=",
+                            "question": "5.2",
+                            "answerCoding": {
+                                "code": "2nd diagnostic injection follow up",
+                                "display": "2nd diagnostic injection follow up"
+                            }
+                        },
+                        {
+                            "operator": "=",
+                            "question": "5.2",
+                            "answerCoding": {
+                                "code": "Initial RFA intervention follow up",
+                                "display": "Initial RFA intervention follow up"
+                            }
+                        },
+                        {
+                            "operator": "=",
+                            "question": "5.2",
+                            "answerCoding": {
+                                "code": "Second/subsequent RFA intervention follow up",
+                                "display": "Second/subsequent RFA intervention follow up"
+                            }
+                        },
+                        {
+                            "operator": "=",
+                            "question": "5.2",
+                            "answerCoding": {
+                                "code": "Therapeutic intervention follow up",
+                                "display": "Therapeutic intervention follow up"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "linkId": "5.5",
+                    "text": "Which pain scale was used at this follow up that reflects the reported pain relief? Provider education: Pain assessment must be performed and documented at baseline, after each procedure and at each follow-up using the same pain scale for each assessment.",
+                    "type": "choice",
+                    "required": false,
+                    "answerOption":[
+                        {
+                            "valueCoding":{
+                                "code": "Numerical Pain Rating Scale (NRS) (0-10)",
+                                "display": "Numerical Pain Rating Scale (NRS) (0-10)"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "Visual Analog Scale (VAS) Score",
+                                "display": "Visual Analog Scale (VAS) Score"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "Wong-Baker FACES",
+                                "display": "Wong-Baker FACES"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "Verbal Rating Scale for pain intensity",
+                                "display": "Verbal Rating Scale for pain intensity"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "Pain Assessment in Advanced Dementia Scale (PAINAD)",
+                                "display": "Pain Assessment in Advanced Dementia Scale (PAINAD)"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "Other",
+                                "display": "Other"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "No tool used",
+                                "display": "No tool used"
+                            }
+                        }
+                    ],
+                    "enableWhen":[
+                        {
+                            "operator": "!=",
+                            "question": "5.2",
+                            "answerCoding": {
+                                "code": "N/A initial request",
+                                "display": "N/A initial request"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "linkId": "5.5.1",
+                    "text": "Pain duration",
+                    "type": "quantity",
+                    "required": false,
+                    "enableBehavior": "any",
+                    "enableWhen":[
+                        {
+                            "operator": "=",
+                            "question": "5.5",
+                            "answerCoding": {
+                                "code": "Numerical Pain Rating Scale (NRS) (0-10)",
+                                "display": "Numerical Pain Rating Scale (NRS) (0-10)"
+                            }
+                        },
+                        {
+                            "operator": "=",
+                            "question": "5.5",
+                            "answerCoding": {
+                                "code": "Visual Analog Scale (VAS) Score",
+                                "display": "Visual Analog Scale (VAS) Score"
+                            }
+                        },
+                        {
+                            "operator": "=",
+                            "question": "5.5",
+                            "answerCoding": {
+                                "code": "Wong-Baker FACES",
+                                "display": "Wong-Baker FACES"
+                            }
+                        },
+                        {
+                            "operator": "=",
+                            "question": "5.5",
+                            "answerCoding": {
+                                "code": "Verbal Rating Scale for pain intensity",
+                                "display": "Verbal Rating Scale for pain intensity"
+                            }
+                        },
+                        {
+                            "operator": "=",
+                            "question": "5.5",
+                            "answerCoding": {
+                                "code": "Pain Assessment in Advanced Dementia Scale (PAINAD)",
+                                "display": "Pain Assessment in Advanced Dementia Scale (PAINAD)"
+                            }
+                        },
+                        {
+                            "operator": "=",
+                            "question": "5.5",
+                            "answerCoding": {
+                                "code": "Other",
+                                "display": "Other"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "linkId": "5.5.2",
+                    "text": "Pain Intensity or Severity (Pain Score)",
+                    "type": "integer",
+                    "required": false,
+                    "enableBehavior": "any",
+                    "enableWhen":[
+                        {
+                            "operator": "=",
+                            "question": "5.5",
+                            "answerCoding": {
+                                "code": "Numerical Pain Rating Scale (NRS) (0-10)",
+                                "display": "Numerical Pain Rating Scale (NRS) (0-10)"
+                            }
+                        },
+                        {
+                            "operator": "=",
+                            "question": "5.5",
+                            "answerCoding": {
+                                "code": "Visual Analog Scale (VAS) Score",
+                                "display": "Visual Analog Scale (VAS) Score"
+                            }
+                        },
+                        {
+                            "operator": "=",
+                            "question": "5.5",
+                            "answerCoding": {
+                                "code": "Wong-Baker FACES",
+                                "display": "Wong-Baker FACES"
+                            }
+                        },
+                        {
+                            "operator": "=",
+                            "question": "5.5",
+                            "answerCoding": {
+                                "code": "Verbal Rating Scale for pain intensity",
+                                "display": "Verbal Rating Scale for pain intensity"
+                            }
+                        },
+                        {
+                            "operator": "=",
+                            "question": "5.5",
+                            "answerCoding": {
+                                "code": "Pain Assessment in Advanced Dementia Scale (PAINAD)",
+                                "display": "Pain Assessment in Advanced Dementia Scale (PAINAD)"
+                            }
+                        },
+                        {
+                            "operator": "=",
+                            "question": "5.5",
+                            "answerCoding": {
+                                "code": "Other",
+                                "display": "Other"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "linkId": "5.6.1",
+                    "text": "Which functional assessment scale was used at this follow up? Provider education: The SAME scale must be used at baseline, after each procedure and at each follow-up as applicable.)",
+                    "type": "choice",
+                    "required": false,
+                    "answerOption":[
+                        {
+                            "valueCoding":{
+                                "code": "Pain Disability Index",
+                                "display": "Pain Disability Index"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "Oswestry Disability Index (ODI)",
+                                "display": "Oswestry Disability Index (ODI)"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "Oswestry Low Back Pain Disability Questionnaire (OSW)",
+                                "display": "Oswestry Low Back Pain Disability Questionnaire (OSW)"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "Quebec Low Back Pain Disability Scare (QUE)",
+                                "display": "Quebec Low Back Pain Disability Scare (QUE)"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "Roland Morris Pain Scale",
+                                "display": "Roland Morris Pain Scale"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "Back Pain Functional Scale (BPFS)",
+                                "display": "Back Pain Functional Scale (BPFS)"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "PROMIS profile domains which have been found to correlate well with the ODI scale",
+                                "display": "PROMIS profile domains which have been found to correlate well with the ODI scale"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "No functional assessment tool used",
+                                "display": "No functional assessment tool used"
+                            }
+                        }
+                    ],
+                    "enableWhen":[
+                        {
+                            "operator": "!=",
+                            "question": "5.2",
+                            "answerCoding": {
+                                "code": "N/A initial request",
+                                "display": "N/A initial request"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "linkId": "5.6.2",
+                    "text": "Score/Results: ",
+                    "type": "integer",
+                    "required": false,
+                    "enableBehavior": "any",
+                    "enableWhen":[
+                        {
+                            "operator": "=",
+                            "question": "5.6.1",
+                            "answerCoding": {
+                                "code": "Pain Disability Index",
+                                "display": "Pain Disability Index"
+                            }
+                        },
+                        {
+                            "operator": "=",
+                            "question": "5.6.1",
+                            "answerCoding": {
+                                "code": "Quebec Low Back Pain Disability Scare (QUE)",
+                                "display": "Quebec Low Back Pain Disability Scare (QUE)"
+                            }
+                        },
+                        {
+                            "operator": "=",
+                            "question": "5.6.1",
+                            "answerCoding": {
+                                "code": "Roland Morris Pain Scale",
+                                "display": "Roland Morris Pain Scale"
+                            }
+                        },
+                        {
+                            "operator": "=",
+                            "question": "5.6.1",
+                            "answerCoding": {
+                                "code": "Back Pain Functional Scale (BPFS)",
+                                "display": "Back Pain Functional Scale (BPFS)"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "linkId": "5.6.3",
+                    "text": "Pain Intensity Score: ",
+                    "type": "integer",
+                    "required": false,
+                    "enableWhen":[
+                        {
+                            "operator": "=",
+                            "question": "5.6.1",
+                            "answerCoding": {
+                                "code": "Oswestry Disability Index (ODI)",
+                                "display": "Oswestry Disability Index (ODI)"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "linkId": "5.6.4",
+                    "text": "Pain Intensity Score: ",
+                    "type": "choice",
+                    "required": false,
+                    "enableWhen":[
+                        {
+                            "operator": "=",
+                            "question": "5.6.1",
+                            "answerCoding": {
+                                "code": "Oswestry Low Back Pain Disability Questionnaire (OSW)",
+                                "display": "Oswestry Low Back Pain Disability Questionnaire (OSW)"
+                            }
+                        }
+                    ],
+                    "answerOption":[
+                        {
+                            "valueCoding":{
+                                "code": "0",
+                                "display": "No pain or can tolerate pain without pain killers"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "1",
+                                "display": "Able to manage pain without pain killers"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "2",
+                                "display": "Complete relief of pain with pain killers"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "3",
+                                "display": "Moderate relief of pain with pain killers"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "4",
+                                "display": "Very little relief of pain with pain killers"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "5",
+                                "display": "No relief/no effect, and does not use due to not helpful"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "linkId": "5.6.5",
+                    "text": "Pain Intensity Score: ",
+                    "type": "choice",
+                    "required": false,
+                    "enableWhen":[
+                        {
+                            "operator": "=",
+                            "question": "5.6.1",
+                            "answerCoding": {
+                                "code": "PROMIS profile domains which have been found to correlate well with the ODI scale",
+                                "display": "PROMIS profile domains which have been found to correlate well with the ODI scale"
+                            }
+                        }
+                    ],
+                    "answerOption":[
+                        {
+                            "valueCoding":{
+                                "code": "1",
+                                "display": "No pain"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "2",
+                                "display": "Mild"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "3",
+                                "display": "Moderate"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "4",
+                                "display": "Severe"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "5",
+                                "display": "Very Severe"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "linkId": "5.6.6",
+                    "text": "Disability Index Score/Results: ",
+                    "type": "choice",
+                    "required": false,
+                    "enableBehavior": "any",
+                    "enableWhen":[
+                        {
+                            "operator": "=",
+                            "question": "5.6.1",
+                            "answerCoding": {
+                                "code": "Oswestry Disability Index (ODI)",
+                                "display": "Oswestry Disability Index (ODI)"
+                            }
+                        },
+                        {
+                            "operator": "=",
+                            "question": "5.6.1",
+                            "answerCoding": {
+                                "code": "Oswestry Low Back Pain Disability Questionnaire (OSW)",
+                                "display": "Oswestry Low Back Pain Disability Questionnaire (OSW)"
+                            }
+                        }
+                    ],
+                    "answerOption":[
+                        {
+                            "valueCoding":{
+                                "code": "0 - 4 No disability",
+                                "display": "0 - 4 No disability"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "5 - 14 Mild disability",
+                                "display": "5 - 14 Mild disability"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "15 - 24 Moderate disability",
+                                "display": "15 - 24 Moderate disability"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "25 - 34 Severe disability",
+                                "display": "25 - 34 Severe disability"
+                            }
+                        },
+                        {
+                            "valueCoding":{
+                                "code": "35 - 50 Completely disabled",
+                                "display": "35 - 50 Completely disabled"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "linkId": "5.6.7",
+                    "text": "Pain interference with ADLs Score/Results: ",
+                    "type": "integer",
+                    "required": false,
+                    "enableWhen":[
+                        {
+                            "operator": "=",
+                            "question": "5.6.1",
+                            "answerCoding": {
+                                "code": "PROMIS profile domains which have been found to correlate well with the ODI scale",
+                                "display": "PROMIS profile domains which have been found to correlate well with the ODI scale"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "linkId": "6",
+            "text": "History and Physical",
+            "type": "group",
+            "item": [
+                {
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceResource",
+                            "valueCode": "Observation"
+                        },
+                        {
+                            "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-answerExpression",
+                            "valueExpression": {
+                                "description": "all active diagnosis",
+                                "language": "application/x-fhir-query",
+                                "expression": "Observation?code=34117-2"
+                            }
+                        },
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                            "valueCodeableConcept": {
+                                "coding": [
+                                    {
+                                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                                        "code": "drop-down",
+                                        "display": "Drop down"
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    "linkId": "6.1",
+                    "text": "The History and Physical note that supports the procedure:",
+                    "type": "reference",
+                    "required": false
+                }
+            ]
+        },
+        {
+            "linkId": "7",
+            "text": "Diagnostic Test Results",
+            "type": "group",
+            "item": [
+                {
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceResource",
+                            "valueCode": "DiagnosticReport"
+                        },
+                        {
+                            "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-answerExpression",
+                            "valueExpression": {
+                                "description": "all active diagnosis",
+                                "language": "application/x-fhir-query",
+                                "expression": "DiagnosticReport?code=34117-2"
+                            }
+                        },
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                            "valueCodeableConcept": {
+                                "coding": [
+                                    {
+                                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                                        "code": "drop-down",
+                                        "display": "Drop down"
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    "linkId": "7.1",
+                    "text": "Diagnostic Imaging Report(s) Results available:",
+                    "type": "reference",
+                    "required": false,
+                    "repeats": true
+                }
+            ]
+        }
+    ]
+}
