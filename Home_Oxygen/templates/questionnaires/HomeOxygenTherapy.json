@@ -323,31 +323,40 @@
           "linkId": "3.1",
           "type": "choice",
           "text": "Specify condition",
-              "required": true,
-              "repeats": true,
-              "answerOption": [
-                {
-                  "valueString": "Lives in or travels to high altitude"
-
-                },
-                {
-                  "valueString": "Age"
-
-                },
-                {
-                  "valueString": "Skin pigmentation"
-
-                },
-                {
-                  "valueString": "Reduced O2 carrying capacity"
-
-                },
-                {
-                  "valueString": "Other"
-
-                }
-              ]
-
+          "required": true,
+          "repeats": true,
+          "answerOption": [
+            {
+              "valueCoding": {
+                "code": "highaltitude",
+                "display": "Lives in or travels to high altitude"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "Age",
+                "display": "Age"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "Skin pigmentation",
+                "display": "Skin pigmentation"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "o2capacity",
+                "display": "Reduced O2 carrying capacity"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "Other",
+                "display": "Other"
+              }
+            }
+          ]
         },
         {
           "extension": [
@@ -483,28 +492,38 @@
           "text": "Specify symptoms",
           "answerOption": [
             {
-              "valueString": "Impairment of cognitive processes"
-
+              "valueCoding": {
+                "code": "Impairment of cognitive processes",
+                "display": "Impairment of cognitive processes"
+              }
             },
             {
-              "valueString": "Nocturnal restlessness"
-
+              "valueCoding": {
+                "code": "Nocturnal restlessness",
+                "display": "Nocturnal restlessness"
+              }
             },
             {
-              "valueString": "Insomnia"
-
+              "valueCoding": {
+                "code": "Insomnia",
+                "display": "Insomnia"
+              }
             },
             {
-              "valueString": "Morning headache"
-
+              "valueCoding": {
+                "code": "Morning headache",
+                "display": "Morning headache"
+              }
             },
             {
-              "valueString": "Other"
-
+              "valueCoding": {
+                "code": "Other",
+                "display": "Other"
+              }
             }
           ],
           "required": true,
-          "repeats":true
+          "repeats": true
         },
         {
           "extension": [
@@ -564,11 +583,11 @@
             {
               "operator": "=",
               "question": "3.8",
-              "answerBoolean":true
+              "answerBoolean": true
             }
           ],
           "linkId": "3.9",
-          "type":"boolean",
+          "type": "boolean",
           "text": "Was nocturnal testing performed under the direction of medicare enrolled IDTF ?",
           "initial": [
             {
@@ -576,7 +595,6 @@
             }
           ]
         },
-
         {
           "extension": [
             {
@@ -591,7 +609,7 @@
             {
               "operator": "=",
               "question": "3.8",
-              "answerBoolean":true
+              "answerBoolean": true
             }
           ],
           "linkId": "3.10",
@@ -609,7 +627,7 @@
             {
               "operator": "=",
               "question": "3.8",
-              "answerBoolean":true
+              "answerBoolean": true
             }
           ],
           "linkId": "3.11",
@@ -813,7 +831,7 @@
             {
               "operator": "=",
               "question": "3.8",
-              "answerBoolean":true
+              "answerBoolean": true
             }
           ],
           "linkId": "4.8",
@@ -823,12 +841,16 @@
           "required": true,
           "answerOption": [
             {
-              "valueString": "Nocturnal oximetry"
-
+              "valueCoding": {
+                "code": "Nocturnal oximetry",
+                "display": "Nocturnal oximetry"
+              }
             },
             {
-              "valueString": "Titration Polysomnography"
-
+              "valueCoding": {
+                "code": "Titration Polysomnography",
+                "display": "Titration Polysomnography"
+              }
             }
           ]
         },
@@ -846,7 +868,7 @@
             {
               "operator": "=",
               "question": "3.8",
-              "answerBoolean":true
+              "answerBoolean": true
             }
           ],
           "linkId": "4.9",
@@ -868,7 +890,7 @@
             {
               "operator": "=",
               "question": "3.8",
-              "answerBoolean":true
+              "answerBoolean": true
             }
           ],
           "linkId": "4.10",
@@ -890,9 +912,10 @@
             {
               "operator": "=",
               "question": "3.8",
-              "answerBoolean":true
+              "answerBoolean": true
             }
-          ],"linkId": "4.11",
+          ],
+          "linkId": "4.11",
           "text": "Oxygen saturation during sleep with oxygen",
           "type": "quantity",
           "required": false
@@ -911,9 +934,10 @@
             {
               "operator": "=",
               "question": "3.8",
-              "answerBoolean":true
+              "answerBoolean": true
             }
-          ],"linkId": "4.12",
+          ],
+          "linkId": "4.12",
           "text": "Arterial PO2 with oxygen during sleep",
           "type": "quantity",
           "required": false
@@ -942,68 +966,100 @@
           "repeats": true,
           "answerOption": [
             {
-             "valueString": "COPD"
-
+              "valueCoding": {
+                "code": "COPD",
+                "display": "COPD"
+              }
             },
             {
-              "valueString": "Heart failure"
-
+              "valueCoding": {
+                "code": "Heart failure",
+                "display": "Heart failure"
+              }
             },
             {
-              "valueString": "COVID-19"
-
+              "valueCoding": {
+                "code": "COVID-19",
+                "display": "COVID-19"
+              }
             },
             {
-              "valueString": "Hypoxemia"
-
+              "valueCoding": {
+                "code": "Hypoxemia",
+                "display": "Hypoxemia"
+              }
             },
             {
-              "valueString": "Obstructive sleep apnea"
-
+              "valueCoding": {
+                "code": "Obstructive sleep apnea",
+                "display": "Obstructive sleep apnea"
+              }
             },
             {
-              "valueString": "Chronic respiratory failure with hypoxia"
-
+              "valueCoding": {
+                "code": "Chronic respiratory failure with hypoxia",
+                "display": "Chronic respiratory failure with hypoxia"
+              }
             },
             {
-              "valueString": "Acute respiratory failure with hypoxia"
-
+              "valueCoding": {
+                "code": "Acute respiratory failure with hypoxia",
+                "display": "Acute respiratory failure with hypoxia"
+              }
             },
             {
-              "valueString": "Interstitial pulmonary disease"
-
+              "valueCoding": {
+                "code": "Interstitial pulmonary disease",
+                "display": "Interstitial pulmonary disease"
+              }
             },
             {
-              "valueString": "Asthma"
-
+              "valueCoding": {
+                "code": "Asthma",
+                "display": "Asthma"
+              }
             },
             {
-              "valueString": "Pneumonia"
-
+              "valueCoding": {
+                "code": "Pneumonia",
+                "display": "Pneumonia"
+              }
             },
             {
-              "valueString": "Erythrocythemia"
-
+              "valueCoding": {
+                "code": "Erythrocythemia",
+                "display": "Erythrocythemia"
+              }
             },
             {
-              "valueString": "Cluster headaches"
-
+              "valueCoding": {
+                "code": "Cluster headaches",
+                "display": "Cluster headaches"
+              }
             },
             {
-              "valueString": "Pulmonary hypertension"
-
+              "valueCoding": {
+                "code": "Pulmonary hypertension",
+                "display": "Pulmonary hypertension"
+              }
             },
             {
-              "valueString": "Dependent edema suggesting congestive heart failure"
-
+              "valueCoding": {
+                "code": "Dependent edema suggesting congestive heart failure",
+                "display": "Dependent edema suggesting congestive heart failure"
+              }
             },
             {
-              "valueString": "Cor Pulmonale"
-
+              "valueCoding": {
+                "code": "Cor Pulmonale",
+                "display": "Cor Pulmonale"
+              }
             },
             {
-              "valueString": "Others"
-
+              "valueCoding": {
+                "code": "Others",
+                "display": "Others"
+              }
             }
           ]
         },
@@ -1075,7 +1131,6 @@
                 "code": "Pulmonary hypertension",
                 "display": "Pulmonary hypertension"
               }
-
             },
             {
               "operator": "=",
@@ -1084,7 +1139,6 @@
                 "code": "Cor Pulmonale",
                 "display": "Cor Pulmonale"
               }
-
             }
           ],
           "linkId": "5.5",
@@ -1095,24 +1149,34 @@
           "enableBehavior": "any",
           "answerOption": [
             {
-              "valueString": "Pulmonary Artery pressure"
-
+              "valueCoding": {
+                "code": "Pulmonary Artery pressure",
+                "display": "Pulmonary Artery pressure"
+              }
             },
             {
-              "valueString": "Gated blood pool scan"
-
+              "valueCoding": {
+                "code": "Gated blood pool scan",
+                "display": "Gated blood pool scan"
+              }
             },
             {
-              "valueString": "Echocardiogram"
-
+              "valueCoding": {
+                "code": "Echocardiogram",
+                "display": "Echocardiogram"
+              }
             },
             {
-              "valueString": "'p' Pulmonale on EKG"
-
+              "valueCoding": {
+                "code": "'p' Pulmonale on EKG",
+                "display": "'p' Pulmonale on EKG"
+              }
             },
             {
-              "valueString": "Other"
-
+              "valueCoding": {
+                "code": "Other",
+                "display": "Other"
+              }
             }
           ]
         },
@@ -1199,27 +1263,36 @@
           "required": true,
           "answerOption": [
             {
-              "valueString": "Angina pectoris in the absence of hypoxemia. "
-
+              "valueCoding": {
+                "code": "Angina pectoris",
+                "display": "Angina pectoris in the absence of hypoxemia. "
+              }
             },
             {
-              "valueString": "Dyspnea without cor pulmonale or evidence of hypoxemia"
-
+              "valueCoding": {
+                "code": "Dyspnea",
+                "display": "Dyspnea without cor pulmonale or evidence of hypoxemia"
+              }
             },
             {
-             "valueString": "Severe peripheral vascular disease resulting in clinically evident desaturation in one or more extremities but in the absence of systemic hypoxemia."
-
+              "valueCoding": {
+                "code": "Peripheral Vascular Disease",
+                "display": "Severe peripheral vascular disease resulting in clinically evident desaturation in one or more extremities but in the absence of systemic hypoxemia."
+              }
             },
             {
-              "valueString": "Terminal illnesses that do not affect the ability to breathe"
-
+              "valueCoding": {
+                "code": "Terminal Illness",
+                "display": "Terminal illnesses that do not affect the ability to breathe"
+              }
             },
             {
-              "valueString": "None"
-
+              "valueCoding": {
+                "code": "None",
+                "display": "None"
+              }
             }
           ]
-
         }
       ]
     },
@@ -1245,56 +1318,82 @@
           "required": true,
           "answerOption": [
             {
-              "valueString": "General"
-
+              "valueCoding": {
+                "code": "General",
+                "display": "General"
+              }
             },
             {
-              "valueString": "HEENT"
-
+              "valueCoding": {
+                "code": "HEENT",
+                "display": "HEENT"
+              }
             },
             {
-              "valueString": "Pulmonary System"
-
+              "valueCoding": {
+                "code": "Pulmonary System",
+                "display": "Pulmonary System"
+              }
             },
             {
-              "valueString": "Cardiovascular System"
-
+              "valueCoding": {
+                "code": "Cardiovascular System",
+                "display": "Cardiovascular System"
+              }
             },
             {
-              "valueString": "Integumental System"
-
+              "valueCoding": {
+                "code": "Integumental System",
+                "display": "Integumental System"
+              }
             },
             {
-              "valueString": "Gastrointestinal System"
-
+              "valueCoding": {
+                "code": "Gastrointestinal System",
+                "display": "Gastrointestinal System"
+              }
             },
             {
-              "valueString": "Musculoskeletal System"
-
+              "valueCoding": {
+                "code": "Musculoskeletal System",
+                "display": "Musculoskeletal System"
+              }
             },
             {
-              "valueString": "Neurological System"
-
+              "valueCoding": {
+                "code": "Neurological System",
+                "display": "Neurological System"
+              }
             },
             {
-              "valueString": "Psychiatric Conditions"
-
+              "valueCoding": {
+                "code": "Psychiatric Conditions",
+                "display": "Psychiatric Conditions"
+              }
             },
             {
-              "valueString": "Hematology"
-
+              "valueCoding": {
+                "code": "Hematology",
+                "display": "Hematology"
+              }
             },
             {
-              "valueString": "Immunology"
-
+              "valueCoding": {
+                "code": "Immunology",
+                "display": "Immunology"
+              }
             },
             {
-              "valueString": "Endocrine System"
-
+              "valueCoding": {
+                "code": "Endocrine System",
+                "display": "Endocrine System"
+              }
             },
             {
-              "valueString": "Other"
-
+              "valueCoding": {
+                "code": "Other",
+                "display": "Other"
+              }
             }
           ]
         },
@@ -1350,39 +1449,58 @@
           "required": true,
           "answerOption": [
             {
-              "valueString": "weight gain"
-
+              "valueCoding": {
+                "code": "weight gain",
+                "display": "weight gain"
+              }
             },
             {
-              "valueString": "weight loss"
-
+              "valueCoding": {
+                "code": "weight loss",
+                "display": "weight loss"
+              }
             },
             {
-              "valueString": "sleeping problems"
-
+              "valueCoding": {
+                "code": "sleeping problems",
+                "display": "sleeping problems"
+              }
             },
             {
-              "valueString": "fatigue"
-
+              "valueCoding": {
+                "code": "fatigue",
+                "display": "fatigue"
+              }
             },
             {
-              "valueString": "fever"
-
-            },
-            {"valueString": "chills"
-
-            },
-            {
-              "valueString": "night sweats / diaphoresi"
-
+              "valueCoding": {
+                "code": "fever",
+                "display": "fever"
+              }
             },
             {
-              "valueString": "Other"
-
+              "valueCoding": {
+                "code": "chills",
+                "display": "chills"
+              }
             },
             {
-              "valueString": "None"
-
+              "valueCoding": {
+                "code": "night sweats / diaphoresi",
+                "display": "night sweats / diaphoresi"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "Other",
+                "display": "Other"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "None",
+                "display": "None"
+              }
             }
           ]
         },
@@ -1437,24 +1555,35 @@
           "repeats": true,
           "required": true,
           "answerOption": [
-            {"valueString": "lumps"
-
+            {
+              "valueCoding": {
+                "code": "lumps",
+                "display": "lumps"
+              }
             },
             {
-              "valueString": "pain on neck movement"
-
+              "valueCoding": {
+                "code": "pain on neck movement",
+                "display": "pain on neck movement"
+              }
             },
             {
-              "valueString": "Nasal polyps"
-
+              "valueCoding": {
+                "code": "Nasal polyps",
+                "display": "Nasal polyps"
+              }
             },
             {
-              "valueString": "Other"
-
+              "valueCoding": {
+                "code": "Other",
+                "display": "Other"
+              }
             },
             {
-              "valueString": "None"
-
+              "valueCoding": {
+                "code": "None",
+                "display": "None"
+              }
             }
           ]
         },
@@ -1510,36 +1639,52 @@
           "required": true,
           "answerOption": [
             {
-              "valueString": "cough"
-
+              "valueCoding": {
+                "code": "cough",
+                "display": "cough"
+              }
             },
             {
-              "valueString": "shortness of breath"
-
+              "valueCoding": {
+                "code": "shortness of breath",
+                "display": "shortness of breath"
+              }
             },
             {
-              "valueString": "pain"
-
+              "valueCoding": {
+                "code": "pain",
+                "display": "pain"
+              }
             },
             {
-              "valueString": "wheezing"
-
+              "valueCoding": {
+                "code": "wheezing",
+                "display": "wheezing"
+              }
             },
             {
-              "valueString": "hemoptysis"
-
+              "valueCoding": {
+                "code": "hemoptysis",
+                "display": "hemoptysis"
+              }
             },
             {
-              "valueString": "sputum production"
-
+              "valueCoding": {
+                "code": "sputum production",
+                "display": "sputum production"
+              }
             },
             {
-              "valueString": "Other"
-
+              "valueCoding": {
+                "code": "Other",
+                "display": "Other"
+              }
             },
             {
-              "valueString": "None"
-
+              "valueCoding": {
+                "code": "None",
+                "display": "None"
+              }
             }
           ]
         },
@@ -1595,40 +1740,58 @@
           "required": true,
           "answerOption": [
             {
-              "valueString": "chest pain"
-
+              "valueCoding": {
+                "code": "chest pain",
+                "display": "chest pain"
+              }
             },
             {
-              "valueString": "palpitations"
-
+              "valueCoding": {
+                "code": "palpitations",
+                "display": "palpitations"
+              }
             },
             {
-              "valueString": "orthopnea"
-
+              "valueCoding": {
+                "code": "orthopnea",
+                "display": "orthopnea"
+              }
             },
             {
-              "valueString": "murmur"
-
+              "valueCoding": {
+                "code": "murmur",
+                "display": "murmur"
+              }
             },
             {
-              "valueString": "syncope"
-
+              "valueCoding": {
+                "code": "syncope",
+                "display": "syncope"
+              }
             },
             {
-              "valueString": "edema"
-
+              "valueCoding": {
+                "code": "edema",
+                "display": "edema"
+              }
             },
             {
-              "valueString": "claudication"
-
+              "valueCoding": {
+                "code": "claudication",
+                "display": "claudication"
+              }
             },
             {
-              "valueString": "varicose veins"
-
+              "valueCoding": {
+                "code": "varicose veins",
+                "display": "varicose veins"
+              }
             },
             {
-              "valueString": "thrombophlebitis"
-
+              "valueCoding": {
+                "code": "thrombophlebitis",
+                "display": "thrombophlebitis"
+              }
             },
             {
               "valueCoding": {
@@ -1643,12 +1806,16 @@
               }
             },
             {
-              "valueString": "Other"
-
+              "valueCoding": {
+                "code": "Other",
+                "display": "Other"
+              }
             },
             {
-              "valueString": "None"
-
+              "valueCoding": {
+                "code": "None",
+                "display": "None"
+              }
             }
           ]
         },
@@ -1704,35 +1871,46 @@
           "required": true,
           "answerOption": [
             {
-              "valueString": "swallowing problems"
-
+              "valueCoding": {
+                "code": "swallowing problems",
+                "display": "swallowing problems"
+              }
             },
             {
-              "valueString": "abdominal pain"
-
+              "valueCoding": {
+                "code": "abdominal pain",
+                "display": "abdominal pain"
+              }
             },
             {
-              "valueString": "constipation"
-
-            },
-            {"valueString": "diarrhea"
-
-            },
-            {
-             "valueString": "incontinence"
-
+              "valueCoding": {
+                "code": "constipation",
+                "display": "constipation"
+              }
             },
             {
-             "valueString": "nausea"
-
+              "valueCoding": {
+                "code": "diarrhea",
+                "display": "diarrhea"
+              }
             },
             {
-             "valueString": "vomiting"
-
+              "valueCoding": {
+                "code": "incontinence",
+                "display": "incontinence"
+              }
             },
             {
-              "valueString": "ulcers "
-
+              "valueCoding": {
+                "code": "nausea",
+                "display": "nausea"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "vomiting",
+                "display": "vomiting"
+              }
             },
             {
               "valueCoding": {
@@ -1741,28 +1919,46 @@
               }
             },
             {
-              "valueString": "rectal bleeding"
-
+              "valueCoding": {
+                "code": "melena",
+                "display": "melena"
+              }
             },
             {
-              "valueString": "jaundice"
-
+              "valueCoding": {
+                "code": "rectal bleeding",
+                "display": "rectal bleeding"
+              }
             },
             {
-              "valueString": "heartburn"
-
+              "valueCoding": {
+                "code": "jaundice",
+                "display": "jaundice"
+              }
             },
             {
-              "valueString": "hematemesis"
-
+              "valueCoding": {
+                "code": "heartburn",
+                "display": "heartburn"
+              }
             },
             {
-              "valueString": "Other"
-
+              "valueCoding": {
+                "code": "hematemesis",
+                "display": "hematemesis"
+              }
             },
             {
-              "valueString": "None"
-
+              "valueCoding": {
+                "code": "Other",
+                "display": "Other"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "None",
+                "display": "None"
+              }
             }
           ]
         },
@@ -1818,64 +2014,94 @@
           "required": true,
           "answerOption": [
             {
-              "valueString": "pain"
-
+              "valueCoding": {
+                "code": "pain",
+                "display": "pain"
+              }
             },
             {
-              "valueString": "swelling"
-
+              "valueCoding": {
+                "code": "swelling",
+                "display": "swelling"
+              }
             },
             {
-              "valueString": "stiffness"
-
+              "valueCoding": {
+                "code": "stiffness",
+                "display": "stiffness"
+              }
             },
             {
-              "valueString": "limitation of range of motion"
-
+              "valueCoding": {
+                "code": "limitation of range of motion",
+                "display": "limitation of range of motion"
+              }
             },
             {
-              "valueString": "arthritis"
-
+              "valueCoding": {
+                "code": "arthritis",
+                "display": "arthritis"
+              }
             },
             {
-              "valueString": "gout"
-
-            },
-            {"valueString": "cramps"
-
-            },
-            {
-              "valueString": "myalgia"
-
+              "valueCoding": {
+                "code": "gout",
+                "display": "gout"
+              }
             },
             {
-              "valueString": "fasciculation"
-
+              "valueCoding": {
+                "code": "cramps",
+                "display": "cramps"
+              }
             },
             {
-              "valueString": "atrophy"
-
+              "valueCoding": {
+                "code": "myalgia",
+                "display": "myalgia"
+              }
             },
             {
-              "valueString": "fracture"
-
+              "valueCoding": {
+                "code": "fasciculation",
+                "display": "fasciculation"
+              }
             },
             {
-             "valueString": "deformity"
-
+              "valueCoding": {
+                "code": "atrophy",
+                "display": "atrophy"
+              }
             },
             {
-              "valueString": "weakness"
-
+              "valueCoding": {
+                "code": "fracture",
+                "display": "fracture"
+              }
             },
             {
-              "valueString": "Other"
-
+              "valueCoding": {
+                "code": "deformity",
+                "display": "deformity"
+              }
             },
             {
-
-                "valueString": "None"
-
+              "valueCoding": {
+                "code": "weakness",
+                "display": "weakness"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "Other",
+                "display": "Other"
+              }
+            },
+            {
+              "valueCoding": {
+                "code": "None",
+                "display": "None"
+              }
             }
           ]
         },
@@ -1931,80 +2157,118 @@
           "required": true,
           "answerOption": [
             {
-              "valueString": "seizures"
-
+              "valueCoding": {
+                "code": "seizures",
+                "display": "seizures"
+              }
             },
             {
-              "valueString": "poor memory"
-
+              "valueCoding": {
+                "code": "poor memory",
+                "display": "poor memory"
+              }
             },
             {
-              "valueString": "poor concentration"
-
+              "valueCoding": {
+                "code": "poor concentration",
+                "display": "poor concentration"
+              }
             },
             {
-              "valueString": "numbness / tingling"
-
+              "valueCoding": {
+                "code": "numbness / tingling",
+                "display": "numbness / tingling"
+              }
             },
             {
-              "valueString": "pins and needles sensation"
-
+              "valueCoding": {
+                "code": "pins and needles sensation",
+                "display": "pins and needles sensation"
+              }
             },
             {
-              "valueString": "hyperpathia"
-
+              "valueCoding": {
+                "code": "hyperpathia",
+                "display": "hyperpathia"
+              }
             },
             {
-              "valueString": "dysesthesia"
-
+              "valueCoding": {
+                "code": "dysesthesia",
+                "display": "dysesthesia"
+              }
             },
             {
-              "valueString": "weakness"
-
+              "valueCoding": {
+                "code": "weakness",
+                "display": "weakness"
+              }
             },
             {
-              "valueString": "paralysis"
-
+              "valueCoding": {
+                "code": "paralysis",
+                "display": "paralysis"
+              }
             },
             {
-              "valueString": "tremors"
-
+              "valueCoding": {
+                "code": "tremors",
+                "display": "tremors"
+              }
             },
             {
-              "valueString": "involuntary movements"
-
+              "valueCoding": {
+                "code": "involuntary movements",
+                "display": "involuntary movements"
+              }
             },
             {
-              "valueString": "unstable gait"
-
+              "valueCoding": {
+                "code": "unstable gait",
+                "display": "unstable gait"
+              }
             },
             {
-              "valueString": "fall"
-
+              "valueCoding": {
+                "code": "fall",
+                "display": "fall"
+              }
             },
             {
-              "valueString": "vertigo"
-
+              "valueCoding": {
+                "code": "vertigo",
+                "display": "vertigo"
+              }
             },
             {
-              "valueString": "headache"
-
+              "valueCoding": {
+                "code": "headache",
+                "display": "headache"
+              }
             },
             {
-              "valueString": "stroke"
-
+              "valueCoding": {
+                "code": "stroke",
+                "display": "stroke"
+              }
             },
             {
-              "valueString": "speech disorders"
-
+              "valueCoding": {
+                "code": "speech disorders",
+                "display": "speech disorders"
+              }
             },
             {
-              "valueString": "Other"
-
+              "valueCoding": {
+                "code": "Other",
+                "display": "Other"
+              }
             },
             {
-              "valueString": "None"
-
+              "valueCoding": {
+                "code": "None",
+                "display": "None"
+              }
             }
           ]
         },
@@ -2060,36 +2324,52 @@
           "required": true,
           "answerOption": [
             {
-              "valueString": "hallucinations"
-
+              "valueCoding": {
+                "code": "hallucinations",
+                "display": "hallucinations"
+              }
             },
             {
-              "valueString": "delusions"
-
+              "valueCoding": {
+                "code": "delusions",
+                "display": "delusions"
+              }
             },
             {
-              "valueString": "anxiety"
-
+              "valueCoding": {
+                "code": "anxiety",
+                "display": "anxiety"
+              }
             },
             {
-              "valueString": "nervous breakdown"
-
+              "valueCoding": {
+                "code": "nervous breakdown",
+                "display": "nervous breakdown"
+              }
             },
             {
-              "valueString": "mood changes"
-
+              "valueCoding": {
+                "code": "mood changes",
+                "display": "mood changes"
+              }
             },
             {
-              "valueString": "depression"
-
+              "valueCoding": {
+                "code": "depression",
+                "display": "depression"
+              }
             },
             {
-              "valueString": "Other"
-
+              "valueCoding": {
+                "code": "Other",
+                "display": "Other"
+              }
             },
             {
-              "valueString": "None"
-
+              "valueCoding": {
+                "code": "None",
+                "display": "None"
+              }
             }
           ]
         },
@@ -2145,24 +2425,34 @@
           "required": true,
           "answerOption": [
             {
-              "valueString": "anemia"
-
+              "valueCoding": {
+                "code": "anemia",
+                "display": "anemia"
+              }
             },
             {
-              "valueString": "bruising"
-
+              "valueCoding": {
+                "code": "bruising",
+                "display": "bruising"
+              }
             },
             {
-              "valueString": "bleeding disorders (conditional)"
-
+              "valueCoding": {
+                "code": "bleeding disorders (conditional)",
+                "display": "bleeding disorders (conditional)"
+              }
             },
             {
-              "valueString": "Other"
-
+              "valueCoding": {
+                "code": "Other",
+                "display": "Other"
+              }
             },
             {
-              "valueString": "None"
-
+              "valueCoding": {
+                "code": "None",
+                "display": "None"
+              }
             }
           ]
         },
@@ -2218,28 +2508,40 @@
           "required": true,
           "answerOption": [
             {
-              "valueString": "heat or cold intolerance"
-
+              "valueCoding": {
+                "code": "heat or cold intolerance",
+                "display": "heat or cold intolerance"
+              }
             },
             {
-              "valueString": "diabetes"
-
+              "valueCoding": {
+                "code": "diabetes",
+                "display": "diabetes"
+              }
             },
             {
-              "valueString": "lipid disorders"
-
+              "valueCoding": {
+                "code": "lipid disorders",
+                "display": "lipid disorders"
+              }
             },
             {
-              "valueString": "goiter"
-
+              "valueCoding": {
+                "code": "goiter",
+                "display": "goiter"
+              }
             },
             {
-              "valueString": "Other"
-
+              "valueCoding": {
+                "code": "Other",
+                "display": "Other"
+              }
             },
             {
-              "valueString": "None"
-
+              "valueCoding": {
+                "code": "None",
+                "display": "None"
+              }
             }
           ]
         },
@@ -2295,28 +2597,40 @@
           "required": true,
           "answerOption": [
             {
-              "valueString": "Acne"
-
+              "valueCoding": {
+                "code": "Acne",
+                "display": "Acne"
+              }
             },
             {
-              "valueString": "Atopic Dermatitis"
-
+              "valueCoding": {
+                "code": "Atopic Dermatitis",
+                "display": "Atopic Dermatitis"
+              }
             },
             {
-              "valueString": "Cellulitis"
-
+              "valueCoding": {
+                "code": "Cellulitis",
+                "display": "Cellulitis"
+              }
             },
             {
-              "valueString": "Vitiligo"
-
+              "valueCoding": {
+                "code": "Vitiligo",
+                "display": "Vitiligo"
+              }
             },
             {
-              "valueString": "Other"
-
+              "valueCoding": {
+                "code": "Other",
+                "display": "Other"
+              }
             },
             {
-              "valueString": "None"
-
+              "valueCoding": {
+                "code": "None",
+                "display": "None"
+              }
             }
           ]
         },
@@ -2372,28 +2686,40 @@
           "required": true,
           "answerOption": [
             {
-              "valueString": "Rheumatoid Arthritis"
-
+              "valueCoding": {
+                "code": "Rheumatoid Arthritis",
+                "display": "Rheumatoid Arthritis"
+              }
             },
             {
-              "valueString": "Multiple Sclerosis"
-
+              "valueCoding": {
+                "code": "Multiple Sclerosis",
+                "display": "Multiple Sclerosis"
+              }
             },
             {
-              "valueString": "Celiac disease"
-
+              "valueCoding": {
+                "code": "Celiac disease",
+                "display": "Celiac disease"
+              }
             },
             {
-              "valueString": "Inflammatory bowel disease"
-
+              "valueCoding": {
+                "code": "Inflammatory bowel disease",
+                "display": "Inflammatory bowel disease"
+              }
             },
             {
-              "valueString": "Other"
-
+              "valueCoding": {
+                "code": "Other",
+                "display": "Other"
+              }
             },
             {
-              "valueString": "None"
-
+              "valueCoding": {
+                "code": "None",
+                "display": "None"
+              }
             }
           ]
         },
@@ -2485,7 +2811,7 @@
               "answerDecimal": 1.0
             }
           ],
-          "enableBehavior":"any",
+          "enableBehavior": "any",
           "item": [
             {
               "linkId": "9.2.1",
@@ -2617,16 +2943,22 @@
           "required": true,
           "answerOption": [
             {
-              "valueString": "At rest/Awake"
-
+              "valueCoding": {
+                "code": "At rest/Awake",
+                "display": "At rest/Awake"
+              }
             },
             {
-              "valueString": "During exertion"
-
+              "valueCoding": {
+                "code": "During exertion",
+                "display": "During exertion"
+              }
             },
             {
-              "valueString": "During Sleep"
-
+              "valueCoding": {
+                "code": "During Sleep",
+                "display": "During Sleep"
+              }
             }
           ]
         },
@@ -2666,28 +2998,40 @@
           "required": true,
           "answerOption": [
             {
-              "valueString": "Nasal cannula"
-
+              "valueCoding": {
+                "code": "Nasal cannula",
+                "display": "Nasal cannula"
+              }
             },
             {
-              "valueString": "Non-rebreather"
-
+              "valueCoding": {
+                "code": "Non-rebreather",
+                "display": "Non-rebreather"
+              }
             },
             {
-              "valueString": "Ventilator"
-
+              "valueCoding": {
+                "code": "Ventilator",
+                "display": "Ventilator"
+              }
             },
             {
-              "valueString": "Mask"
-
+              "valueCoding": {
+                "code": "Mask",
+                "display": "Mask"
+              }
             },
             {
-              "valueString": "PAP bleed in"
-
+              "valueCoding": {
+                "code": "PAP bleed in",
+                "display": "PAP bleed in"
+              }
             },
             {
-              "valueString": "Oxygen conserving device"
-
+              "valueCoding": {
+                "code": "Oxygen conserving device",
+                "display": "Oxygen conserving device"
+              }
             },
             {
               "valueCoding": {
@@ -2696,8 +3040,10 @@
               }
             },
             {
-             "valueString": "Other"
-
+              "valueCoding": {
+                "code": "Other",
+                "display": "Other"
+              }
             }
           ]
         }
@@ -2722,15 +3068,22 @@
               "initialSelected": true
             },
             {
-              "valueString": "Change in status"
-
+              "valueCoding": {
+                "code": "Change in status",
+                "display": "Change in status"
+              }
             },
             {
-              "valueString": "Revision or change in equipment"
+              "valueCoding": {
+                "code": "Revision or change in equipment",
+                "display": "Revision or change in equipment"
+              }
             },
             {
-              "valueString": "Replacement"
-
+              "valueCoding": {
+                "code": "Replacement",
+                "display": "Replacement"
+              }
             }
           ]
         },
@@ -2752,8 +3105,10 @@
           "required": true,
           "answerOption": [
             {
-              "valueString": "Patient relocated"
-
+              "valueCoding": {
+                "code": "Patient relocated",
+                "display": "Patient relocated"
+              }
             },
             {
               "valueCoding": {
@@ -2762,8 +3117,10 @@
               }
             },
             {
-              "valueString": "Other"
-
+              "valueCoding": {
+                "code": "Other",
+                "display": "Other"
+              }
             }
           ]
         },
@@ -2785,15 +3142,22 @@
           ],
           "answerOption": [
             {
-              "valueString": "New Physician order"
-
+              "valueCoding": {
+                "code": "New Physician order",
+                "display": "New Physician order"
+              }
             },
             {
-              "valueString": "beneficiary requested upgrade with signed ABN"
-
+              "valueCoding": {
+                "code": "beneficiary requested upgrade with signed ABN",
+                "display": "beneficiary requested upgrade with signed ABN"
+              }
             },
             {
-              "valueString": "Other"
+              "valueCoding": {
+                "code": "Other",
+                "display": "Other"
+              }
             }
           ]
         },
@@ -2815,16 +3179,22 @@
           ],
           "answerOption": [
             {
-              "valueString": "lost or stolen"
-
+              "valueCoding": {
+                "code": "lost or stolen",
+                "display": "lost or stolen"
+              }
             },
             {
-              "valueString": "end of reasonable useful lifetime (5 years)"
-
+              "valueCoding": {
+                "code": "end of reasonable useful lifetime (5 years)",
+                "display": "end of reasonable useful lifetime (5 years)"
+              }
             },
             {
-              "valueString": "irreparable damage"
-
+              "valueCoding": {
+                "code": "irreparable damage",
+                "display": "irreparable damage"
+              }
             }
           ]
         }
