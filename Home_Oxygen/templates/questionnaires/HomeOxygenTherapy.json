@@ -2593,7 +2593,7 @@
         {
           "linkId": "10.1",
           "text": "Type Of Order",
-          "type": "radio-button",
+          "type": "choice",
           "required": true,
           "extension": [
             {
