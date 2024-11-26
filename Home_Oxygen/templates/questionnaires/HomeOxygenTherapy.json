@@ -2596,7 +2596,7 @@
         {
           "linkId": "10.1",
           "text": "Type Of Order",
-          "type": "choice",
+          "type": "radio-button",
           "required": true,
           "extension": [
             {
