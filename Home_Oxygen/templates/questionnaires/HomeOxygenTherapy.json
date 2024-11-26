@@ -435,6 +435,14 @@
                 "expression": "Nocturnalanswer"
               }
             }
+            ,
+            {
+              "url": "http://hl7.org/fhir/questionnaire-item-control",
+              "valueCoding": {
+                "code": " radio-button",
+                "display": "Radio Button"
+              }
+            }
           ],
 
           "linkId": "3.7",
@@ -482,6 +490,14 @@
               "valueExpression": {
                 "language": "text/cql",
                 "expression": "sufferother"
+              }
+            }
+            ,
+            {
+              "url": "http://hl7.org/fhir/questionnaire-item-control",
+              "valueCoding": {
+                "code": " radio-button",
+                "display": "Radio Button"
               }
             }
           ],
