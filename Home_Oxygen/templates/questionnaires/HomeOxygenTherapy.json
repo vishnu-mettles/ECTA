@@ -2598,6 +2598,15 @@
           "text": "Type Of Order",
           "type": "choice",
           "required": true,
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/questionnaire-item-control",
+              "valueCoding": {
+                "code": " radio-button",
+                "display": "Radio Button"
+              }
+            }
+          ],
           "answerOption": [
             {
               "valueCoding": {
@@ -2624,16 +2633,8 @@
                 "display": "Replacement"
               }
             }
-          ],
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/questionnaire-item-control",
-              "valueCoding": {
-                "code": " radio-button",
-                "display": "Radio Button"
-              }
-            }
           ]
+
         },
         {
           "linkId": "10.2",
