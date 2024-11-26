@@ -2624,7 +2624,16 @@
                 "display": "Replacement"
               }
             }
-          ]
+          ],
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/questionnaire-item-control",
+              "valueCoding": {
+                "code": " radio-button",
+                "display": "Radio Button"
+              }
+            }
+          ],
         },
         {
           "linkId": "10.2",
