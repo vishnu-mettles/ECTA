@@ -145,26 +145,14 @@
               }
             }
           ],
-          "enableWhen": [
-            {
-              "operator": "=",
-              "question": "2.3",
-              "answerBoolean": true
-            }
-          ],
+
           "linkId": "2.4",
           "text": "Date of Blood Gas Study test?",
           "type": "date",
           "required": false
         },
         {
-          "enableWhen": [
-            {
-              "operator": "=",
-              "question": "2.3",
-              "answerBoolean": true
-            }
-          ],
+
           "linkId": "2.4.1",
           "text": "Testing location of Blood Gas Study test?",
           "type": "text",
@@ -180,13 +168,7 @@
               }
             }
           ],
-          "enableWhen": [
-            {
-              "operator": "=",
-              "question": "2.3",
-              "answerBoolean": true
-            }
-          ],
+
           "linkId": "2.5",
           "text": "O2 Sat ",
           "type": "quantity",
@@ -202,13 +184,7 @@
               }
             }
           ],
-          "enableWhen": [
-            {
-              "operator": "=",
-              "question": "2.3",
-              "answerBoolean": true
-            }
-          ],
+
           "linkId": "2.6",
           "text": "PaO2 (ABG)",
           "type": "quantity",
@@ -224,13 +200,7 @@
               }
             }
           ],
-          "enableWhen": [
-            {
-              "operator": "=",
-              "question": "2.3",
-              "answerBoolean": true
-            }
-          ],
+
           "linkId": "2.7",
           "text": "Hematocrit ",
           "type": "quantity",
@@ -313,13 +283,7 @@
               }
             }
           ],
-          "enableWhen": [
-            {
-              "operator": "=",
-              "question": "3.01",
-              "answerBoolean": true
-            }
-          ],
+
           "linkId": "3.1",
           "type": "choice",
           "text": "Specify condition",
@@ -368,16 +332,7 @@
               }
             }
           ],
-          "enableWhen": [
-            {
-              "operator": "=",
-              "question": "3.1",
-              "answerCoding": {
-                "code": "Other",
-                "display": "Other"
-              }
-            }
-          ],
+
           "linkId": "3.2",
           "text": "Specify",
           "type": "string",
@@ -433,13 +388,7 @@
               }
             }
           ],
-          "enableWhen": [
-            {
-              "operator": "=",
-              "question": "3.5",
-              "answerBoolean": true
-            }
-          ],
+
           "linkId": "3.6",
           "text": "Was exercise testing performed in-person by a treating practitioner or other medical professional qualified to conduct testing ? ",
           "type": "boolean",
@@ -480,13 +429,7 @@
               }
             }
           ],
-          "enableWhen": [
-            {
-              "operator": "=",
-              "question": "3.07",
-              "answerBoolean": true
-            }
-          ],
+
           "linkId": "3.7",
           "type": "choice",
           "text": "Specify symptoms",
@@ -535,16 +478,7 @@
               }
             }
           ],
-          "enableWhen": [
-            {
-              "operator": "=",
-              "question": "3.7",
-              "answerCoding": {
-                "code": "Other",
-                "display": "Other"
-              }
-            }
-          ],
+
           "linkId": "3.711",
           "text": "Specify other",
           "type": "string",
@@ -579,13 +513,7 @@
               }
             }
           ],
-          "enableWhen": [
-            {
-              "operator": "=",
-              "question": "3.8",
-              "answerBoolean": true
-            }
-          ],
+
           "linkId": "3.9",
           "type": "boolean",
           "text": "Was nocturnal testing performed under the direction of medicare enrolled IDTF ?",
@@ -605,13 +533,7 @@
               }
             }
           ],
-          "enableWhen": [
-            {
-              "operator": "=",
-              "question": "3.8",
-              "answerBoolean": true
-            }
-          ],
+
           "linkId": "3.10",
           "text": "Is the patient's OSA being sufficiently treated?",
           "type": "boolean",
@@ -623,13 +545,7 @@
           ]
         },
         {
-          "enableWhen": [
-            {
-              "operator": "=",
-              "question": "3.8",
-              "answerBoolean": true
-            }
-          ],
+
           "linkId": "3.11",
           "text": "Was the titration study performed after determining optimal settings of the PAP device ?",
           "type": "boolean",
@@ -672,13 +588,7 @@
           "text": "Was the qualifying blood gas study performed on 4LPM or higher",
           "type": "boolean",
           "required": true,
-          "enableWhen": [
-            {
-              "operator": "=",
-              "question": "4.1",
-              "answerBoolean": true
-            }
-          ],
+
           "initial": [
             {
               "valueBoolean": false
@@ -695,13 +605,7 @@
               }
             }
           ],
-          "enableWhen": [
-            {
-              "operator": "=",
-              "question": "4.1",
-              "answerBoolean": true
-            }
-          ],
+
           "linkId": "4.2",
           "text": "Oxygen saturation results at rest",
           "type": "quantity",
@@ -717,13 +621,7 @@
               }
             }
           ],
-          "enableWhen": [
-            {
-              "operator": "=",
-              "question": "4.1",
-              "answerBoolean": true
-            }
-          ],
+
           "linkId": "4.3",
           "text": "Arterial PO2 results at rest",
           "type": "quantity",
@@ -739,13 +637,7 @@
               }
             }
           ],
-          "enableWhen": [
-            {
-              "operator": "=",
-              "question": "3.5",
-              "answerBoolean": true
-            }
-          ],
+
           "linkId": "4.4",
           "text": "Oxygen saturation results during exercise without oxygen",
           "type": "quantity",
@@ -761,13 +653,7 @@
               }
             }
           ],
-          "enableWhen": [
-            {
-              "operator": "=",
-              "question": "3.5",
-              "answerBoolean": true
-            }
-          ],
+
           "linkId": "4.5",
           "text": "Arterial PO2 results during exercise without oxygen",
           "type": "quantity",
@@ -783,13 +669,7 @@
               }
             }
           ],
-          "enableWhen": [
-            {
-              "operator": "=",
-              "question": "3.5",
-              "answerBoolean": true
-            }
-          ],
+
           "linkId": "4.6",
           "text": "Oxygen saturation results during exercise with oxygen",
           "type": "quantity",
@@ -805,13 +685,7 @@
               }
             }
           ],
-          "enableWhen": [
-            {
-              "operator": "=",
-              "question": "3.5",
-              "answerBoolean": true
-            }
-          ],
+
           "linkId": "4.7",
           "text": "Arterial PO2 results during exercise with oxygen",
           "type": "quantity",
@@ -827,13 +701,7 @@
               }
             }
           ],
-          "enableWhen": [
-            {
-              "operator": "=",
-              "question": "3.8",
-              "answerBoolean": true
-            }
-          ],
+
           "linkId": "4.8",
           "text": "Study performed in relevance to Nocturnal Restlessness",
           "type": "choice",
@@ -864,13 +732,7 @@
               }
             }
           ],
-          "enableWhen": [
-            {
-              "operator": "=",
-              "question": "3.8",
-              "answerBoolean": true
-            }
-          ],
+
           "linkId": "4.9",
           "text": "Oxygen saturation during sleep",
           "type": "quantity",
@@ -886,13 +748,7 @@
               }
             }
           ],
-          "enableWhen": [
-            {
-              "operator": "=",
-              "question": "3.8",
-              "answerBoolean": true
-            }
-          ],
+
           "linkId": "4.10",
           "text": "Arterial PO2 during sleep",
           "type": "quantity",
@@ -908,13 +764,7 @@
               }
             }
           ],
-          "enableWhen": [
-            {
-              "operator": "=",
-              "question": "3.8",
-              "answerBoolean": true
-            }
-          ],
+
           "linkId": "4.11",
           "text": "Oxygen saturation during sleep with oxygen",
           "type": "quantity",
@@ -930,13 +780,7 @@
               }
             }
           ],
-          "enableWhen": [
-            {
-              "operator": "=",
-              "question": "3.8",
-              "answerBoolean": true
-            }
-          ],
+
           "linkId": "4.12",
           "text": "Arterial PO2 with oxygen during sleep",
           "type": "quantity",
@@ -1073,16 +917,7 @@
               }
             }
           ],
-          "enableWhen": [
-            {
-              "operator": "=",
-              "question": "5.1",
-              "answerCoding": {
-                "code": "Others",
-                "display": "Others"
-              }
-            }
-          ],
+
           "linkId": "5.2",
           "text": "Specify the ICD-10 code",
           "type": "string",
@@ -1098,16 +933,7 @@
               }
             }
           ],
-          "enableWhen": [
-            {
-              "operator": "=",
-              "question": "5.1",
-              "answerCoding": {
-                "code": "Others",
-                "display": "Others"
-              }
-            }
-          ],
+
           "linkId": "5.3",
           "text": "Specify the ICD-10 code description",
           "type": "string",
@@ -1123,24 +949,7 @@
               }
             }
           ],
-          "enableWhen": [
-            {
-              "operator": "=",
-              "question": "5.1",
-              "answerCoding": {
-                "code": "Pulmonary hypertension",
-                "display": "Pulmonary hypertension"
-              }
-            },
-            {
-              "operator": "=",
-              "question": "5.1",
-              "answerCoding": {
-                "code": "Cor Pulmonale",
-                "display": "Cor Pulmonale"
-              }
-            }
-          ],
+
           "linkId": "5.5",
           "text": "Determination of Pulmonary hypertension/Cor Pulmonale",
           "type": "choice",
@@ -1190,16 +999,7 @@
               }
             }
           ],
-          "enableWhen": [
-            {
-              "operator": "=",
-              "question": "5.1",
-              "answerCoding": {
-                "code": "Erythrocytosis",
-                "display": "Erythrocytosis"
-              }
-            }
-          ],
+
           "linkId": "5.7",
           "text": "Hematocrit/hemoglobin result (Hct/Hgb)",
           "type": "quantity",
@@ -1235,13 +1035,7 @@
               }
             }
           ],
-          "enableWhen": [
-            {
-              "operator": "=",
-              "question": "5.8",
-              "answerBoolean": true
-            }
-          ],
+
           "linkId": "5.811",
           "text": "Specify condition",
           "type": "string",
@@ -1407,16 +1201,7 @@
               }
             }
           ],
-          "enableWhen": [
-            {
-              "operator": "=",
-              "question": "6.1",
-              "answerCoding": {
-                "code": "Other",
-                "display": "Other"
-              }
-            }
-          ],
+
           "linkId": "6.1.1",
           "text": "Specify other",
           "type": "string",
@@ -1432,16 +1217,7 @@
               }
             }
           ],
-          "enableWhen": [
-            {
-              "operator": "=",
-              "question": "6.1",
-              "answerCoding": {
-                "code": "General",
-                "display": "General"
-              }
-            }
-          ],
+
           "linkId": "6.2",
           "text": "General",
           "type": "choice",
@@ -1514,16 +1290,7 @@
               }
             }
           ],
-          "enableWhen": [
-            {
-              "operator": "=",
-              "question": "6.2",
-              "answerCoding": {
-                "code": "Other",
-                "display": "Other"
-              }
-            }
-          ],
+
           "linkId": "6.21",
           "text": "Specify other",
           "type": "string",
@@ -1539,16 +1306,7 @@
               }
             }
           ],
-          "enableWhen": [
-            {
-              "operator": "=",
-              "question": "6.1",
-              "answerCoding": {
-                "code": "HEENT",
-                "display": "HEENT"
-              }
-            }
-          ],
+
           "linkId": "6.3",
           "text": "HEENT",
           "type": "choice",
@@ -1597,16 +1355,7 @@
               }
             }
           ],
-          "enableWhen": [
-            {
-              "operator": "=",
-              "question": "6.3",
-              "answerCoding": {
-                "code": "Other",
-                "display": "Other"
-              }
-            }
-          ],
+
           "linkId": "6.31",
           "text": "Specify other",
           "type": "string",
@@ -1622,16 +1371,7 @@
               }
             }
           ],
-          "enableWhen": [
-            {
-              "operator": "=",
-              "question": "6.1",
-              "answerCoding": {
-                "code": "Pulmonary System",
-                "display": "Pulmonary System"
-              }
-            }
-          ],
+
           "linkId": "6.4",
           "text": "Pulmonary System",
           "type": "choice",
@@ -1698,16 +1438,7 @@
               }
             }
           ],
-          "enableWhen": [
-            {
-              "operator": "=",
-              "question": "6.4",
-              "answerCoding": {
-                "code": "Other",
-                "display": "Other"
-              }
-            }
-          ],
+
           "linkId": "6.41",
           "text": "Specify other",
           "type": "string",
@@ -1723,16 +1454,7 @@
               }
             }
           ],
-          "enableWhen": [
-            {
-              "operator": "=",
-              "question": "6.1",
-              "answerCoding": {
-                "code": "Cardiovascular System",
-                "display": "Cardiovascular System"
-              }
-            }
-          ],
+
           "linkId": "6.5",
           "text": "Cardiovascular System",
           "type": "choice",
@@ -1829,16 +1551,7 @@
               }
             }
           ],
-          "enableWhen": [
-            {
-              "operator": "=",
-              "question": "6.5",
-              "answerCoding": {
-                "code": "Other",
-                "display": "Other"
-              }
-            }
-          ],
+
           "linkId": "6.51",
           "text": "Specify other",
           "type": "string",
@@ -1854,16 +1567,7 @@
               }
             }
           ],
-          "enableWhen": [
-            {
-              "operator": "=",
-              "question": "6.1",
-              "answerCoding": {
-                "code": "Gastrointestinal System",
-                "display": "Gastrointestinal System"
-              }
-            }
-          ],
+
           "linkId": "6.7",
           "text": "Gastrointestinal System",
           "type": "choice",
@@ -1972,16 +1676,6 @@
               }
             }
           ],
-          "enableWhen": [
-            {
-              "operator": "=",
-              "question": "6.7",
-              "answerCoding": {
-                "code": "Other",
-                "display": "Other"
-              }
-            }
-          ],
           "linkId": "6.71",
           "text": "Specify other",
           "type": "string",
@@ -1997,16 +1691,7 @@
               }
             }
           ],
-          "enableWhen": [
-            {
-              "operator": "=",
-              "question": "6.1",
-              "answerCoding": {
-                "code": "Musculoskeletal System",
-                "display": "Musculoskeletal System"
-              }
-            }
-          ],
+
           "linkId": "6.8",
           "text": "Musculoskeletal System",
           "type": "choice",
@@ -2115,16 +1800,7 @@
               }
             }
           ],
-          "enableWhen": [
-            {
-              "operator": "=",
-              "question": "6.8",
-              "answerCoding": {
-                "code": "Other",
-                "display": "Other"
-              }
-            }
-          ],
+
           "linkId": "6.81",
           "text": "Specify other",
           "type": "string",
@@ -2140,16 +1816,7 @@
               }
             }
           ],
-          "enableWhen": [
-            {
-              "operator": "=",
-              "question": "6.1",
-              "answerCoding": {
-                "code": "Neurological System",
-                "display": "Neurological System"
-              }
-            }
-          ],
+
           "linkId": "6.9",
           "text": "Neurological System",
           "type": "choice",
@@ -2282,16 +1949,7 @@
               }
             }
           ],
-          "enableWhen": [
-            {
-              "operator": "=",
-              "question": "6.9",
-              "answerCoding": {
-                "code": "Other",
-                "display": "Other"
-              }
-            }
-          ],
+
           "linkId": "6.91",
           "text": "Specify other",
           "type": "string",
@@ -2304,16 +1962,6 @@
               "valueExpression": {
                 "language": "text/cql",
                 "expression": "PsychiatricConditions"
-              }
-            }
-          ],
-          "enableWhen": [
-            {
-              "operator": "=",
-              "question": "6.1",
-              "answerCoding": {
-                "code": "Psychiatric Conditions",
-                "display": "Psychiatric Conditions"
               }
             }
           ],
@@ -2383,16 +2031,7 @@
               }
             }
           ],
-          "enableWhen": [
-            {
-              "operator": "=",
-              "question": "6.10",
-              "answerCoding": {
-                "code": "Other",
-                "display": "Other"
-              }
-            }
-          ],
+
           "linkId": "6.101",
           "text": "Specify other",
           "type": "string",
@@ -2408,16 +2047,7 @@
               }
             }
           ],
-          "enableWhen": [
-            {
-              "operator": "=",
-              "question": "6.1",
-              "answerCoding": {
-                "code": "Hematology",
-                "display": "Hematology"
-              }
-            }
-          ],
+
           "linkId": "6.11",
           "text": "Hematology",
           "type": "choice",
@@ -2466,16 +2096,7 @@
               }
             }
           ],
-          "enableWhen": [
-            {
-              "operator": "=",
-              "question": "6.11",
-              "answerCoding": {
-                "code": "Other",
-                "display": "Other"
-              }
-            }
-          ],
+
           "linkId": "6.111",
           "text": "Specify other",
           "type": "string",
@@ -2491,16 +2112,7 @@
               }
             }
           ],
-          "enableWhen": [
-            {
-              "operator": "=",
-              "question": "6.1",
-              "answerCoding": {
-                "code": "Endocrine System",
-                "display": "Endocrine System"
-              }
-            }
-          ],
+
           "linkId": "6.12",
           "text": "Endocrine System ",
           "type": "choice",
@@ -2555,16 +2167,7 @@
               }
             }
           ],
-          "enableWhen": [
-            {
-              "operator": "=",
-              "question": "6.12",
-              "answerCoding": {
-                "code": "Other",
-                "display": "Other"
-              }
-            }
-          ],
+
           "linkId": "6.121",
           "text": "Specify other",
           "type": "string",
@@ -2580,16 +2183,7 @@
               }
             }
           ],
-          "enableWhen": [
-            {
-              "operator": "=",
-              "question": "6.1",
-              "answerCoding": {
-                "code": "Integumental System",
-                "display": "Integumental System"
-              }
-            }
-          ],
+
           "linkId": "6.13",
           "text": "Integumental System",
           "type": "choice",
@@ -2644,16 +2238,7 @@
               }
             }
           ],
-          "enableWhen": [
-            {
-              "operator": "=",
-              "question": "6.13",
-              "answerCoding": {
-                "code": "Other",
-                "display": "Other"
-              }
-            }
-          ],
+
           "linkId": "6.131",
           "text": "Specify other",
           "type": "string",
@@ -2669,16 +2254,7 @@
               }
             }
           ],
-          "enableWhen": [
-            {
-              "operator": "=",
-              "question": "6.1",
-              "answerCoding": {
-                "code": "Immunology",
-                "display": "Immunology"
-              }
-            }
-          ],
+
           "linkId": "6.14",
           "text": "Immunology",
           "type": "choice",
@@ -2733,16 +2309,7 @@
               }
             }
           ],
-          "enableWhen": [
-            {
-              "operator": "=",
-              "question": "6.14",
-              "answerCoding": {
-                "code": "Other",
-                "display": "Other"
-              }
-            }
-          ],
+
           "linkId": "6.141",
           "text": "Specify other",
           "type": "string",
@@ -2799,18 +2366,7 @@
           "linkId": "9.2",
           "text": "Are flow rates different between any of the following?",
           "type": "group",
-          "enableWhen": [
-            {
-              "operator": ">",
-              "question": "maximum-flow-rate",
-              "answerDecimal": 4.0
-            },
-            {
-              "operator": "<",
-              "question": "minimum-flow-rate",
-              "answerDecimal": 1.0
-            }
-          ],
+
           "enableBehavior": "any",
           "item": [
             {
@@ -2828,27 +2384,15 @@
               "linkId": "9.2.1.1",
               "text": "Stationary Flow Rate",
               "type": "quantity",
-              "required": true,
-              "enableWhen": [
-                {
-                  "operator": "=",
-                  "question": "9.2.1",
-                  "answerBoolean": true
-                }
-              ]
+              "required": true
+
             },
             {
               "linkId": "9.2.1.2",
               "text": "Portable Flow Rate",
               "type": "quantity",
-              "required": true,
-              "enableWhen": [
-                {
-                  "operator": "=",
-                  "question": "9.2.1",
-                  "answerBoolean": true
-                }
-              ]
+              "required": true
+
             },
             {
               "linkId": "9.2.2",
@@ -2865,27 +2409,13 @@
               "linkId": "9.2.2.1",
               "text": "Rest Flow Rate",
               "type": "quantity",
-              "required": true,
-              "enableWhen": [
-                {
-                  "operator": "=",
-                  "question": "9.2.2",
-                  "answerBoolean": true
-                }
-              ]
+              "required": true
             },
             {
               "linkId": "9.2.2.2",
               "text": "Exercise Flow Rate",
               "type": "quantity",
-              "required": true,
-              "enableWhen": [
-                {
-                  "operator": "=",
-                  "question": "9.2.2",
-                  "answerBoolean": true
-                }
-              ]
+              "required": true
             },
             {
               "linkId": "9.2.3",
@@ -2902,27 +2432,13 @@
               "linkId": "9.2.3.1",
               "text": "Daytime Flow Rate",
               "type": "quantity",
-              "required": true,
-              "enableWhen": [
-                {
-                  "operator": "=",
-                  "question": "9.2.3",
-                  "answerBoolean": true
-                }
-              ]
+              "required": true
             },
             {
               "linkId": "9.2.3.2",
               "text": "Nighttime Flow Rate",
               "type": "quantity",
-              "required": true,
-              "enableWhen": [
-                {
-                  "operator": "=",
-                  "question": "9.2.3",
-                  "answerBoolean": true
-                }
-              ]
+              "required": true
             }
           ]
         },
@@ -3092,16 +2608,6 @@
           "text": "Reason for Change in Status",
           "type": "choice",
           "repeats": true,
-          "enableWhen": [
-            {
-              "operator": "=",
-              "question": "10.1",
-              "answerCoding": {
-                "code": "Change in status",
-                "display": "Change in status"
-              }
-            }
-          ],
           "required": true,
           "answerOption": [
             {
@@ -3130,16 +2636,6 @@
           "type": "choice",
           "repeats": true,
           "required": true,
-          "enableWhen": [
-            {
-              "operator": "=",
-              "question": "10.1",
-              "answerCoding": {
-                "code": "Revision or change in equipment",
-                "display": "Revision or change in equipment"
-              }
-            }
-          ],
           "answerOption": [
             {
               "valueCoding": {
@@ -3167,16 +2663,6 @@
           "type": "choice",
           "repeats": true,
           "required": true,
-          "enableWhen": [
-            {
-              "operator": "=",
-              "question": "10.1",
-              "answerCoding": {
-                "code": "Replacement",
-                "display": "Replacement"
-              }
-            }
-          ],
           "answerOption": [
             {
               "valueCoding": {
