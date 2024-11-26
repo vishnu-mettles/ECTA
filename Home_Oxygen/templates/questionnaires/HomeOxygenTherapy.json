@@ -285,10 +285,15 @@
           ],
           "extension": [
             {
-              "url": "http://hl7.org/fhir/questionnaire-item-control",
-              "valueCoding": {
-                "code": " radio-button",
-                "display": "Lives in or travels to high altitude"
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "check-box",
+                    "display": "Check-box"
+                  }
+                ]
               }
             }
           ],
@@ -298,6 +303,20 @@
           "text": "Specify condition",
           "required": true,
           "repeats": true,
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "check-box",
+                    "display": "Check-box"
+                  }
+                ]
+              }
+            }
+          ],
           "answerOption": [
             {
               "valueCoding": {
@@ -441,6 +460,20 @@
 
           "linkId": "3.7",
           "type": "choice",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "check-box",
+                    "display": "Check-box"
+                  }
+                ]
+              }
+            }
+          ],
           "text": "Specify symptoms",
           "answerOption": [
             {
@@ -714,6 +747,20 @@
           "linkId": "4.8",
           "text": "Study performed in relevance to Nocturnal Restlessness",
           "type": "choice",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "check-box",
+                    "display": "Check-box"
+                  }
+                ]
+              }
+            }
+          ],
           "repeats": true,
           "required": true,
           "answerOption": [
@@ -815,6 +862,20 @@
           "linkId": "5.1",
           "text": "Primary Diagnosis",
           "type": "choice",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "check-box",
+                    "display": "Check-box"
+                  }
+                ]
+              }
+            }
+          ],
           "required": true,
           "repeats": true,
           "answerOption": [
@@ -962,6 +1023,20 @@
           "linkId": "5.5",
           "text": "Determination of Pulmonary hypertension/Cor Pulmonale",
           "type": "choice",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "check-box",
+                    "display": "Check-box"
+                  }
+                ]
+              }
+            }
+          ],
           "repeats": true,
           "required": true,
           "enableBehavior": "any",
@@ -1063,6 +1138,20 @@
           "linkId": "5.9",
           "text": "Does the patient suffer from any of the following conditions ?",
           "type": "choice",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "check-box",
+                    "display": "Check-box"
+                  }
+                ]
+              }
+            }
+          ],
           "required": true,
           "answerOption": [
             {
@@ -1105,10 +1194,24 @@
       "type": "group",
       "item": [
         {
-          
+
           "linkId": "6.1",
           "text": "Review of Systems",
           "type": "choice",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "check-box",
+                    "display": "Check-box"
+                  }
+                ]
+              }
+            }
+          ],
           "repeats": true,
           "required": true,
           "extension": [
@@ -1236,6 +1339,20 @@
           "linkId": "6.2",
           "text": "General",
           "type": "choice",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "check-box",
+                    "display": "Check-box"
+                  }
+                ]
+              }
+            }
+          ],
           "repeats": true,
           "required": true,
           "answerOption": [
@@ -1325,6 +1442,20 @@
           "linkId": "6.3",
           "text": "HEENT",
           "type": "choice",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "check-box",
+                    "display": "Check-box"
+                  }
+                ]
+              }
+            }
+          ],
           "repeats": true,
           "required": true,
           "answerOption": [
@@ -1390,6 +1521,20 @@
           "linkId": "6.4",
           "text": "Pulmonary System",
           "type": "choice",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "check-box",
+                    "display": "Check-box"
+                  }
+                ]
+              }
+            }
+          ],
           "repeats": true,
           "required": true,
           "answerOption": [
@@ -1473,6 +1618,20 @@
           "linkId": "6.5",
           "text": "Cardiovascular System",
           "type": "choice",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "check-box",
+                    "display": "Check-box"
+                  }
+                ]
+              }
+            }
+          ],
           "repeats": true,
           "required": true,
           "answerOption": [
@@ -1586,6 +1745,20 @@
           "linkId": "6.7",
           "text": "Gastrointestinal System",
           "type": "choice",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "check-box",
+                    "display": "Check-box"
+                  }
+                ]
+              }
+            }
+          ],
           "repeats": true,
           "required": true,
           "answerOption": [
@@ -1710,6 +1883,20 @@
           "linkId": "6.8",
           "text": "Musculoskeletal System",
           "type": "choice",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "check-box",
+                    "display": "Check-box"
+                  }
+                ]
+              }
+            }
+          ],
           "repeats": true,
           "required": true,
           "answerOption": [
@@ -1835,6 +2022,20 @@
           "linkId": "6.9",
           "text": "Neurological System",
           "type": "choice",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "check-box",
+                    "display": "Check-box"
+                  }
+                ]
+              }
+            }
+          ],
           "repeats": true,
           "required": true,
           "answerOption": [
@@ -1983,6 +2184,20 @@
           "linkId": "6.10",
           "text": "Psychiatric Conditions",
           "type": "choice",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "check-box",
+                    "display": "Check-box"
+                  }
+                ]
+              }
+            }
+          ],
           "repeats": true,
           "required": true,
           "answerOption": [
@@ -2066,6 +2281,20 @@
           "linkId": "6.11",
           "text": "Hematology",
           "type": "choice",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "check-box",
+                    "display": "Check-box"
+                  }
+                ]
+              }
+            }
+          ],
           "repeats": true,
           "required": true,
           "answerOption": [
@@ -2131,6 +2360,20 @@
           "linkId": "6.12",
           "text": "Endocrine System ",
           "type": "choice",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "check-box",
+                    "display": "Check-box"
+                  }
+                ]
+              }
+            }
+          ],
           "repeats": true,
           "required": true,
           "answerOption": [
@@ -2202,6 +2445,20 @@
           "linkId": "6.13",
           "text": "Integumental System",
           "type": "choice",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "check-box",
+                    "display": "Check-box"
+                  }
+                ]
+              }
+            }
+          ],
           "repeats": true,
           "required": true,
           "answerOption": [
@@ -2273,6 +2530,20 @@
           "linkId": "6.14",
           "text": "Immunology",
           "type": "choice",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "check-box",
+                    "display": "Check-box"
+                  }
+                ]
+              }
+            }
+          ],
           "repeats": true,
           "required": true,
           "answerOption": [
@@ -2471,6 +2742,20 @@
           "text": "Usage Directions",
           "repeats": true,
           "type": "choice",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "check-box",
+                    "display": "Check-box"
+                  }
+                ]
+              }
+            }
+          ],
           "required": true,
           "answerOption": [
             {
@@ -2526,6 +2811,20 @@
           "linkId": "9.6",
           "text": "Means of Oxygen Delivery and Accessories",
           "type": "choice",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "check-box",
+                    "display": "Check-box"
+                  }
+                ]
+              }
+            }
+          ],
           "required": true,
           "answerOption": [
             {
@@ -2589,6 +2888,20 @@
           "linkId": "10.1",
           "text": "Type Of Order",
           "type": "choice",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "check-box",
+                    "display": "Check-box"
+                  }
+                ]
+              }
+            }
+          ],
           "required": true,
           "answerOption": [
             {
@@ -2622,6 +2935,20 @@
           "linkId": "10.2",
           "text": "Reason for Change in Status",
           "type": "choice",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "check-box",
+                    "display": "Check-box"
+                  }
+                ]
+              }
+            }
+          ],
           "repeats": true,
           "required": true,
           "answerOption": [
@@ -2649,6 +2976,20 @@
           "linkId": "10.3",
           "text": "Reason for Revision or change in equipment",
           "type": "choice",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+              "valueCodeableConcept": {
+                "coding": [
+                  {
+                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                    "code": "check-box",
+                    "display": "Check-box"
+                  }
+                ]
+              }
+            }
+          ],
           "repeats": true,
           "required": true,
           "answerOption": [
